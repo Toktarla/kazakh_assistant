@@ -1,0 +1,2 @@
+C:/Users/Toktarla/StudioProjects/ielts_adviser/android/app/.cxx/Debug/k3c6t5p2/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/Toktarla/StudioProjects/ielts_adviser/android/app/.cxx/Debug/k3c6t5p2/armeabi-v7a/CMakeFiles/rebuild_cache.dir

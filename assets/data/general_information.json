@@ -1,0 +1,476 @@
+{
+  "sections": [
+    {
+      "title": "Beautiful/Rare Kazakh Words",
+      "description": "Discover the beauty and richness of the Kazakh language with these exquisite words.",
+      "data": [
+        {
+          "word": "Көктем",
+          "meaning": "Spring",
+          "etymology": "From Turkic *kök* (blue, green) + *-tem* (season)",
+          "examples": [
+            "Көктем келді – жер жаңарды. (Spring has come – the earth has renewed itself.)",
+            "Көктемнің хош иісі сезіледі. (The fragrance of spring is felt.)",
+            "Көктемде құстар қайтып келеді. (Birds return in spring.)"
+          ],
+          "poemExample": {
+            "text": "Көктем, сен келдің, гүлдер жайнады.",
+            "poemTitle": "Көктем",
+            "author": "Abai Kunanbaev"
+          },
+          "writingExample": "Көктем – жылдың ең әдемі мезгілі. (Spring is the most beautiful season of the year.)"
+        },
+        {
+          "word": "Арай",
+          "meaning": "Dawn, Radiance",
+          "etymology": "From Arabic",
+          "examples": [
+            "Таңның арайы көңілді көтереді. (The radiance of dawn lifts the spirits.)",
+            "Арайлы күн басталды. (A radiant day has begun.)",
+            "Арай бетіңнен нұр шашады. (Radiance shines from your face.)"
+          ],
+          "poemExample": {
+            "text": "Арай таңы атты, дүние нұрға бөленді.",
+            "poemTitle": "Таң",
+            "author": "Mukagali Makatayev"
+          },
+          "writingExample": "Арай – жаңа күннің басталуы. (Dawn is the beginning of a new day.)"
+        }
+      ]
+    },
+    {
+      "title": "Phrases",
+      "description": "Learn essential Kazakh phrases for everyday communication.",
+      "data": [
+        {
+          "phrase": "Сәлеметсіз бе?",
+          "meaning": "Hello/Good day",
+          "usage": "A formal greeting.",
+          "example": "Көшеде: «Сәлеметсіз бе!» деп айтыңыз. (Say “Hello!” on the street.)",
+          "whenToUse": "When greeting someone older or in a formal setting.",
+          "alternatives": ["Сәлем!"]
+        },
+        {
+          "phrase": "Қалайсыз?",
+          "meaning": "How are you?",
+          "usage": "To ask about someone's well-being.",
+          "example": "Досыңызға: «Қалайсыз?» деп сұраңыз. (Ask your friend, “How are you?”)",
+          "whenToUse": "When meeting someone you know.",
+          "alternatives": ["Жағдайыңыз қалай?"]
+        },
+        {
+          "phrase": "Сау болыңыз!",
+          "meaning": "Goodbye!",
+          "usage": "To say farewell.",
+          "example": "Шығарда: «Сау болыңыз!» деп айтыңыз. (Say “Goodbye!” when leaving.)",
+          "whenToUse": "When departing from someone.",
+          "alternatives": ["Көріскенше!"]
+        },
+        {
+          "phrase": "Кешіріңіз",
+          "meaning": "Excuse me/Sorry",
+          "usage": "To apologize or ask for attention.",
+          "example": "Кешіріңіз, мен адасып кеттім. (Excuse me, I am lost.)",
+          "whenToUse": "When you want to get someone's attention or apologize.",
+          "alternatives": ["Өтінемін"]
+        },
+        {
+          "phrase": "Менің атым...",
+          "meaning": "My name is...",
+          "usage": "To introduce yourself.",
+          "example": "Менің атым - Айдана. (My name is Aidana.)",
+          "whenToUse": "When meeting someone new.",
+          "alternatives": ["Атым..."]
+        },
+        {
+          "phrase": "Сіздің атыңыз кім?",
+          "meaning": "What is your name?",
+          "usage": "To ask someone's name.",
+          "example": "Сіздің атыңыз кім? (What is your name?)",
+          "whenToUse": "When meeting someone new.",
+          "alternatives": ["Атыңыз кім?"]
+        },
+        {
+          "phrase": "Иә",
+          "meaning": "Yes",
+          "usage": "To give an affirmative response.",
+          "example": "Сіз келесіз бе? Иә. (Are you coming? Yes.)",
+          "whenToUse": "When agreeing with something.",
+          "alternatives": ["Жарайды"]
+        },
+        {
+          "phrase": "Жоқ",
+          "meaning": "No",
+          "usage": "To give a negative response.",
+          "example": "Сіз шаршадыңыз ба? Жоқ. (Are you tired? No.)",
+          "whenToUse": "When disagreeing with something.",
+          "alternatives": ["Емес"]
+        },
+        {
+          "phrase": "Жақсы",
+          "meaning": "Good",
+          "usage": "To express approval or satisfaction.",
+          "example": "Бұл жақсы. (This is good.)",
+          "whenToUse": "When something is satisfactory.",
+          "alternatives": ["Керемет"]
+        },
+        {
+          "phrase": "Жаман",
+          "meaning": "Bad",
+          "usage": "To express disapproval or dissatisfaction.",
+          "example": "Бұл жаман. (This is bad.)",
+          "whenToUse": "When something is unsatisfactory.",
+          "alternatives": ["Нашар"]
+        },
+        {
+          "phrase": "Не істеу керек?",
+          "meaning": "What to do?",
+          "usage": "To ask for advice or instructions.",
+          "example": "Не істеу керек? (What to do?)",
+          "whenToUse": "When you are unsure of what to do.",
+          "alternatives": ["Қалай істеу керек?"]
+        },
+        {
+          "phrase": "Қайда барамыз?",
+          "meaning": "Where are we going?",
+          "usage": "To ask about the destination.",
+          "example": "Қайда барамыз? (Where are we going?)",
+          "whenToUse": "When you are traveling with someone.",
+          "alternatives": ["Қайда бара жатырмыз?"]
+        },
+        {
+          "phrase": "Не болды?",
+          "meaning": "What happened?",
+          "usage": "To ask about an event.",
+          "example": "Не болды? (What happened?)",
+          "whenToUse": "When something unexpected occurs.",
+          "alternatives": ["Не істедіңіз?"]
+        },
+        {
+          "phrase": "Маған көмектесіңіз",
+          "meaning": "Help me",
+          "usage": "To ask for assistance.",
+          "example": "Маған көмектесіңіз. (Help me.)",
+          "whenToUse": "When you need help with something.",
+          "alternatives": ["Көмектесіңізші"]
+        },
+        {
+          "phrase": "Мен сізді жақсы көремін",
+          "meaning": "I love you",
+          "usage": "To express affection.",
+          "example": "Мен сізді жақсы көремін. (I love you.)",
+          "whenToUse": "When expressing love to someone.",
+          "alternatives": ["Мен сізді сүйемін"]
+        },
+        {
+          "phrase": "Мен шаршадым",
+          "meaning": "I am tired",
+          "usage": "To express fatigue.",
+          "example": "Мен шаршадым. (I am tired.)",
+          "whenToUse": "When you feel tired.",
+          "alternatives": ["Мен қажыдым"]
+        },
+        {
+          "phrase": "Мен ашпын",
+          "meaning": "I am hungry",
+          "usage": "To express hunger.",
+          "example": "Мен ашпын. (I am hungry.)",
+          "whenToUse": "When you feel hungry.",
+          "alternatives": ["Мен қарным ашты"]
+        },
+        {
+          "phrase": "Мен шөлдедім",
+          "meaning": "I am thirsty",
+          "usage": "To express thirst.",
+          "example": "Мен шөлдедім. (I am thirsty.)",
+          "whenToUse": "When you feel thirsty.",
+          "alternatives": ["Мен сусадым"]
+        },
+        {
+          "phrase": "Бүгін ауа райы қандай?",
+          "meaning": "What is the weather today?",
+          "usage": "To ask about the weather.",
+          "example": "Бүгін ауа райы қандай? (What is the weather today?)",
+          "whenToUse": "When you want to know the weather.",
+          "alternatives": ["Ауа райы қандай?"]
+        },
+        {
+          "phrase": "Бұл қанша тұрады?",
+          "meaning": "How much does this cost?",
+          "usage": "To ask about the price.",
+          "example": "Бұл қанша тұрады? (How much does this cost?)",
+          "whenToUse": "When you want to know the price of something.",
+          "alternatives": ["Бағасы қанша?"]
+        }
+      ]
+    },
+    {
+      "title": "Literature Recommendations",
+      "description": "Explore a collection of beautiful literatures in Kazakh history",
+      "data": [
+        {
+          "title": "The Book of Words",
+          "author": "Abai Kunanbaev",
+          "imageUrl": "https://m.media-amazon.com/images/I/51oKCv6AzTL._AC_UF894,1000_QL80_.jpg",
+          "description": "A collection of philosophical essays and reflections on various aspects of life.",
+          "link": "url_to_book_1"
+        },
+        {
+          "title": "My name is Kozha",
+          "author": "Berdibek Sokpakbaev",
+          "imageUrl": "https://outskirtspress.com/images/author_content_thumbs/285626B/cover.jpg",
+          "description": "A collection of beautiful and emotional poems by a renowned Kazakh poet.",
+          "link": "url_to_book_2"
+        },
+        {
+          "title": "Abai Zholy",
+          "author": "Mukhtar Auezov",
+          "imageUrl": "https://www.abaicenter.org/wp-content/uploads/2022/10/5sidorkin_1_11zon.jpg",
+          "description": "An epic novel that serves as a fictionalized biography of Abai Qunanbaiuly, exploring Kazakh culture and history.",
+          "link": "url_to_book_3"
+        },
+        {
+          "title": "Kokserek",
+          "author": "Mukhtar Auezov",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4sIxQLaSZnXglSETZ4LcyHOftft4Jrizh5g&s",
+          "description": "A short story about the relationship between humans and nature, focusing on a wolf named Kokserek.",
+          "link": "url_to_book_4"
+        },
+        {
+          "title": "The Silent Steppe: The Memoir of a Kazakh Nomad Under Stalin",
+          "author": "Mukhamet Shayakhmetov",
+          "imageUrl": "https://m.media-amazon.com/images/I/51sQQKApH5L.jpg",
+          "description": "A memoir detailing the experiences of a Kazakh nomad during the oppressive Stalinist regime.",
+          "link": "url_to_book_5"
+        },
+        {
+          "title": "Ulpan",
+          "author": "Gabiden Mustafin",
+          "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1445678757i/27265865.jpg",
+          "description": "A historical novel about the life of a strong and resilient Kazakh woman named Ulpan.",
+          "link": "url_to_book_6"
+        },
+        {
+          "title": "Jamal the Unfortunate",
+          "author": "Mirzhakyp Dulatuli",
+          "imageUrl": "https://kitapal.kz/media/2022/09/27/094320176500.gif",
+          "description": "A collection of traditional Kazakh and Kyrgyz fairy tales that reflect the rich folklore of Central Asia.",
+          "link": "url_to_book_7"
+        },
+        {
+          "title": "My Time",
+          "author": "Shakarim Kudaiberdiev",
+          "imageUrl": "https://knigogid.ru/storage/books/d0d/5e1/5f8/01c/57e/efa/65b27e6fff608309d799058553e5953b.jpg",
+          "description": "A collection of poetry by Shakarim Kudaiberdiev, exploring themes of spirituality, philosophy, and morality.",
+          "link": "url_to_book_8"
+        },
+        {
+          "title": "Nomads",
+          "author": "Ilyas Yesenberlin",
+          "imageUrl": "https://m.media-amazon.com/images/I/31GUqKiklHL._AC_UF1000,1000_QL80_.jpg",
+          "description": "'Nomads' is a historical trilogy that narrates the story of Kazakhstan's struggles and victories over centuries.",
+          "link": "url_to_book_9"
+        },
+        {
+          "title": "Lonely Yurt",
+          "author": "Smagul Yelubayev",
+          "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-zy3ZvSuaPgR7GJJeDimkZbJx3_rrS67XKg&s",
+          "description": "'Nomads' is a historical trilogy that narrates the story of Kazakhstan's struggles and victories over centuries.",
+          "link": "url_to_book_9"
+        },
+        {
+          "title": "Botagoz",
+          "author": "Sabit Mukanov",
+          "imageUrl": "https://project.orenlib.ru/litmap/up/person/book/Mukanov/botagoz.jpg",
+          "description": "'Nomads' is a historical trilogy that narrates the story of Kazakhstan's struggles and victories over centuries.",
+          "link": "url_to_book_9"
+        },
+        {
+          "title": "Definition of the coast",
+          "author": "Oljas Suleymanov",
+          "imageUrl": "https://flibusta.site/i/6/467306/cover.jpg",
+          "description": "'Nomads' is a historical trilogy that narrates the story of Kazakhstan's struggles and victories over centuries.",
+          "link": "url_to_book_9"
+        }
+      ]
+    },
+    {
+      "title": "Idioms",
+      "description": "Discover the colorful world of Kazakh idioms and expressions.",
+      "data": [
+        {
+          "id": 1,
+          "idiom": "Аузына су құйылғандай",
+          "meaning": "Speechless",
+          "literalMeaning": "As if water was poured into their mouth",
+          "example": "Ол мұндайды естігенде, аузына су құйылғандай қалды. (When he heard such a thing, he was left speechless.)",
+          "usage": "Describes someone who is unable to speak due to shock, surprise, or shyness.",
+          "synonyms": ["Тілі байланып қалды"]
+        },
+        {
+          "id": 2,
+          "idiom": "Көзден ұшты",
+          "meaning": "Disappeared",
+          "literalMeaning": "Flew from the eyes",
+          "example": "Ол көзден ұшты, оны ешкім көрген жоқ. (He disappeared; no one saw him.)",
+          "usage": "Describes someone or something that has vanished completely.",
+          "synonyms": ["Жоқ болып кетті"]
+        }
+      ]
+    },
+    {
+      "title": "Proverbs",
+      "description": "Gain wisdom from the rich heritage of Kazakh proverbs.",
+      "data": [
+        {
+          "id": 1,
+          "proverb": "Бірлік бар жерде, тірлік бар.",
+          "meaning": "Where there is unity, there is life.",
+          "literalMeaning": "Where there is unity, there is life.",
+          "example": "Бұл мақал бірліктің маңыздылығын көрсетеді. (This proverb shows the importance of unity.)",
+          "usage": "Emphasizes the importance of unity and cooperation.",
+          "relatedProverbs": ["Күш бірлікте."]
+        },
+        {
+          "id": 2,
+          "proverb": "Жүз сомға дейін дос бол, мың сомнан кейін қас болма.",
+          "meaning": "Be friends until a hundred tenge, don't become enemies after a thousand tenge.",
+          "literalMeaning": "Be friends until a hundred tenge, don't become enemies after a thousand tenge.",
+          "example": "Бұл мақал ақшаның достыққа әсер етуі мүмкін екенін ескертеді. (This proverb warns that money can affect friendship.)",
+          "usage": "Advises against letting money ruin friendships.",
+          "relatedProverbs": ["Ақша – қолдың кірі."]
+        }
+      ]
+    },
+    {
+      "title": "Literary Extracts",
+      "description": "Enjoy beautiful excerpts from famous Kazakh literary works.",
+      "data": [
+        {
+          "title": "Abai Kunanbaev - Words of Wisdom",
+          "author": "Abai Kunanbaev",
+          "extract": "Адам болам деп жүрсең, / If you aspire to be human, / Тірілігіңе пайдаң тисін. / Let your life be of benefit.",
+          "translation": "If you aspire to be human, let your life be of benefit.",
+          "audio": "url_to_audio_1"
+        },
+        {
+          "title": "Mukagali Makatayev - Poem",
+          "author": "Mukagali Makatayev",
+          "extract": "Жаным менің, сені сүйем, / My soul, I love you, / Сенен басқа жанды күйем. / I cherish no other soul but yours.",
+          "translation": "My soul, I love you, I cherish no other soul but yours.",
+          "audio": "url_to_audio_2"
+        }
+      ]
+    },
+    {
+      "title": "Regional Dialects",
+      "description": "Open regional dialects of Kazakhstan for yourself",
+      "data": {
+        "west": [
+          {
+            "dialect": "Адай диалекті",
+            "features": "Some specific phonetical differences",
+            "words": {
+              "салем": "Салем (same)",
+              "бару": "Бару (same)",
+              "қалай": "Қалай (same)",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          },
+          {
+            "dialect": "Жайық диалекті",
+            "features": "Influence of other Turkic languages",
+            "words": {
+              "салем": "Сәлем",
+              "бару": "Бару",
+              "қалай": "Қалай",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          }
+        ],
+        "south": [
+          {
+            "dialect": "Қызылорда диалекті",
+            "features": "Some vocabulary differences",
+            "words": {
+              "салем": "Сәлеметсіз бе",
+              "бару": "Бару",
+              "қалай": "Қалай",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          },
+          {
+            "dialect": "Түркістан диалекті",
+            "features": "Closer to literary Kazakh",
+            "words": {
+              "салем": "Сәлеметсіз бе",
+              "бару": "Бару",
+              "қалай": "Қалай",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          }
+        ],
+        "north": [
+          {
+            "dialect": "Көкшетау диалекті",
+            "features": "Influence of Russian language",
+            "words": {
+              "салем": "Сәлем",
+              "бару": "Бару",
+              "қалай": "Қалай",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          },
+          {
+            "dialect": "Петропавл диалекті",
+            "features": "Some pronunciation variations",
+            "words": {
+              "салем": "Сәлем",
+              "бару": "Бару",
+              "қалай": "Қалай",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          }
+        ],
+        "east": [
+          {
+            "dialect": "Өскемен диалекті",
+            "features": "Some pronunciation variations",
+            "words": {
+              "салем": "Сәлем",
+              "бару": "Бару",
+              "қалай": "Қалай",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          },
+          {
+            "dialect": "Семей диалекті",
+            "features": "Some vocabulary variations",
+            "words": {
+              "салем": "Сәлем",
+              "бару": "Бару",
+              "қалай": "Қалай",
+              "нан": "Нан",
+              "су": "Су",
+              "үй": "Үй"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
