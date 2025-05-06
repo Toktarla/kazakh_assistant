@@ -12,7 +12,6 @@ import 'package:proj_management_project/features/profile/views/profile_page.dart
 import 'package:proj_management_project/utils/error/error_page.dart';
 import 'package:proj_management_project/features/home/views/home_page.dart';
 import 'package:proj_management_project/features/streak/views/streak_tracker_page.dart';
-
 import '../features/chat/views/chat_screen.dart';
 
 class AppRoutes {

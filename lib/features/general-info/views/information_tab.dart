@@ -5,7 +5,7 @@ import 'package:flutter/services.dart' as rootBundle;
 import 'package:line_icons/line_icons.dart';
 import 'package:proj_management_project/features/general-info/views/question_page.dart';
 import '../../../config/app_colors.dart';
-import '../../../utils/enums/content_type.dart';
+import '../models/content_type.dart';
 
 class InformationTab extends StatefulWidget {
   const InformationTab({super.key});

@@ -50,7 +50,7 @@ class ThemeCubit extends Cubit<ThemeData> {
     iconTheme: const IconThemeData(
       color: AppColors.blueAccentColor,
     ),
-    textTheme: GoogleFonts.nunitoTextTheme(const TextTheme(
+    textTheme: GoogleFonts.montserratTextTheme(const TextTheme(
       titleLarge: TextStyle(fontSize: 18, color: Colors.black),
       titleMedium: TextStyle(fontSize: 14, color: Colors.black),
       displayLarge: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.blueAccentColor),
@@ -115,7 +115,7 @@ class ThemeCubit extends Cubit<ThemeData> {
         TargetPlatform.iOS: FadePageTransitionsBuilder(),
       },
     ),
-    textTheme: GoogleFonts.nunitoTextTheme(const TextTheme(
+    textTheme: GoogleFonts.montserratTextTheme(const TextTheme(
       titleLarge: TextStyle(fontSize: 18, color: Colors.white),
       titleMedium: TextStyle(fontSize: 14, color: Colors.white),
       titleSmall: TextStyle(fontSize: 12, color: Colors.white),

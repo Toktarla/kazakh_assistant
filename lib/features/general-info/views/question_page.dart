@@ -6,9 +6,9 @@ import 'package:proj_management_project/features/general-info/views/sections/lit
 import 'package:proj_management_project/features/general-info/views/sections/literature_recommendations_section.dart';
 import 'package:proj_management_project/features/general-info/views/sections/phrases_section.dart';
 import 'package:proj_management_project/features/general-info/views/sections/proverbs_section.dart';
-import 'package:proj_management_project/features/general-info/views/sections/regional_dialects_section.dart';
+import 'package:proj_management_project/features/general-info/views/sections/region/regional_dialects_section.dart';
 
-import '../../../utils/enums/content_type.dart';
+import '../models/content_type.dart';
 
 class QuestionPage extends StatelessWidget {
   final String sectionTitle;
