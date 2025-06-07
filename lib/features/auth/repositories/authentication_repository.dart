@@ -20,10 +20,21 @@ class AuthenticationRepository {
         userId: user.uid,
         email: email,
         fullName: fullName,
-        photoUrl: user.photoURL ?? defaultUserPhotoUrl
+        photoUrl: user.photoURL ?? defaultUserPhotoUrl,
+        isAnonymous: false,
       );
     }
     return user;
+  }
+
+  Future<User?> signInAnonymously() async {
+    try {
+      UserCredential userCredential = await FirebaseAuth.instance.signInAnonymously();
+      return userCredential.user;
+    } catch (e) {
+      print('Failed to sign in anonymously: $e');
+      return null;
+    }
   }
 
   Future<void> signOut() async {

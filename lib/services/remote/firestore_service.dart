@@ -98,16 +98,25 @@ class FirestoreService {
     return _currentUserUid;
   }
 
-  Future<Map<String,dynamic>?> fetchRandomWordOfTheDay() async {
-    final messagesCollection = _firestore.collection('wordOfTheDay');
-    final snapshot = await messagesCollection.get();
+  Future<Map<String, String>?> fetchRandomMotivation(String localeCode) async {
+    final motivationCollection = _firestore.collection('motivation');
+    final snapshot = await motivationCollection.get();
 
     if (snapshot.docs.isEmpty) return null;
 
     final randomIndex = DateTime.now().millisecondsSinceEpoch % snapshot.docs.length;
+    final data = snapshot.docs[randomIndex].data();
+
+    // Defensive fallback if locale not found, fallback to 'en'
+    final titleMap = Map<String, dynamic>.from(data['title'] ?? {});
+    final bodyMap = Map<String, dynamic>.from(data['body'] ?? {});
+
+    final title = titleMap[localeCode] ?? titleMap['en'] ?? '';
+    final body = bodyMap[localeCode] ?? bodyMap['en'] ?? '';
+
     return {
-      "text" : snapshot.docs[randomIndex].data()['text'] as String?,
-      "example": snapshot.docs[randomIndex].data()['example'] as String?,
+      'title': title,
+      'body': body,
     };
   }
 
@@ -115,7 +124,8 @@ class FirestoreService {
     required String userId,
     required String email,
     required String fullName,
-    required String photoUrl
+    required String photoUrl,
+    required bool isAnonymous
   }) async {
     String? fcmToken = await FirebaseMessaging.instance.getToken();
     await _firestore.collection('users').doc(userId).set({
@@ -125,6 +135,7 @@ class FirestoreService {
       'userId': userId,
       'name': fullName,
       'photoUrl': photoUrl,
+      'isAnonymous': isAnonymous,
     });
   }
 
@@ -176,8 +187,13 @@ class FirestoreService {
         .orderBy('createdAt', descending: true)
         .get();
 
-    return querySnapshot.docs.map((doc) => doc.data()).toList();
+    return querySnapshot.docs.map((doc) {
+      final data = doc.data();
+      data['chatId'] = doc.id; // <-- include chatId
+      return data;
+    }).toList();
   }
+
 
   // Fetch messages for a specific chat
   Stream<List<Map<String, dynamic>>> fetchMessages(String chatId) {
@@ -195,5 +211,28 @@ class FirestoreService {
         snapshot.docs.map((doc) => doc.data()).toList());
   }
 
+  Future<void> renameChat(String chatId, String newTitle) async {
+    final userId = _firebaseAuth.currentUser!.uid;
+    await _firestore
+        .collection('users')
+        .doc(userId)
+        .collection('chats')
+        .doc(chatId)
+        .update({
+      'title': newTitle,
+    });
+  }
 
+  Future<void> deleteChat(String chatId, String userId) async {
+    try {
+      await _firestore
+          .collection('users')
+          .doc(userId)
+          .collection('chats')
+          .doc(chatId)
+          .delete();
+    } catch (e) {
+      throw Exception('Failed to delete chat: $e');
+    }
+  }
 }

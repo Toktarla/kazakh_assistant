@@ -1,0 +1,1206 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4327111225800429064",
+      "lastPropertyId": "21:7449705140586041598",
+      "name": "Idiom",
+      "properties": [
+        {
+          "id": "1:2520562765315643490",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5087774491423164818",
+          "name": "idiomTypeId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:8930881621969336340",
+          "relationTarget": "IdiomType"
+        },
+        {
+          "id": "3:1054270398582396461",
+          "name": "idiom",
+          "type": 9
+        },
+        {
+          "id": "4:3036541825079522725",
+          "name": "meaningRu",
+          "type": 9
+        },
+        {
+          "id": "5:119259071263464321",
+          "name": "meaningEn",
+          "type": 9
+        },
+        {
+          "id": "6:1352550162839095156",
+          "name": "usageRu",
+          "type": 9
+        },
+        {
+          "id": "7:4694231511229199540",
+          "name": "usageEn",
+          "type": 9
+        },
+        {
+          "id": "8:3292150653332459325",
+          "name": "example",
+          "type": 9
+        },
+        {
+          "id": "9:6989901518787869830",
+          "name": "whenToUseRu",
+          "type": 9
+        },
+        {
+          "id": "10:1061598900330925405",
+          "name": "whenToUseEn",
+          "type": 9
+        },
+        {
+          "id": "11:5028613478238491386",
+          "name": "literalMeaningRu",
+          "type": 9
+        },
+        {
+          "id": "12:1192931705378335198",
+          "name": "literalMeaningEn",
+          "type": 9
+        },
+        {
+          "id": "13:3558760021693003933",
+          "name": "synonyms",
+          "type": 30
+        },
+        {
+          "id": "14:1001531313795391872",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "15:7035763691715305817",
+          "name": "isFavorite",
+          "type": 1
+        },
+        {
+          "id": "16:2233538579451016494",
+          "name": "isLearned",
+          "type": 1
+        },
+        {
+          "id": "17:5779031969005806546",
+          "name": "meaningKz",
+          "type": 9
+        },
+        {
+          "id": "18:2440975960771584833",
+          "name": "usageKz",
+          "type": 9
+        },
+        {
+          "id": "19:7317837078977042272",
+          "name": "whenToUseKz",
+          "type": 9
+        },
+        {
+          "id": "20:1470870526712002960",
+          "name": "literalMeaningKz",
+          "type": 9
+        },
+        {
+          "id": "21:7449705140586041598",
+          "name": "audioUrl",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:3670495648987894593",
+      "lastPropertyId": "6:7928210568729421008",
+      "name": "IdiomType",
+      "properties": [
+        {
+          "id": "1:3605588329558242278",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:526018605499127923",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "3:8112909876744026408",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "4:5705316862736126462",
+          "name": "typeEn",
+          "type": 9
+        },
+        {
+          "id": "5:7100246940611126309",
+          "name": "typeRu",
+          "type": 9
+        },
+        {
+          "id": "6:7928210568729421008",
+          "name": "typeKz",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:8466958757279939441",
+      "lastPropertyId": "8:8082799866688256276",
+      "name": "Line",
+      "properties": [
+        {
+          "id": "1:4440163509100880162",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7055528888206136407",
+          "name": "kz",
+          "type": 30
+        },
+        {
+          "id": "3:4007963834527504505",
+          "name": "ru",
+          "type": 30
+        },
+        {
+          "id": "5:3231115675736254194",
+          "name": "literatureExtractId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:6589887776429660663",
+          "relationTarget": "LiteratureExtract"
+        },
+        {
+          "id": "6:941960015490363023",
+          "name": "en",
+          "type": 30
+        },
+        {
+          "id": "7:6504318111887098380",
+          "name": "translationIndexRuJson",
+          "type": 9
+        },
+        {
+          "id": "8:8082799866688256276",
+          "name": "translationIndexEnJson",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:8874195302979397774",
+      "lastPropertyId": "10:795130351730140998",
+      "name": "LiteratureExtract",
+      "properties": [
+        {
+          "id": "1:5583490979767385320",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7413437734961151478",
+          "name": "titleRu",
+          "type": 9
+        },
+        {
+          "id": "3:5421886813067895660",
+          "name": "titleEn",
+          "type": 9
+        },
+        {
+          "id": "4:5016044810614983330",
+          "name": "authorRu",
+          "type": 9
+        },
+        {
+          "id": "5:3468434418734849131",
+          "name": "authorEn",
+          "type": 9
+        },
+        {
+          "id": "6:8714100420306344441",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "7:934439497943921043",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "8:3128633189304007784",
+          "name": "titleKz",
+          "type": 9
+        },
+        {
+          "id": "9:5262785488570202167",
+          "name": "authorKz",
+          "type": 9
+        },
+        {
+          "id": "10:795130351730140998",
+          "name": "audioUrl",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:416467396771524307",
+      "lastPropertyId": "20:8811826325678218716",
+      "name": "LiteratureRecomendation",
+      "properties": [
+        {
+          "id": "1:1380113213109197074",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2781645882845128549",
+          "name": "idiom",
+          "type": 9
+        },
+        {
+          "id": "3:4890730314321728163",
+          "name": "titleRu",
+          "type": 9
+        },
+        {
+          "id": "4:6567492710958234162",
+          "name": "titleEn",
+          "type": 9
+        },
+        {
+          "id": "5:5157610288745439438",
+          "name": "authorRu",
+          "type": 9
+        },
+        {
+          "id": "6:5612760323297469263",
+          "name": "authorEn",
+          "type": 9
+        },
+        {
+          "id": "7:2571313284052483745",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "8:1018623535358551603",
+          "name": "descriptionRu",
+          "type": 9
+        },
+        {
+          "id": "9:3884729790305454205",
+          "name": "descriptionEn",
+          "type": 9
+        },
+        {
+          "id": "10:4435636176008671381",
+          "name": "genreRu",
+          "type": 9
+        },
+        {
+          "id": "11:7122881584228269524",
+          "name": "genreEn",
+          "type": 9
+        },
+        {
+          "id": "12:8012806787893603538",
+          "name": "rating",
+          "type": 8
+        },
+        {
+          "id": "13:1808668561315131621",
+          "name": "pages",
+          "type": 6
+        },
+        {
+          "id": "14:2669949051966794923",
+          "name": "releaseDate",
+          "type": 9
+        },
+        {
+          "id": "15:6198462591495395245",
+          "name": "link",
+          "type": 9
+        },
+        {
+          "id": "16:8108661219600289196",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "17:8872381110769065705",
+          "name": "titleKz",
+          "type": 9
+        },
+        {
+          "id": "18:6044001162257598762",
+          "name": "authorKz",
+          "type": 9
+        },
+        {
+          "id": "19:6170706698829509338",
+          "name": "descriptionKz",
+          "type": 9
+        },
+        {
+          "id": "20:8811826325678218716",
+          "name": "genreKz",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:3289246940735202598",
+      "lastPropertyId": "33:4525687876637556957",
+      "name": "Proverb",
+      "properties": [
+        {
+          "id": "1:7312130734371409833",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5520636399104967506",
+          "name": "proverb",
+          "type": 9
+        },
+        {
+          "id": "3:6678699206364444003",
+          "name": "meaningRu",
+          "type": 9
+        },
+        {
+          "id": "4:3213537207970297543",
+          "name": "meaningEn",
+          "type": 9
+        },
+        {
+          "id": "5:8740031917935336923",
+          "name": "usageRu",
+          "type": 9
+        },
+        {
+          "id": "6:8679100963602774716",
+          "name": "usageEn",
+          "type": 9
+        },
+        {
+          "id": "7:1215847465143141023",
+          "name": "example",
+          "type": 9
+        },
+        {
+          "id": "8:6862658202513894458",
+          "name": "authorRu",
+          "type": 9
+        },
+        {
+          "id": "9:8762678300397212575",
+          "name": "authorEn",
+          "type": 9
+        },
+        {
+          "id": "10:6582793991969610831",
+          "name": "isFavorite",
+          "type": 1
+        },
+        {
+          "id": "11:5466981213368574776",
+          "name": "shareable",
+          "type": 1
+        },
+        {
+          "id": "12:3693390467005296365",
+          "name": "imagePath",
+          "type": 9
+        },
+        {
+          "id": "13:5328366875465762241",
+          "name": "whenToUseRu",
+          "type": 9
+        },
+        {
+          "id": "14:1331008725726133578",
+          "name": "whenToUseEn",
+          "type": 9
+        },
+        {
+          "id": "15:6116404628494001967",
+          "name": "literalMeaningRu",
+          "type": 9
+        },
+        {
+          "id": "16:4275904683937604026",
+          "name": "literalMeaningEn",
+          "type": 9
+        },
+        {
+          "id": "17:4540845449378433310",
+          "name": "relatedProverbs",
+          "type": 30
+        },
+        {
+          "id": "18:2908513365422803723",
+          "name": "tags",
+          "type": 30
+        },
+        {
+          "id": "19:2536809176890276783",
+          "name": "categories",
+          "type": 30
+        },
+        {
+          "id": "20:4494518528451147120",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "21:7362664614077293493",
+          "name": "isLearned",
+          "type": 1
+        },
+        {
+          "id": "22:7233793754332460023",
+          "name": "meaningKz",
+          "type": 9
+        },
+        {
+          "id": "23:7346690383424196932",
+          "name": "usageKz",
+          "type": 9
+        },
+        {
+          "id": "24:3893770714417330475",
+          "name": "authorKz",
+          "type": 9
+        },
+        {
+          "id": "25:4280032980476570077",
+          "name": "whenToUseKz",
+          "type": 9
+        },
+        {
+          "id": "26:8573242375353755605",
+          "name": "literalMeaningKz",
+          "type": 9
+        },
+        {
+          "id": "27:8596863443759190195",
+          "name": "categoriesEn",
+          "type": 30
+        },
+        {
+          "id": "28:7485268886343486978",
+          "name": "categoriesRu",
+          "type": 30
+        },
+        {
+          "id": "29:6693133209698359568",
+          "name": "categoriesKz",
+          "type": 30
+        },
+        {
+          "id": "30:1786759887213461871",
+          "name": "tagsKz",
+          "type": 30
+        },
+        {
+          "id": "31:237321408773781242",
+          "name": "tagsRu",
+          "type": 30
+        },
+        {
+          "id": "32:6678214784061397519",
+          "name": "tagsEn",
+          "type": 30
+        },
+        {
+          "id": "33:4525687876637556957",
+          "name": "audioUrl",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:6303527452055229534",
+      "lastPropertyId": "16:4039206330448990602",
+      "name": "RareKazakhWord",
+      "properties": [
+        {
+          "id": "1:5266653947010133536",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8015955753312039700",
+          "name": "idiomTypeId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:7777411161363330867",
+          "relationTarget": "RareKazakhWordType"
+        },
+        {
+          "id": "3:3210476467803178444",
+          "name": "word",
+          "type": 9
+        },
+        {
+          "id": "4:3374283151649062952",
+          "name": "meaningRu",
+          "type": 9
+        },
+        {
+          "id": "5:7621518226806790225",
+          "name": "meaningEn",
+          "type": 9
+        },
+        {
+          "id": "6:6500138096657984533",
+          "name": "etymologyRu",
+          "type": 9
+        },
+        {
+          "id": "7:269850249334928127",
+          "name": "etymologyEn",
+          "type": 9
+        },
+        {
+          "id": "8:465780438820763680",
+          "name": "examples",
+          "type": 30
+        },
+        {
+          "id": "9:7494185447766490263",
+          "name": "poemExample",
+          "type": 9
+        },
+        {
+          "id": "10:6889963966882783334",
+          "name": "writingExample",
+          "type": 9
+        },
+        {
+          "id": "11:2970072177779649587",
+          "name": "isFavorite",
+          "type": 1
+        },
+        {
+          "id": "12:7137891132694772642",
+          "name": "isLearned",
+          "type": 1
+        },
+        {
+          "id": "13:3806618855679428876",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "14:6950888023292637649",
+          "name": "meaningKz",
+          "type": 9
+        },
+        {
+          "id": "15:8182241673885531845",
+          "name": "etymologyKz",
+          "type": 9
+        },
+        {
+          "id": "16:4039206330448990602",
+          "name": "audioUrl",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:5374842888645314602",
+      "lastPropertyId": "7:2340733970911805721",
+      "name": "RareKazakhWordType",
+      "properties": [
+        {
+          "id": "1:549504599226682391",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6354224335597348646",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "3:2177882054263991893",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "4:3626719075656487615",
+          "name": "progress",
+          "type": 8
+        },
+        {
+          "id": "5:1325842228887608503",
+          "name": "sectionKz",
+          "type": 9
+        },
+        {
+          "id": "6:1743916372701180150",
+          "name": "sectionRu",
+          "type": 9
+        },
+        {
+          "id": "7:2340733970911805721",
+          "name": "sectionEn",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "11:3218862414291607928",
+      "lastPropertyId": "11:5717432052564695950",
+      "name": "RegionalDialect",
+      "properties": [
+        {
+          "id": "1:663724155717643737",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7088136427903505990",
+          "name": "dialectTypeId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "5:5293382025666645014",
+          "relationTarget": "RegionalDialectType"
+        },
+        {
+          "id": "3:1585385733892582883",
+          "name": "dialect",
+          "type": 9
+        },
+        {
+          "id": "4:2739839382918280821",
+          "name": "standart",
+          "type": 9
+        },
+        {
+          "id": "5:3008515830502158158",
+          "name": "meaningRu",
+          "type": 9
+        },
+        {
+          "id": "6:2641521021699497422",
+          "name": "meaningEn",
+          "type": 9
+        },
+        {
+          "id": "7:5582396766343619453",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "8:8731693098626694507",
+          "name": "usageRu",
+          "type": 9
+        },
+        {
+          "id": "9:4412742953521740454",
+          "name": "usageEn",
+          "type": 9
+        },
+        {
+          "id": "10:6733947294041480830",
+          "name": "meaningKz",
+          "type": 9
+        },
+        {
+          "id": "11:5717432052564695950",
+          "name": "usageKz",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "12:8385130404238109802",
+      "lastPropertyId": "5:4842174311400654650",
+      "name": "RegionalDialectType",
+      "properties": [
+        {
+          "id": "1:7852355409864561738",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:9039732319101294164",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "3:7018952432090599539",
+          "name": "typeEn",
+          "type": 9
+        },
+        {
+          "id": "4:2017527761102381695",
+          "name": "typeRu",
+          "type": 9
+        },
+        {
+          "id": "5:4842174311400654650",
+          "name": "typeKz",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "13:5494177663754534388",
+      "lastPropertyId": "11:5049112770931632416",
+      "name": "Section",
+      "properties": [
+        {
+          "id": "1:5578556499560037272",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5161128517064070990",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:4257078268861444443",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:361246055697704134",
+          "name": "contentTypeIndex",
+          "type": 6
+        },
+        {
+          "id": "5:1671692273701702577",
+          "name": "contentTypeString",
+          "type": 9
+        },
+        {
+          "id": "6:205555801230396720",
+          "name": "titleRu",
+          "type": 9
+        },
+        {
+          "id": "7:1483830659299976209",
+          "name": "titleEn",
+          "type": 9
+        },
+        {
+          "id": "8:2100503053125521448",
+          "name": "titleKz",
+          "type": 9
+        },
+        {
+          "id": "9:6984847015593078315",
+          "name": "descriptionKz",
+          "type": 9
+        },
+        {
+          "id": "10:105909701196262472",
+          "name": "descriptionRu",
+          "type": 9
+        },
+        {
+          "id": "11:5049112770931632416",
+          "name": "descriptionEn",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "14:2817526633751854359",
+      "lastPropertyId": "21:4368553390882796461",
+      "name": "Phrase",
+      "properties": [
+        {
+          "id": "1:1603054897338183596",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2457130461575150127",
+          "name": "phraseTypeId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "6:4532966103670003472",
+          "relationTarget": "PhraseType"
+        },
+        {
+          "id": "3:639463505387788218",
+          "name": "phrase",
+          "type": 9
+        },
+        {
+          "id": "4:327347652385247073",
+          "name": "meaningRu",
+          "type": 9
+        },
+        {
+          "id": "5:1533243706353640162",
+          "name": "meaningEn",
+          "type": 9
+        },
+        {
+          "id": "6:4333085150443589122",
+          "name": "usageRu",
+          "type": 9
+        },
+        {
+          "id": "7:5764339296629496678",
+          "name": "usageEn",
+          "type": 9
+        },
+        {
+          "id": "8:7707936048892551030",
+          "name": "example",
+          "type": 9
+        },
+        {
+          "id": "9:8678375903470700662",
+          "name": "whenToUseRu",
+          "type": 9
+        },
+        {
+          "id": "10:2571869672823348003",
+          "name": "whenToUseEn",
+          "type": 9
+        },
+        {
+          "id": "11:5012722677532159314",
+          "name": "noteRu",
+          "type": 9
+        },
+        {
+          "id": "12:8457156810019627704",
+          "name": "noteEn",
+          "type": 9
+        },
+        {
+          "id": "13:3837755345293394880",
+          "name": "alternatives",
+          "type": 30
+        },
+        {
+          "id": "14:6840173751774136642",
+          "name": "level",
+          "type": 9
+        },
+        {
+          "id": "15:7813612170050267836",
+          "name": "isFavorite",
+          "type": 1
+        },
+        {
+          "id": "16:6501561948572465216",
+          "name": "isLearned",
+          "type": 1
+        },
+        {
+          "id": "17:3685939794554455494",
+          "name": "meaningKz",
+          "type": 9
+        },
+        {
+          "id": "18:5793147800971105364",
+          "name": "usageKz",
+          "type": 9
+        },
+        {
+          "id": "19:7544007386985230576",
+          "name": "whenToUseKz",
+          "type": 9
+        },
+        {
+          "id": "20:2045861297285444436",
+          "name": "noteKz",
+          "type": 9
+        },
+        {
+          "id": "21:4368553390882796461",
+          "name": "audioUrl",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "15:1396988478052855647",
+      "lastPropertyId": "9:6378353029329500185",
+      "name": "PhraseTheme",
+      "properties": [
+        {
+          "id": "1:15124798516823252",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3720286828233316725",
+          "name": "theme",
+          "type": 9
+        },
+        {
+          "id": "3:3628171501857015391",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:5279622845708003683",
+          "name": "themeEn",
+          "type": 9
+        },
+        {
+          "id": "5:3362823239556160083",
+          "name": "themeRu",
+          "type": 9
+        },
+        {
+          "id": "6:130520453289640460",
+          "name": "themeKz",
+          "type": 9
+        },
+        {
+          "id": "7:816081044565561473",
+          "name": "descriptionEn",
+          "type": 9
+        },
+        {
+          "id": "8:5789887998988545317",
+          "name": "descriptionRu",
+          "type": 9
+        },
+        {
+          "id": "9:6378353029329500185",
+          "name": "descriptionKz",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "16:374171804799340951",
+      "lastPropertyId": "6:3860148621627089425",
+      "name": "PhraseType",
+      "properties": [
+        {
+          "id": "1:5392824527913585082",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1352829493580892215",
+          "name": "type",
+          "type": 9
+        },
+        {
+          "id": "3:413014731311160677",
+          "name": "phraseThemeId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "7:8434049478614499407",
+          "relationTarget": "PhraseTheme"
+        },
+        {
+          "id": "4:6167672192320014141",
+          "name": "typeKz",
+          "type": 9
+        },
+        {
+          "id": "5:7184401617345352968",
+          "name": "typeRu",
+          "type": 9
+        },
+        {
+          "id": "6:3860148621627089425",
+          "name": "typeEn",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "17:7744676140017354957",
+      "lastPropertyId": "7:5449804902898096456",
+      "name": "StreakModel",
+      "properties": [
+        {
+          "id": "1:8461577917955747287",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3609560077252703842",
+          "name": "userId",
+          "type": 9
+        },
+        {
+          "id": "3:6406235470023556210",
+          "name": "streakCount",
+          "type": 6
+        },
+        {
+          "id": "4:8227831738885814569",
+          "name": "bestStreak",
+          "type": 6
+        },
+        {
+          "id": "5:4453584974116059903",
+          "name": "lastActiveDate",
+          "type": 6
+        },
+        {
+          "id": "6:2742437845026620515",
+          "name": "isStreakLost",
+          "type": 1
+        },
+        {
+          "id": "7:5449804902898096456",
+          "name": "activityDates",
+          "type": 23
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "18:5335373039590121029",
+      "lastPropertyId": "11:6095654235350180220",
+      "name": "FillInTheBlank",
+      "properties": [
+        {
+          "id": "1:2733619240060721377",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7818499391441687736",
+          "name": "textBeforeKk",
+          "type": 9
+        },
+        {
+          "id": "3:3209879140671545131",
+          "name": "textBeforeRu",
+          "type": 9
+        },
+        {
+          "id": "4:1121517182118551282",
+          "name": "textBeforeEn",
+          "type": 9
+        },
+        {
+          "id": "5:3478013043323136062",
+          "name": "answerKk",
+          "type": 9
+        },
+        {
+          "id": "6:7080185837676579180",
+          "name": "answerRu",
+          "type": 9
+        },
+        {
+          "id": "7:3425311259534268317",
+          "name": "answerEn",
+          "type": 9
+        },
+        {
+          "id": "8:1737406968783887529",
+          "name": "textAfterKk",
+          "type": 9
+        },
+        {
+          "id": "9:3497654988965383445",
+          "name": "textAfterRu",
+          "type": 9
+        },
+        {
+          "id": "10:8793031954152996691",
+          "name": "textAfterEn",
+          "type": 9
+        },
+        {
+          "id": "11:6095654235350180220",
+          "name": "level",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "18:5335373039590121029",
+  "lastIndexId": "7:8434049478614499407",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [
+    7749141197527300278,
+    7385353834509364680
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    3428218697571508461,
+    4651265677820715094,
+    6908801874828812445,
+    7120882403334206261,
+    6396700331508733289,
+    6541525472788090641,
+    1372562790896551054,
+    7966235924694981164,
+    580863280989657996,
+    2401341682310544375,
+    6256111404375926653,
+    3537962671328208173,
+    1427878914721926909,
+    7719212117112863588,
+    2355001721173320811,
+    5852233300810208473,
+    4604856681070566130
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

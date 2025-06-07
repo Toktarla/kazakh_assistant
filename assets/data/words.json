@@ -1,0 +1,1107 @@
+{
+  "data": [
+    {
+      "sectionKz": "Этикет",
+      "sectionRu": "Этикет",
+      "sectionEn": "Ethics",
+      "imageUrl": "https://sloanreview.mit.edu/wp-content/uploads/2020/09/GEN-Smith-Compliance-Ethics-1290x860-1.jpg",
+      "words": [
+        {
+          "word": "Мәнмәтін",
+          "audioUrl": "mp3/word1.mp3",
+          "meaningKz": "Сөздің немесе оқиғаның мағынасына әсер ететін орта",
+          "meaningRu": "Среда, влияющая на смысл слова или события",
+          "meaningEn": "The surrounding circumstances that influence meaning",
+          "etymologyKz": "«Мән» (мағына) және «мәтін» (текст) сөздерінен құралған",
+          "etymologyRu": "От слов «смысл» и «текст» в казахском",
+          "etymologyEn": "From Kazakh 'män' (meaning) + 'mätin' (text)",
+          "examplesKz": ["Сөздің мәнмәтінін түсіну маңызды.", "Мәтіндегі әр сөздің мәнмәтіні бар."],
+          "examplesRu": ["Важно понимать контекст слова.", "Каждое слово в тексте имеет контекст."],
+          "examplesEn": ["Understanding the context of a word is important.", "Every word has its context in the text."],
+          "poemExample": "Мәнмәтінсіз мағына – жолсыз қалған бағыт.",
+          "writingExample": "Тарихи құжатты мәнмәтінмен бірге талдады.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Құндылық",
+          "audioUrl": "mp3/word2.mp3",
+
+          "meaningKz": "Адамдар үшін маңызды саналатын рухани немесе материалдық ұғым",
+          "meaningRu": "То, что считается важным для людей — духовное или материальное",
+          "meaningEn": "Something regarded as important — spiritual or material",
+          "etymologyKz": "«Құн» (баға, бағалылық) түбірінен туындаған",
+          "etymologyRu": "Происходит от казахского корня «құн» — цена",
+          "etymologyEn": "Derived from Kazakh root 'qun' meaning price or worth",
+          "examplesKz": ["Ұлттық құндылықтарды сақтау қажет.", "Отбасы – басты құндылық."],
+          "examplesRu": ["Необходимо сохранять национальные ценности.", "Семья — главная ценность."],
+          "examplesEn": ["It's important to preserve national values.", "Family is the main value."],
+          "poemExample": "Құндылықсыз өмір – мағынасыз күндер.",
+          "writingExample": "Жас ұрпаққа құндылық ұғымын түсіндіру керек.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Болмыс",
+          "audioUrl": "mp3/word3.mp3",
+
+
+          "meaningKz": "Адамның, әлемнің немесе заттың өмір сүруі мен табиғаты",
+          "meaningRu": "Существование и природа человека, мира или предмета",
+          "meaningEn": "The existence and nature of a person, world, or thing",
+          "etymologyKz": "Түркі тілдеріндегі «бол» (бар болу) етістігінен шыққан",
+          "etymologyRu": "Происходит от глагола «бол» — быть, существовать",
+          "etymologyEn": "From Turkic verb 'bol' meaning to be, to exist",
+          "examplesKz": ["Болмыс пен сана – философиялық ұғымдар.", "Оның болмысы ерекше."],
+          "examplesRu": ["Бытие и сознание — философские понятия.", "Его бытие особенное."],
+          "examplesEn": ["Existence and consciousness are philosophical concepts.", "His essence is unique."],
+          "poemExample": "Болмыс терең, ойға азық.",
+          "writingExample": "Автор кейіпкердің болмысын ашуға тырысты.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Парасат",
+          "audioUrl": "mp3/word4.mp3",
+          "meaningKz": "Ақыл-парасаттылық, терең ой мен даналық",
+          "meaningRu": "Ум, глубокое мышление и мудрость",
+          "meaningEn": "Intelligence, deep thinking, and wisdom",
+          "etymologyKz": "Парсы тілінен енген, бастапқы мағынасы – түсінік, ұғыну",
+          "etymologyRu": "Заемка из персидского, означает понимание, разум",
+          "etymologyEn": "Borrowed from Persian, originally meaning comprehension",
+          "examplesKz": ["Парасатты адам сабырлы болады.", "Парасат – тәрбие белгісі."],
+          "examplesRu": ["Мудрый человек всегда терпелив.", "Мудрость — признак воспитанности."],
+          "examplesEn": ["A wise person is always patient.", "Wisdom is a sign of upbringing."],
+          "poemExample": "Парасат – жүрек пен ақылдың үндестігі.",
+          "writingExample": "Кейіпкер парасаттылығымен ерекшеленді.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Қиял",
+          "audioUrl": "mp3/word4.mp3",
+          "meaningKz": "Адамның ойында шындыққа жанасатын немесе жанаспайтын бейнелерді елестету қабілеті",
+          "meaningRu": "Способность создавать образы в сознании, реальные или фантастические",
+          "meaningEn": "The ability to form mental images, whether real or fantasy",
+          "etymologyKz": "Араб тілінен енген «хаяль» – елес, елестету",
+          "etymologyRu": "Происходит от арабского «хаяль» — образ, фантазия",
+          "etymologyEn": "From Arabic 'khayal' meaning image or illusion",
+          "examplesKz": ["Қиял – шығармашылықтың негізі.", "Бала қиялмен ойнайды."],
+          "examplesRu": ["Воображение – основа творчества.", "Ребенок играет в своем воображении."],
+          "examplesEn": ["Imagination is the basis of creativity.", "A child plays in their imagination."],
+          "poemExample": "Қиялға қанат байлаған өнер туады.",
+          "writingExample": "Автордың шығармасы қиялға толы.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Таным",
+          "audioUrl": "mp3/word4.mp3",
+
+          "meaningKz": "Адамның білім арқылы әлемді танып-білуі",
+          "meaningRu": "Познавательный процесс через знание",
+          "meaningEn": "The process of knowing the world through knowledge",
+          "etymologyKz": "«Тану» етістігінен туындаған",
+          "etymologyRu": "Происходит от глагола «тану» — узнавать",
+          "etymologyEn": "Derived from Kazakh verb 'tanu' meaning to know or recognize",
+          "examplesKz": ["Таным – ғылымның негізі.", "Баланың танымы ойын арқылы дамиды."],
+          "examplesRu": ["Познание — основа науки.", "Познавательные способности развиваются через игру."],
+          "examplesEn": ["Cognition is the foundation of science.", "Children develop cognition through play."],
+          "poemExample": "Таныммен ашылар әлемнің сыры.",
+          "writingExample": "Ол зерттеуде таным мәселесін көтерді.",
+          "level": "Intermediate"
+        }
+      ]
+
+    },
+    {
+      "sectionKz": "Позитивті комплименттер",
+      "sectionRu": "Положительные комплименты",
+      "sectionEn": "Positive compliments",
+      "imageUrl": "https://ofhsoupkitchen.org/wp-content/uploads/2024/02/stay-positive-quotes-2.jpg",
+      "words": [
+        {
+          "word": "Шырай",
+          "audioUrl": "mp3/compliment1.mp3",
+          "meaningKz": "Көркем келбет, бет ажарының сұлулығы",
+          "meaningRu": "Прекрасный облик, сияние лица",
+          "meaningEn": "Radiance, beauty of one's appearance",
+          "etymology": "Түркі тілінен, «нұр» мен «бет ажары» ұғымдарымен байланысты.",
+          "exampleSentenceKz": "Оның шырайы күндей жарқырап тұр.",
+          "exampleSentenceRu": "Её шырай сиял как солнечный свет.",
+          "exampleSentenceEn": "Her radiance glowed like the sun.",
+          "poemExample": "Шырайың нұр шашқан жазғы күндей.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Наз",
+          "audioUrl": "mp3/compliment2.mp3",
+          "meaningKz": "Әсем қылық, нәзік сезім",
+          "meaningRu": "Очарование, кокетство, нежность",
+          "meaningEn": "Graceful charm, tender allure",
+          "etymology": "Парсы тілінен енген, «нәзіктік» мағынасында.",
+          "exampleSentenceKz": "Назды күлкісімен жүректі баурады.",
+          "exampleSentenceRu": "Она покорила сердце своим нежным смехом.",
+          "exampleSentenceEn": "She captured hearts with her tender smile.",
+          "poemExample": "Наздана күлгенде, гүл де ұялар.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Көркем",
+          "audioUrl": "mp3/compliment3.mp3",
+          "meaningKz": "Сұлулығы мен үйлесімділігі ерекше",
+          "meaningRu": "Прекрасный, эстетически гармоничный",
+          "meaningEn": "Beautiful, aesthetically graceful",
+          "etymology": "Қазақтың көркемөнер ұғымымен байланысты.",
+          "exampleSentenceKz": "Көркем бейнесі жүректе сақталады.",
+          "exampleSentenceRu": "Её красивый образ останется в памяти.",
+          "exampleSentenceEn": "Her graceful figure will remain in memory.",
+          "poemExample": "Көркем келбет – көздің нұры.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Асыл",
+          "audioUrl": "mp3/compliment4.mp3",
+          "meaningKz": "Құнды, таза, мінсіз қасиет иесі",
+          "meaningRu": "Драгоценный, благородный",
+          "meaningEn": "Noble, pure, precious",
+          "etymology": "Қазақша «асыл тас» сөзінен, рухани байлықты білдіреді.",
+          "exampleSentenceKz": "Асыл қасиет адамды биік етеді.",
+          "exampleSentenceRu": "Благородство возвышает человека.",
+          "exampleSentenceEn": "Nobility elevates a person.",
+          "poemExample": "Асыл жандар алтыннан да қымбат.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Сабырлы",
+          "audioUrl": "mp3/compliment5.mp3",
+          "meaningKz": "Салмақты, байсалды мінезді адам",
+          "meaningRu": "Спокойный, уравновешенный",
+          "meaningEn": "Calm, composed",
+          "etymology": "Араб тілінен «сабыр» — төзім деген мағынада.",
+          "exampleSentenceKz": "Сабырлы жан дауылда да тыныш.",
+          "exampleSentenceRu": "Спокойный человек остаётся невозмутим даже в бурю.",
+          "exampleSentenceEn": "A calm soul stays still even in storms.",
+          "poemExample": "Сабыр – ақылдың айғағы.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Сәнді",
+          "audioUrl": "mp3/compliment6.mp3",
+          "meaningKz": "Талғаммен киінетін, жарасымды адам",
+          "meaningRu": "Элегантный, со вкусом одетый",
+          "meaningEn": "Stylish, elegant",
+          "etymology": "«Сән» сөзі – түрік тілінен шыққан сән-салтанат ұғымы.",
+          "exampleSentenceKz": "Сәнді киімімен көзге түсті.",
+          "exampleSentenceRu": "Она выделялась своим элегантным нарядом.",
+          "exampleSentenceEn": "She stood out in her elegant outfit.",
+          "poemExample": "Сәніңмен сымбаттанып тұрсың бүгін.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Жадыраңқы",
+          "audioUrl": "mp3/compliment7.mp3",
+          "meaningKz": "Көңілді, жарқын мінезді адам",
+          "meaningRu": "Весёлый, жизнерадостный",
+          "meaningEn": "Cheerful, radiant personality",
+          "etymology": "«Жадырау» етістігінен – көңілдің ашықтығы.",
+          "exampleSentenceKz": "Жадыраңқы жүзінен қуаныш көрінеді.",
+          "exampleSentenceRu": "На её лице сияла радость.",
+          "exampleSentenceEn": "Her face shone with joy.",
+          "poemExample": "Жадыраған жүзіңмен таңды аштың.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Ілтипатты",
+          "audioUrl": "mp3/compliment8.mp3",
+          "meaningKz": "Ізетті, құрмет көрсететін жан",
+          "meaningRu": "Вежливый, уважительный",
+          "meaningEn": "Respectful, courteous",
+          "etymology": "Араб тілінен, «ілтипат» – құрмет, назар аудару.",
+          "exampleSentenceKz": "Ілтипатты сөзімен жүрекке жол табады.",
+          "exampleSentenceRu": "Своей вежливостью он нашёл путь к сердцу.",
+          "exampleSentenceEn": "With politeness, he found his way into hearts.",
+          "poemExample": "Ілтипаты – жүрек кілті.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Байсалды",
+          "audioUrl": "mp3/compliment9.mp3",
+          "meaningKz": "Тыныш, ойлы, тұрақты адам мінезі",
+          "meaningRu": "Разумный, уравновешенный",
+          "meaningEn": "Thoughtful, steady",
+          "etymology": "Қазақша «байсал» – тыныштық, орнықтылық мағынасынан.",
+          "exampleSentenceKz": "Байсалды адам шешімін асықпай қабылдайды.",
+          "exampleSentenceRu": "Разумный человек не торопится с решениями.",
+          "exampleSentenceEn": "A steady person doesn’t rush decisions.",
+          "poemExample": "Байсалдылық – даналықтың белгісі.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        },
+        {
+          "word": "Тартымды",
+          "audioUrl": "mp3/compliment10.mp3",
+          "meaningKz": "Қызықты, өзіне тартатын, сүйкімді",
+          "meaningRu": "Привлекательный, обаятельный",
+          "meaningEn": "Attractive, charming",
+          "etymology": "«Тарту» етістігінен – тарту, қызықтыру мағынасында.",
+          "exampleSentenceKz": "Тартымды күлкісімен бәрін баурап алды.",
+          "exampleSentenceRu": "Своей обаятельной улыбкой он покорил всех.",
+          "exampleSentenceEn": "His charming smile won everyone over.",
+          "poemExample": "Тартымдылық – табиғи сұлулық.",
+          "level": "Intermediate",
+          "isFavorite": false,
+          "isLearned": false
+        }
+      ]
+    },
+    {
+      "sectionKz": "Теріс мадақ",
+      "sectionRu": "Негативные комплименты",
+      "sectionEn": "Negative compliments",
+      "imageUrl": "https://www.techexplorist.com/wp-content/uploads/2019/03/negative-emotions.jpg",
+      "words": [
+        {
+          "word": "Жасанды",
+          "audioUrl": "mp3/negative6.mp3",
+          "meaningKz": "Табиғи емес, жасалмалы",
+          "meaningRu": "Искусственный, неестественный",
+          "meaningEn": "Artificial, not genuine",
+          "etymologyKz": "«Жасау» сөзінен туындаған",
+          "etymologyRu": "Происходит от слова «жасау»",
+          "etymologyEn": "From Kazakh root 'to make/create'",
+          "examplesKz": ["Күлкісі тым жасанды көрінді.", "Жасанды мінез сенім туғызбайды."],
+          "examplesRu": ["Её улыбка казалась слишком искусственной.", "Искусственное поведение не вызывает доверия."],
+          "examplesEn": ["Her smile seemed too fake.", "Artificial manners don't inspire trust."],
+          "poemExample": "Жасанды жан – шынайылықтан алыс.",
+          "writingExample": "Ол жасанды күлкісімен бәрін таң қалдырды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Ауыр мінезді",
+          "audioUrl": "mp3/negative7.mp3",
+          "meaningKz": "Көңілсіз, ашық емес, тұйық",
+          "meaningRu": "Замкнутый, тяжёлый характер",
+          "meaningEn": "Difficult personality, closed-off",
+          "etymologyKz": "Қазақша сипаттама тіркесі",
+          "etymologyRu": "Казахское описательное выражение",
+          "etymologyEn": "Kazakh descriptive phrase meaning 'hard to deal with'",
+          "examplesKz": ["Ауыр мінезді адаммен жұмыс қиын.", "Мінезі ауыр – жүрегі жұмсақ емес."],
+          "examplesRu": ["С тяжёлым человеком сложно работать.", "Тяжёлый характер – не мягкое сердце."],
+          "examplesEn": ["It's hard to work with a heavy personality.", "Heavy character isn't a soft heart."],
+          "poemExample": "Ауыр мінез – жеңіл жүріс емес.",
+          "writingExample": "Ол – ауыр мінезді болса да, әділ адам.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Салғырт",
+          "audioUrl": "mp3/negative8.mp3",
+          "meaningKz": "Назар аудармайтын, немқұрайлы",
+          "meaningRu": "Небрежный, халатный",
+          "meaningEn": "Careless, inattentive",
+          "etymologyKz": "Қазақтың байырғы сөзі",
+          "etymologyRu": "Староказахское слово",
+          "etymologyEn": "Traditional Kazakh word",
+          "examplesKz": ["Салғырттық – жауапсыздық белгісі.", "Ол жұмысына салғырт қарайды."],
+          "examplesRu": ["Халатность — признак безответственности.", "Он халатно относится к работе."],
+          "examplesEn": ["Negligence is a sign of irresponsibility.", "He's careless about his job."],
+          "poemExample": "Салғырт жаннан үміт күтпе.",
+          "writingExample": "Салғырт жауаптарымен ұстазын ренжітті.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Жалтақ",
+          "audioUrl": "mp3/negative9.mp3",
+          "meaningKz": "Өз ойын ашық айта алмайтын",
+          "meaningRu": "Робкий, нерешительный",
+          "meaningEn": "Timid, hesitant",
+          "etymologyKz": "Қазақ сөзі, бейнелі мағынада",
+          "etymologyRu": "Казахское образное слово",
+          "etymologyEn": "Kazakh expressive term",
+          "examplesKz": ["Жалтақ адамнан көшбасшы шықпайды.", "Жалтақтау – сенімсіздік көрінісі."],
+          "examplesRu": ["Робкий человек не станет лидером.", "Робость — признак неуверенности."],
+          "examplesEn": ["A timid person can't lead.", "Timidity reflects insecurity."],
+          "poemExample": "Жалтақтық – батылдықтың жауы.",
+          "writingExample": "Жалтақ көзқарасы бәрін ыңғайсыздандырды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Таркөкірек",
+          "audioUrl": "mp3/negative10.mp3",
+          "meaningKz": "Ой-өрісі тар, ашық пікірге жабық",
+          "meaningRu": "Ограниченный, узкомыслящий",
+          "meaningEn": "Narrow-minded",
+          "etymologyKz": "«Тар» және «көкірек» сөздерінен",
+          "etymologyRu": "Из слов «тар» и «көкірек»",
+          "etymologyEn": "From 'narrow' and 'chest/mind'",
+          "examplesKz": ["Таркөкірек адаммен пікір алмасу қиын.", "Таркөкіректік – білімсіздік белгісі."],
+          "examplesRu": ["С узкомыслящим трудно спорить.", "Узость мышления — признак невежества."],
+          "examplesEn": ["Debating a narrow-minded person is hard.", "Narrow-mindedness signals ignorance."],
+          "poemExample": "Таркөкірек – ойдың тұмша түбі.",
+          "writingExample": "Ол таркөкірек пікірімен бәрін шектеді.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Кекшіл",
+          "audioUrl": "mp3/negative11.mp3",
+          "meaningKz": "Ренжігенін ұмытпайтын, кек сақтайтын",
+          "meaningRu": "Злопамятный, мстительный",
+          "meaningEn": "Vindictive, holds grudges",
+          "etymologyKz": "«Кек» сөзінен туындаған",
+          "etymologyRu": "Происходит от слова «кек»",
+          "etymologyEn": "Derived from 'kek' (revenge)",
+          "examplesKz": ["Кекшіл адаммен татуласу қиын.", "Кекшілдік – жүректің ауыртпалығы."],
+          "examplesRu": ["Со злопамятным тяжело мириться.", "Злопамятность – тяжесть на сердце."],
+          "examplesEn": ["It's hard to reconcile with a vindictive person.", "Grudge-bearing weighs down the heart."],
+          "poemExample": "Кекшіл жүрек – тыныштықсыз өмір.",
+          "writingExample": "Оның кекшілдігі достығымызға кедергі болды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Сылбыр",
+          "audioUrl": "mp3/negative12.mp3",
+          "meaningKz": "Баяу, шапшаң емес, әрекеті баяу",
+          "meaningRu": "Медлительный, вялый",
+          "meaningEn": "Slow, sluggish",
+          "etymologyKz": "Қазақтың көнерген сөзі",
+          "etymologyRu": "Староказахское слово",
+          "etymologyEn": "Old Kazakh word",
+          "examplesKz": ["Сылбыр қимылы іске бөгет болады.", "Сылбырлық – ниетсіздіктің белгісі."],
+          "examplesRu": ["Медлительность мешает делу.", "Вялость — знак безразличия."],
+          "examplesEn": ["Sluggishness delays work.", "Lethargy shows lack of will."],
+          "poemExample": "Сылбыр аяқ – шапшаңға жүк.",
+          "writingExample": "Сылбыр әрекетімен топтан қалып қойды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Селқос",
+          "audioUrl": "mp3/negative1.mp3",
+          "meaningKz": "Қызығушылығы жоқ, енжар",
+          "meaningRu": "Безразличный, пассивный",
+          "meaningEn": "Apathetic, indifferent",
+          "etymologyKz": "Түркі тілдерінен енген",
+          "etymologyRu": "Происходит из тюркских языков",
+          "etymologyEn": "Derived from Turkic languages",
+          "examplesKz": ["Оның селқос көзқарасы бәрін ренжітті.", "Селқостық – қарым-қатынасқа кедергі."],
+          "examplesRu": ["Его безразличный взгляд всех обидел.", "Безразличие мешает общению."],
+          "examplesEn": ["His apathetic look upset everyone.", "Apathy hinders communication."],
+          "poemExample": "Селқос жаннан сезім шықпас.",
+          "writingExample": "Сабаққа селқос қатысқаны байқалды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Өркөкірек",
+          "audioUrl": "mp3/negative2.mp3",
+          "meaningKz": "Көзге көрінетіндей тәкаппар",
+          "meaningRu": "Высокомерный, надменный",
+          "meaningEn": "Arrogant, conceited",
+          "etymologyKz": "«Өр» және «көкірек» сөздерінен құралған",
+          "etymologyRu": "Сложено из слов «өр» и «көкірек»",
+          "etymologyEn": "Composed of 'өр' (pride) and 'көкірек' (chest/pride)",
+          "examplesKz": ["Ол өркөкірек мінезімен танымал.", "Өркөкіректік – кішіпейілділікке қарсы."],
+          "examplesRu": ["Он известен своим высокомерием.", "Высокомерие противоположно скромности."],
+          "examplesEn": ["He is known for his arrogance.", "Arrogance is the opposite of humility."],
+          "poemExample": "Өркөкірек жанды ел ұнатпас.",
+          "writingExample": "Өркөкірек сөзімен бәрін шошытты.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Сырттай әдемі",
+          "audioUrl": "mp3/negative3.mp3",
+          "meaningKz": "Тек сырт келбеті жақсы, іші бос",
+          "meaningRu": "Красив снаружи, пустой внутри",
+          "meaningEn": "Nice-looking but shallow",
+          "etymologyKz": "Қос сөз тіркесі ретінде қолданылған",
+          "etymologyRu": "Фраза из двух слов",
+          "etymologyEn": "Phrase combining 'outside' and 'beautiful'",
+          "examplesKz": ["Сырттай әдемі, бірақ сөйлесе алмайсың.", "Сырттай әдемілік алдамшы."],
+          "examplesRu": ["Выглядит красиво, но общаться сложно.", "Внешняя красота обманчива."],
+          "examplesEn": ["Looks nice but hard to talk to.", "External beauty is deceptive."],
+          "poemExample": "Сырттай әдемі – іші бос.",
+          "writingExample": "Сырттай әдемі болғанымен, мінезі ауыр.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Мақтаншақ",
+          "audioUrl": "mp3/negative4.mp3",
+          "meaningKz": "Өзін тым жоғары бағалайтын",
+          "meaningRu": "Хвастливый, самодовольный",
+          "meaningEn": "Boastful, self-important",
+          "etymologyKz": "«Мақтан» сөзінен туындаған",
+          "etymologyRu": "Происходит от слова «маҡтан»",
+          "etymologyEn": "Derived from 'maqtan' (boast)",
+          "examplesKz": ["Мақтаншақ адаммен сөйлесу қиын.", "Мақтану – кемшілік белгісі."],
+          "examplesRu": ["С хвастливым человеком тяжело.", "Хвастовство — признак недостатка."],
+          "examplesEn": ["Talking to a boastful person is hard.", "Boasting is a flaw."],
+          "poemExample": "Мақтаншақтың сөзі көп, ісі аз.",
+          "writingExample": "Мақтаншақ мінезі оны жақтырмауға себеп болды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Мылжың",
+          "audioUrl": "mp3/negative5.mp3",
+          "meaningKz": "Көп және мәнсіз сөйлейтін",
+          "meaningRu": "Болтливый, говорит без смысла",
+          "meaningEn": "Talkative, meaningless chatterer",
+          "etymologyKz": "Қазақ тіліндегі бейнелі сөз",
+          "etymologyRu": "Ономатопоэтическое слово в казахском",
+          "etymologyEn": "Onomatopoeic Kazakh word for excessive speech",
+          "examplesKz": ["Мылжың адаммен уақыт босқа өтеді.", "Мылжыңдық – сабырсыздықтың белгісі."],
+          "examplesRu": ["С болтливым человеком теряешь время.", "Болтливость — признак нетерпения."],
+          "examplesEn": ["You waste time with a chatterbox.", "Chattiness shows impatience."],
+          "poemExample": "Мылжың тілді ел тыңдамас.",
+          "writingExample": "Жиында мылжың сөзімен жүйке тоздырды.",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "sectionKz": "Сирек және көркем сөздер",
+      "sectionRu": "Редкие и красивые слова",
+      "sectionEn": "Rare & Beautiful Words",
+      "imageUrl": "https://bilim-all.kz//uploads/images/2016/09/27/original/bbb10fb83c3f191320b24d84c4430947.jpg",
+      "words": [
+        {
+          "word": "Мерей",
+          "audioUrl": "mp3/word11.mp3",
+          "meaningKz": "Адамның абыройы, қуанышы мен беделі",
+          "meaningRu": "Достоинство, радость и авторитет человека",
+          "meaningEn": "Honor, joy, and prestige of a person",
+          "etymologyKz": "Көне түркі тілінен – «бедел» мағынасында",
+          "etymologyRu": "Из древнетюркского – означает «престиж»",
+          "etymologyEn": "From Old Turkic, meaning 'prestige'",
+          "examplesKz": ["Оның мерейі үстем болды.", "Мерейлі сәттер есте қалады."],
+          "examplesRu": ["Его достоинство возросло.", "Памятные моменты радости остаются в сердце."],
+          "examplesEn": ["His prestige was elevated.", "Joyful moments remain in memory."],
+          "poemExample": "Мерейің тасысын – көңілің ашысын.",
+          "writingExample": "Мерейі үстем болған елдің болашағы зор.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Самал",
+          "audioUrl": "mp3/word12.mp3",
+          "meaningKz": "Жеңіл жел, табиғаттың жұмсақ тынысы",
+          "meaningRu": "Лёгкий ветерок, нежное дыхание природы",
+          "meaningEn": "Gentle breeze, soft breath of nature",
+          "etymologyKz": "Қазақ поэзиясында жиі кездесетін сөз",
+          "etymologyRu": "Часто встречается в казахской поэзии",
+          "etymologyEn": "Commonly used in Kazakh poetry",
+          "examplesKz": ["Самал жел бетімді аймалады.", "Кешкі самал жанға жайлылық сыйлады."],
+          "examplesRu": ["Ветерок ласкал моё лицо.", "Вечерний бриз подарил спокойствие."],
+          "examplesEn": ["The breeze caressed my face.", "The evening breeze brought comfort."],
+          "poemExample": "Самал желдей сыбыр еткен сезім.",
+          "writingExample": "Самалмен бірге ой да ұшады.",
+          "level": "Beginner"
+        },
+        {
+          "word": "Ғұмыр",
+          "audioUrl": "mp3/word13.mp3",
+          "meaningKz": "Өмір, тіршілік ету мерзімі",
+          "meaningRu": "Жизнь, продолжительность существования",
+          "meaningEn": "Life, span of existence",
+          "etymologyKz": "Араб тілінен енген – «өмір» мағынасында",
+          "etymologyRu": "Заимствовано из арабского – означает «жизнь»",
+          "etymologyEn": "Borrowed from Arabic, meaning ‘life’",
+          "examplesKz": ["Ғұмыр бір-ақ рет беріледі.", "Ұзақ ғұмыр тіледім."],
+          "examplesRu": ["Жизнь даётся один раз.", "Я пожелал долгой жизни."],
+          "examplesEn": ["Life is given only once.", "I wished for a long life."],
+          "poemExample": "Ғұмыр – жалғыз ғана сапар.",
+          "writingExample": "Ол өз ғұмырын халқына арнады.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Таңсәрі",
+          "audioUrl": "mp3/word14.mp3",
+          "meaningKz": "Күннің алғаш атуы, таңның жаңа бастауы",
+          "meaningRu": "Рассвет, начало нового дня",
+          "meaningEn": "Dawn, beginning of a new day",
+          "etymologyKz": "Түркі тілінен – «таң» және «сәрі» (ерте) қосындысы",
+          "etymologyRu": "От тюркских слов «таң» (утро) и «сәрі» (ранний)",
+          "etymologyEn": "From Turkic words 'tañ' (morning) and 'sari' (early)",
+          "examplesKz": ["Таңсәріде құстар ән салады.", "Таңсәрі табиғаттың тыныштығын білдіреді."],
+          "examplesRu": ["На рассвете поют птицы.", "Рассвет символизирует покой природы."],
+          "examplesEn": ["Birds sing at dawn.", "Dawn symbolizes nature’s calm."],
+          "poemExample": "Таңсәрі – жаңа үміттің нышаны.",
+          "writingExample": "Жазушы таңсәріні ерекше сипаттады.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Көңіл",
+          "audioUrl": "mp3/word15.mp3",
+          "meaningKz": "Ішкі күй, сезім әлемі, жан дүниесі",
+          "meaningRu": "Настроение, внутреннее состояние души",
+          "meaningEn": "Mood, emotional state, inner world",
+          "etymologyKz": "Қазақ тілінде кең мағынада қолданылатын терең ұғым",
+          "etymologyRu": "Глубокое понятие, широко используемое в казахском языке",
+          "etymologyEn": "A deep concept widely used in Kazakh language",
+          "examplesKz": ["Көңілі пәс еді.", "Көңілсіз күндер де өтеді."],
+          "examplesRu": ["У него было плохое настроение.", "И пасмурные дни проходят."],
+          "examplesEn": ["He was in low spirits.", "Even gloomy days pass."],
+          "poemExample": "Көңіл – жүректің үнсіз әуені.",
+          "writingExample": "Ол шығармаларында адам көңілін терең сипаттайды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Наз",
+          "audioUrl": "mp3/word6.mp3",
+          "meaningKz": "Сезімтал нәзіктік, еркелік, көңілге әсер ететін жұмсақ мінез",
+          "meaningRu": "Нежность, кокетство, ласковое выражение чувств",
+          "meaningEn": "Tenderness, soft emotional expression, coyness",
+          "etymologyKz": "Қазақ халқының поэтикалық тілінде жиі қолданылған",
+          "etymologyRu": "Часто используется в поэтической казахской речи",
+          "etymologyEn": "Common in poetic Kazakh language",
+          "examplesKz": ["Назды қыздың күлкісі жүректі елжіретеді.", "Ол маған назбен қарады."],
+          "examplesRu": ["Улыбка нежной девушки тронула сердце.", "Она посмотрела на меня с лаской."],
+          "examplesEn": ["The gentle girl’s smile softened the heart.", "She looked at me with tenderness."],
+          "poemExample": "Наз – гүлдің сыбдыры, жүректің сыры.",
+          "writingExample": "Ақын оның назды күлкісін жырға қосты.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Қиял",
+          "audioUrl": "mp3/word7.mp3",
+          "meaningKz": "Арман, елестету, ойша бейне жасау",
+          "meaningRu": "Фантазия, воображение, мечта",
+          "meaningEn": "Imagination, dream, mental imagery",
+          "etymologyKz": "Араб тілінен енген – «иллюзия» деген мағынада",
+          "etymologyRu": "Заимствовано из арабского – означает «иллюзия»",
+          "etymologyEn": "Borrowed from Arabic meaning ‘illusion’",
+          "examplesKz": ["Қиялы ұшқыр бала – шығармашыл болады.", "Ол қиялында жаңа әлем құрды."],
+          "examplesRu": ["Ребенок с богатым воображением будет креативным.", "В воображении он создал новый мир."],
+          "examplesEn": ["A child with vivid imagination grows creative.", "He built a new world in his mind."],
+          "poemExample": "Қиял – еркіндік, шектеусіз самғау.",
+          "writingExample": "Жазушы өз қиялын романға арқау етті.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Асау",
+          "audioUrl": "mp3/word8.mp3",
+          "meaningKz": "Тәуелсіз, жуас емес, шеңберге сыймайтын",
+          "meaningRu": "Непокорный, дикий, своенравный",
+          "meaningEn": "Untamed, wild, free-spirited",
+          "etymologyKz": "Мал шаруашылығынан шыққан – асау жылқы",
+          "etymologyRu": "Происходит от скотоводства – необъезженная лошадь",
+          "etymologyEn": "Originates from livestock context – unbroken horse",
+          "examplesKz": ["Асау желдей есіп өтті.", "Бала асау мінезімен ерекшеленді."],
+          "examplesRu": ["Он пронёсся, как дикий ветер.", "Мальчик был известен своим строптивым нравом."],
+          "examplesEn": ["He passed by like a wild wind.", "The boy was known for his rebellious spirit."],
+          "poemExample": "Асау жүрек шеңберге бағынбайды.",
+          "writingExample": "Ақын асау табиғатты бейнеледі.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Шуағ",
+          "audioUrl": "mp3/word9.mp3",
+          "meaningKz": "Күн сәулесі, жылылық пен мейірімділік символы",
+          "meaningRu": "Солнечный свет, символ тепла и доброты",
+          "meaningEn": "Sunlight, symbol of warmth and kindness",
+          "etymologyKz": "Табиғатпен байланысты көне түркі сөзі",
+          "etymologyRu": "Древнетюркское слово, связанное с природой",
+          "etymologyEn": "Old Turkic word tied to nature",
+          "examplesKz": ["Анасының шуағы жүрегін жылытты.", "Көктемнің алғашқы шуағы жанды."],
+          "examplesRu": ["Материнское тепло согрело его душу.", "Весеннее солнце оживило сердце."],
+          "examplesEn": ["A mother’s warmth comforted his heart.", "Spring’s first rays revived the soul."],
+          "poemExample": "Шуақ төгілген жан – жарыққа толы.",
+          "writingExample": "Ол оқырманға шуақ сыйлайтын жазушы еді.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Арман",
+          "audioUrl": "mp3/word10.mp3",
+          "meaningKz": "Асқақ тілек, орындалуын қалайтын қиял",
+          "meaningRu": "Мечта, высокое стремление",
+          "meaningEn": "Dream, noble aspiration",
+          "etymologyKz": "Түркі тілінен – «тілек» мағынасында",
+          "etymologyRu": "Из тюркского – означает «желание»",
+          "etymologyEn": "From Turkic, meaning ‘desire’",
+          "examplesKz": ["Армансыз адам – қанатсыз құс.", "Арманы орындалды."],
+          "examplesRu": ["Человек без мечты — как птица без крыльев.", "Его мечта сбылась."],
+          "examplesEn": ["A man without a dream is like a bird without wings.", "His dream came true."],
+          "poemExample": "Арман – жүрекке жол ашатын шырақ.",
+          "writingExample": "Ол арманын ақ параққа түсірді.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Ғұмыр",
+          "audioUrl": "mp3/word1.mp3",
+          "meaningKz": "Өмір, тіршілік ету мерзімі",
+          "meaningRu": "Жизнь, продолжительность существования",
+          "meaningEn": "Life, the span of existence",
+          "etymologyKz": "Араб тілінен енген, «өмір» мағынасында",
+          "etymologyRu": "Заемка из арабского, означает «жизнь»",
+          "etymologyEn": "Borrowed from Arabic meaning 'life'",
+          "examplesKz": ["Ұзақ ғұмыр кеш!", "Ғұмыры өнегелі өтті."],
+          "examplesRu": ["Живи долгую жизнь!", "Он прожил достойную жизнь."],
+          "examplesEn": ["Live a long life!", "He lived a meaningful life."],
+          "poemExample": "Ғұмыр – ағын судай, тоқтамай ағады.",
+          "writingExample": "Ол өзінің қысқа ғұмырында көп нәрсеге үлгерді.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Көңіл",
+          "audioUrl": "mp3/word2.mp3",
+          "meaningKz": "Ішкі сезім, рухани күй",
+          "meaningRu": "Внутреннее чувство, духовное состояние",
+          "meaningEn": "Inner feeling, emotional state",
+          "etymologyKz": "Ежелгі түркі тілінен – жүрекпен байланысты ұғым",
+          "etymologyRu": "Из древнетюркского, связано с сердцем",
+          "etymologyEn": "From Old Turkic, concept tied to the heart",
+          "examplesKz": ["Көңілі таза адам – бақытты адам.", "Оның көңілі түсіп кетті."],
+          "examplesRu": ["Чистосердечный человек — счастливый.", "Его настроение ухудшилось."],
+          "examplesEn": ["A pure-hearted person is a happy one.", "His mood declined."],
+          "poemExample": "Көңіл – көктем желіндей, сезімге толы.",
+          "writingExample": "Ол әңгімені көңілмен тыңдады.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Шабыт",
+          "audioUrl": "mp3/word3.mp3",
+          "meaningKz": "Ішкі серпін, шығармашылыққа итермелеуші рух",
+          "meaningRu": "Вдохновение, творческий импульс",
+          "meaningEn": "Inspiration, creative impulse",
+          "etymologyKz": "Қазақтың поэзия тілінде ертеден қолданылған сөз",
+          "etymologyRu": "Используется в казахской поэзии с древних времен",
+          "etymologyEn": "Used in Kazakh poetry since ancient times",
+          "examplesKz": ["Шабытсыз өнер – жансыз дене.", "Ол шабыттанып, өлең жазды."],
+          "examplesRu": ["Без вдохновения нет искусства.", "Он вдохновился и написал стих."],
+          "examplesEn": ["Art without inspiration is lifeless.", "He was inspired and wrote a poem."],
+          "poemExample": "Шабыт – жанның қанаты.",
+          "writingExample": "Көрмеден кейін оның шабыт көзі ашылды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Жанар",
+          "audioUrl": "mp3/word4.mp3",
+          "meaningKz": "Көз, қарашық; көзқарастың бейнесі",
+          "meaningRu": "Взгляд, зрачок; отражение души",
+          "meaningEn": "Gaze, pupil; reflection of the soul",
+          "etymologyKz": "«Жан» (рух, душа) мен «ар» (жарқырау, нұр) түбірлерінен",
+          "etymologyRu": "От корней «жан» и «ар» — душа и сияние",
+          "etymologyEn": "From roots 'zhan' (soul) and 'ar' (shine)",
+          "examplesKz": ["Оның жанары мұңға толы еді.", "Жанардан сезім байқалады."],
+          "examplesRu": ["Ее взгляд был полон грусти.", "Через глаза выражаются чувства."],
+          "examplesEn": ["Her gaze was filled with sorrow.", "Emotions are seen through the eyes."],
+          "poemExample": "Жанар – үнсіз сыршы, тілсіз жыршы.",
+          "writingExample": "Кейіпкердің жанарында үміт оты жанды.",
+          "level": "Intermediate"
+        },
+        {
+          "word": "Мұң",
+          "audioUrl": "mp3/word5.mp3",
+          "meaningKz": "Жан күйзелісі, терең қайғы не сағыныш сезімі",
+          "meaningRu": "Печаль, тоска, глубокое внутреннее чувство",
+          "meaningEn": "Sorrow, longing, deep emotional state",
+          "etymologyKz": "Ескі түркі тілінде «мұң» – күйзеліс мағынасында",
+          "etymologyRu": "Древнетюркское слово, означает печаль",
+          "etymologyEn": "From Old Turkic meaning grief or sorrow",
+          "examplesKz": ["Көзінде мұң бар еді.", "Мұңлы әуен жүректі қозғайды."],
+          "examplesRu": ["В ее глазах была печаль.", "Грустная мелодия тронула сердце."],
+          "examplesEn": ["There was sorrow in her eyes.", "A melancholic melody stirred the heart."],
+          "poemExample": "Мұң – жүрекке ұялаған үнсіз жылау.",
+          "writingExample": "Кейіпкердің бейнесі мұңмен көмкерілген.",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "sectionKz": "Культура",
+      "sectionRu": "Культура",
+      "sectionEn": "Culture",
+      "imageUrl": "https://bilis.com/wp-content/uploads/2017/05/traduction-et-culture.jpg",
+      "words": [
+        {
+          "wordKz": "Салт-дәстүр",
+          "wordRu": "Традиция",
+          "wordEn": "Tradition",
+          "meaningKz": "Халықтың өміріндегі қалыптасқан әдет-ғұрыптар мен ережелер жиынтығы",
+          "meaningRu": "Совокупность обычаев и правил, сложившихся в жизни народа",
+          "meaningEn": "A collection of customs and rules established in the life of a nation",
+          "etymologyKz": "Түркі сөздерінен құралған: 'салт' (обычай) + 'дәстүр' (традиция)",
+          "etymologyRu": "Состоит из тюркских слов: 'салт' (обычай) + 'дәстүр' (традиция)",
+          "etymologyEn": "Composed of Turkic words: 'salt' (custom) + 'dästür' (tradition)",
+          "examplesKz": [
+            "Қазақ халқының салт-дәстүрі өте бай.",
+            "Наурыз – қазақтың ежелгі салт-дәстүрінің бірі."
+          ],
+          "examplesRu": [
+            "Традиции казахского народа очень богаты.",
+            "Наурыз – одна из древних традиций казахов."
+          ],
+          "examplesEn": [
+            "Kazakh national traditions are very rich.",
+            "Nauryz is one of the ancient Kazakh traditions."
+          ],
+          "poemExample": "Салт-дәстүр – ұлттың өзегі.",
+          "writingExample": "Біздің отбасымызда қонақтарды қарсы алудың ерекше салт-дәстүрі бар.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Өнер",
+          "wordRu": "Искусство",
+          "wordEn": "Art",
+          "meaningKz": "Адамның шығармашылық қызметінің нәтижесі, әсемдік пен көркемдік құндылықтарды бейнелейтін сала",
+          "meaningRu": "Результат творческой деятельности человека, область, отражающая эстетические и художественные ценности",
+          "meaningEn": "The result of human creative activity, a field reflecting aesthetic and artistic values",
+          "etymologyKz": "Ежелгі түркі тілінен шыққан",
+          "etymologyRu": "Происходит из древнетюркского языка",
+          "etymologyEn": "Derived from Old Turkic",
+          "examplesKz": [
+            "Қазақ өнері әлемге танымал.",
+            "Мұражайда ежелгі өнер туындылары қойылған."
+          ],
+          "examplesRu": [
+            "Казахское искусство известно во всем мире.",
+            "В музее выставлены произведения древнего искусства."
+          ],
+          "examplesEn": [
+            "Kazakh art is known worldwide.",
+            "Ancient works of art are displayed in the museum."
+          ],
+          "poemExample": "Өнер – өмірдің сәні.",
+          "writingExample": "Ол сурет салу өнерін бала кезінен меңгерген.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Мәдени мұра",
+          "wordRu": "Культурное наследие",
+          "wordEn": "Cultural heritage",
+          "meaningKz": "Ұрпақтан ұрпаққа берілетін рухани және материалдық құндылықтар",
+          "meaningRu": "Духовные и материальные ценности, передаваемые из поколения в поколение",
+          "meaningEn": "Spiritual and material values passed down from generation to generation",
+          "etymologyKz": "Түркі тіліндегі 'мәдени' (культурный) және 'мұра' (наследие) сөздерінен",
+          "etymologyRu": "От тюркских слов 'мәдени' (культурный) и 'мұра' (наследие)",
+          "etymologyEn": "From Turkic words 'mädeni' (cultural) and 'mura' (heritage)",
+          "examplesKz": [
+            "Қазақстанның мәдени мұрасы өте бай.",
+            "Ұлттық мұражайда біздің мәдени мұрамыз сақталған."
+          ],
+          "examplesRu": [
+            "Культурное наследие Казахстана очень богато.",
+            "В Национальном музее хранится наше культурное наследие."
+          ],
+          "examplesEn": [
+            "Kazakhstan's cultural heritage is very rich.",
+            "Our cultural heritage is preserved in the National Museum."
+          ],
+          "poemExample": "Мәдени мұра – ұлттың қазынасы.",
+          "writingExample": "Біз өзіміздің мәдени мұрамызды сақтап, дамытуымыз керек.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Әдебиет",
+          "wordRu": "Литература",
+          "wordEn": "Literature",
+          "meaningKz": "Сөз өнері, жазбаша және ауызша шығармалар жиынтығы",
+          "meaningRu": "Искусство слова, совокупность письменных и устных произведений",
+          "meaningEn": "The art of words, a collection of written and oral works",
+          "etymologyKz": "Араб тіліндегі «әдаб» (тәрбие, әдеп) сөзінен",
+          "etymologyRu": "От арабского слова «адаб» (воспитание, этикет)",
+          "etymologyEn": "From the Arabic word 'adab' (education, etiquette)",
+          "examplesKz": [
+            "Қазақ әдебиеті – рухани қазына.",
+            "Ол қазақ әдебиетін терең зерттеді."
+          ],
+          "examplesRu": [
+            "Казахская литература – духовное сокровище.",
+            "Он глубоко изучал казахскую литературу."
+          ],
+          "examplesEn": [
+            "Kazakh literature is a spiritual treasure.",
+            "He deeply studied Kazakh literature."
+          ],
+          "poemExample": "Әдебиет – сөздің патшасы.",
+          "writingExample": "Мен қазақ әдебиетінің классикалық шығармаларын оқығанды ұнатамын.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Театр",
+          "wordRu": "Театр",
+          "wordEn": "Theater",
+          "meaningKz": "Сахнада көрсетілетін өнер түрі",
+          "meaningRu": "Вид искусства, представляемый на сцене",
+          "meaningEn": "A form of art presented on stage",
+          "etymologyKz": "Грек тіліндегі 'theatron' (көретін орын) сөзінен",
+          "etymologyRu": "От греческого слова 'theatron' (место для зрелищ)",
+          "etymologyEn": "From the Greek word 'theatron' (place for viewing)",
+          "examplesKz": [
+            "Астанада көптеген театрлар бар.",
+            "Театрдағы қойылым өте әсерлі болды."
+          ],
+          "examplesRu": [
+            "В Астане много театров.",
+            "Представление в театре было очень впечатляющим."
+          ],
+          "examplesEn": [
+            "There are many theaters in Astana.",
+            "The performance at the theater was very impressive."
+          ],
+          "poemExample": "Театр – өмірдің айнасы.",
+          "writingExample": "Біз отбасымызбен демалыс күндері театрға бардық.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Музыка",
+          "wordRu": "Музыка",
+          "wordEn": "Music",
+          "meaningKz": "Дыбыстардың үйлесімінен тұратын өнер түрі",
+          "meaningRu": "Вид искусства, состоящий из гармоничного сочетания звуков",
+          "meaningEn": "A form of art consisting of the harmonious combination of sounds",
+          "etymologyKz": "Грек тіліндегі 'mousikē' (музаларға қатысты) сөзінен",
+          "etymologyRu": "От греческого слова 'mousikē' (относящееся к музам)",
+          "etymologyEn": "From the Greek word 'mousikē' (relating to the Muses)",
+          "examplesKz": [
+            "Қазақ музыкасының бай тарихы бар.",
+            "Ол классикалық музыка тыңдағанды жақсы көреді."
+          ],
+          "examplesRu": [
+            "Казахская музыка имеет богатую историю.",
+            "Он любит слушать классическую музыку."
+          ],
+          "examplesEn": [
+            "Kazakh music has a rich history.",
+            "He loves listening to classical music."
+          ],
+          "poemExample": "Музыка – жанның азығы.",
+          "writingExample": "Кешкілік концертте дәстүрлі қазақ музыкасы орындалды.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Би",
+          "wordRu": "Танец",
+          "wordEn": "Dance",
+          "meaningKz": "Ритм мен қозғалыс арқылы сезімді білдіретін өнер түрі",
+          "meaningRu": "Вид искусства, выражающий чувства через ритм и движение",
+          "meaningEn": "A form of art expressing feelings through rhythm and movement",
+          "etymologyKz": "Ежелгі түркі тілінен шыққан",
+          "etymologyRu": "Происходит из древнетюркского языка",
+          "etymologyEn": "Derived from Old Turkic",
+          "examplesKz": [
+            "Қазақ биі өте әсем.",
+            "Ол би үйірмесіне қатысады."
+          ],
+          "examplesRu": [
+            "Казахский танец очень красив.",
+            "Он посещает танцевальный кружок."
+          ],
+          "examplesEn": [
+            "Kazakh dance is very beautiful.",
+            "He attends a dance club."
+          ],
+          "poemExample": "Би – тәннің тілі.",
+          "writingExample": "Тойда қыздар қазақ биін биледі.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Ән",
+          "wordRu": "Песня",
+          "wordEn": "Song",
+          "meaningKz": "Сөз бен әуеннің үйлесімінен тұратын музыкалық шығарма",
+          "meaningRu": "Музыкальное произведение, состоящее из сочетания слов и мелодии",
+          "meaningEn": "A musical composition consisting of a combination of words and melody",
+          "etymologyKz": "Түркі тілінен шыққан",
+          "etymologyRu": "Происходит из тюркского языка",
+          "etymologyEn": "Derived from Turkic",
+          "examplesKz": [
+            "Ол әдемі ән шырқады.",
+            "Бұл ән маған балалық шағымды есіме түсіреді."
+          ],
+          "examplesRu": [
+            "Он спел красивую песню.",
+            "Эта песня напоминает мне о моем детстве."
+          ],
+          "examplesEn": [
+            "He sang a beautiful song.",
+            "This song reminds me of my childhood."
+          ],
+          "poemExample": "Ән – көңілдің ажары.",
+          "writingExample": "Біз кешке қарай қазақтың халық әндерін тыңдадық.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Домбыра",
+          "wordRu": "Домбра",
+          "wordEn": "Dombra",
+          "meaningKz": "Екі ішекті қазақ ұлттық музыкалық аспабы",
+          "meaningRu": "Двухструнный казахский национальный музыкальный инструмент",
+          "meaningEn": "A two-stringed Kazakh national musical instrument",
+          "etymologyKz": "Түркі тектес халықтарға ортақ аспап атауы",
+          "etymologyRu": "Название инструмента, общее для тюркоязычных народов",
+          "etymologyEn": "An instrument name common to Turkic peoples",
+          "examplesKz": [
+            "Домбыра – қазақтың қасиетті аспабы.",
+            "Ол домбырада шебер ойнайды."
+          ],
+          "examplesRu": [
+            "Домбра – священный инструмент казахов.",
+            "Он виртуозно играет на домбре."
+          ],
+          "examplesEn": [
+            "The dombra is a sacred Kazakh instrument.",
+            "He plays the dombra masterfully."
+          ],
+          "poemExample": "Домбыра – қазақтың үні.",
+          "writingExample": "Тойда домбыраның күмбірі естіліп тұрды.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Киіз үй",
+          "wordRu": "Юрта",
+          "wordEn": "Yurt",
+          "meaningKz": "Көшпелі халықтардың дәстүрлі баспанасы",
+          "meaningRu": "Традиционное жилище кочевых народов",
+          "meaningEn": "A traditional dwelling of nomadic peoples",
+          "etymologyKz": "Түркі тіліндегі 'киіз' (войлок) және 'үй' (дом) сөздерінен",
+          "etymologyRu": "От тюркских слов 'киіз' (войлок) и 'үй' (дом)",
+          "etymologyEn": "From Turkic words 'kíiz' (felt) and 'úy' (house)",
+          "examplesKz": [
+            "Киіз үй – қазақтың ұлттық символы.",
+            "Туристер киіз үйге қызығушылық танытты."
+          ],
+          "examplesRu": [
+            "Юрта – национальный символ казахов.",
+            "Туристы проявили интерес к юрте."
+          ],
+          "examplesEn": [
+            "The yurt is a national symbol of Kazakhstan.",
+            "Tourists showed interest in the yurt."
+          ],
+          "poemExample": "Киіз үй – қазақтың құтты мекені.",
+          "writingExample": "Біз Наурыз мерекесінде киіз үй тігіп, қонақ шақырдық.",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "sectionKz": "Philosophy",
+      "sectionRu": "Philosophy",
+      "sectionEn": "Philosophy",
+      "imageUrl": "https://crc.losrios.edu//crc/main/img/social-1200-630/programs-majors-social-share/philosophy-social.jpg",
+      "words": [
+        {
+          "word": "Сәлеметсіз бе",
+          "meaningKz": "Ресми амандасу",
+          "meaningRu": "Формальное приветствие",
+          "meaningEn": "Formal greeting",
+          "etymologyKz": "Араб тіліндегі «салам» сөзінен шыққан",
+          "etymologyRu": "Происходит от арабского слова «салам» — мир",
+          "etymologyEn": "From Arabic 'salam' meaning peace",
+          "examplesKz": ["Сәлеметсіз бе, ағай!", "Сәлемдесу – сыйластықтың белгісі."],
+          "examplesRu": ["Здравствуйте, дядя!", "Приветствие – знак уважения."],
+          "examplesEn": ["Hello, uncle!", "Greeting is a sign of respect."],
+          "poemExample": "Сәлем – сөздің анасы.",
+          "writingExample": "Жазда көршіме «Сәлеметсіз бе» деп амандастым.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Рақмет",
+          "wordRu": "Спасибо",
+          "wordEn": "Thank you",
+          "meaningKz": "Алғыс білдіру",
+          "meaningRu": "Выражение благодарности",
+          "meaningEn": "Expression of gratitude",
+          "etymologyKz": "Арабша «рахмат» сөзінен",
+          "etymologyRu": "Происходит от арабского «рахмат»",
+          "etymologyEn": "From Arabic 'rahmat' meaning mercy/blessing",
+          "examplesKz": ["Көмектескеніңізге рақмет!", "Рақмет айту – әдептілік."],
+          "examplesRu": ["Спасибо за помощь!", "Сказать спасибо – это вежливо."],
+          "examplesEn": ["Thank you for your help!", "Saying thank you is polite."],
+          "poemExample": "Рақмет айтсаң, ризашылық туар.",
+          "writingExample": "Ұстазға сессия соңында рақмет айттым.",
+          "level": "Beginner"
+        }
+      ]
+    },
+    {
+      "sectionKz": "Education",
+      "sectionRu": "Education",
+      "sectionEn": "Education",
+      "imageUrl": "https://sea-ac-ae.s3.me-south-1.amazonaws.com/wp-content/uploads/2024/06/19142849/Cover%402x.png",
+      "words": [
+        {
+          "word": "Сәлеметсіз бе",
+          "meaningKz": "Ресми амандасу",
+          "meaningRu": "Формальное приветствие",
+          "meaningEn": "Formal greeting",
+          "etymologyKz": "Араб тіліндегі «салам» сөзінен шыққан",
+          "etymologyRu": "Происходит от арабского слова «салам» — мир",
+          "etymologyEn": "From Arabic 'salam' meaning peace",
+          "examplesKz": ["Сәлеметсіз бе, ағай!", "Сәлемдесу – сыйластықтың белгісі."],
+          "examplesRu": ["Здравствуйте, дядя!", "Приветствие – знак уважения."],
+          "examplesEn": ["Hello, uncle!", "Greeting is a sign of respect."],
+          "poemExample": "Сәлем – сөздің анасы.",
+          "writingExample": "Жазда көршіме «Сәлеметсіз бе» деп амандастым.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Рақмет",
+          "wordRu": "Спасибо",
+          "wordEn": "Thank you",
+          "meaningKz": "Алғыс білдіру",
+          "meaningRu": "Выражение благодарности",
+          "meaningEn": "Expression of gratitude",
+          "etymologyKz": "Арабша «рахмат» сөзінен",
+          "etymologyRu": "Происходит от арабского «рахмат»",
+          "etymologyEn": "From Arabic 'rahmat' meaning mercy/blessing",
+          "examplesKz": ["Көмектескеніңізге рақмет!", "Рақмет айту – әдептілік."],
+          "examplesRu": ["Спасибо за помощь!", "Сказать спасибо – это вежливо."],
+          "examplesEn": ["Thank you for your help!", "Saying thank you is polite."],
+          "poemExample": "Рақмет айтсаң, ризашылық туар.",
+          "writingExample": "Ұстазға сессия соңында рақмет айттым.",
+          "level": "Beginner"
+        }
+      ]
+    },
+    {
+      "sectionKz": "Daily Life",
+      "sectionRu": "Daily Life",
+      "sectionEn": "Daily Life",
+      "imageUrl": "https://img.freepik.com/free-vector/school-child-schedule_74855-6645.jpg",
+      "words": [
+        {
+          "word": "Сәлеметсіз бе",
+          "meaningKz": "Ресми амандасу",
+          "meaningRu": "Формальное приветствие",
+          "meaningEn": "Formal greeting",
+          "etymologyKz": "Араб тіліндегі «салам» сөзінен шыққан",
+          "etymologyRu": "Происходит от арабского слова «салам» — мир",
+          "etymologyEn": "From Arabic 'salam' meaning peace",
+          "examplesKz": ["Сәлеметсіз бе, ағай!", "Сәлемдесу – сыйластықтың белгісі."],
+          "examplesRu": ["Здравствуйте, дядя!", "Приветствие – знак уважения."],
+          "examplesEn": ["Hello, uncle!", "Greeting is a sign of respect."],
+          "poemExample": "Сәлем – сөздің анасы.",
+          "writingExample": "Жазда көршіме «Сәлеметсіз бе» деп амандастым.",
+          "level": "Intermediate"
+        },
+        {
+          "wordKz": "Рақмет",
+          "wordRu": "Спасибо",
+          "wordEn": "Thank you",
+          "meaningKz": "Алғыс білдіру",
+          "meaningRu": "Выражение благодарности",
+          "meaningEn": "Expression of gratitude",
+          "etymologyKz": "Арабша «рахмат» сөзінен",
+          "etymologyRu": "Происходит от арабского «рахмат»",
+          "etymologyEn": "From Arabic 'rahmat' meaning mercy/blessing",
+          "examplesKz": ["Көмектескеніңізге рақмет!", "Рақмет айту – әдептілік."],
+          "examplesRu": ["Спасибо за помощь!", "Сказать спасибо – это вежливо."],
+          "examplesEn": ["Thank you for your help!", "Saying thank you is polite."],
+          "poemExample": "Рақмет айтсаң, ризашылық туар.",
+          "writingExample": "Ұстазға сессия соңында рақмет айттым.",
+          "level": "Beginner"
+        }
+      ]
+    }
+  ]
+}

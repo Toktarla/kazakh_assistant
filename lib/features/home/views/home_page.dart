@@ -10,16 +10,14 @@ import '../../general-info/views/general_information_page.dart';
 import '../../translation/views/translation_page.dart';
 
 class HomePage extends StatefulWidget {
-  final String userId;
 
-  const HomePage({Key? key, required this.userId}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  final FirestoreService _firestoreService = sl<FirestoreService>();
   int _currentIndex = 0;
   final List<Widget> _pages = [
     GeneralInformationPage(),
@@ -33,14 +31,11 @@ class _HomePageState extends State<HomePage> {
     LocalNotificationService.scheduleDailyMotivationalMessage();
   }
 
-  Future<void> _completeTask() async {
-    await _firestoreService.updateStreak(widget.userId);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[_currentIndex],
+      resizeToAvoidBottomInset: true,
       bottomNavigationBar: SalomonBottomBar(
         currentIndex: _currentIndex,
         onTap: (i) => setState(() => _currentIndex = i),

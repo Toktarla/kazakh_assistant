@@ -10,60 +10,62 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        spacing: 80,
         children: [
-          Container(
-            height: MediaQuery.sizeOf(context).height / 1.4,
-            decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColorLight
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ColorFiltered(
+                colorFilter: ColorFilter.mode(Theme.of(context).iconTheme.color!, BlendMode.srcIn),
+                child: Image.asset(
                   "assets/images/app-logo.png",
                   height: 100,
-                ),
-                const SizedBox(height: 200),
-                Column(
-                  children: [
-                    Text(
-                      'Learn Kazakh',
-                      style: Theme.of(context).textTheme.displayLarge,
-                      textAlign: TextAlign.center,
-                    ).tr(),
-                    const SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(
-                        'Begin your engaging Kazakh language adventure, one spark at a time',
-                        style: Theme.of(context).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.w600),
-                        textAlign: TextAlign.center,
-                      ).tr(),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+                  width: 100,
 
-          const SizedBox(height: 40),
-          CustomButton(
-              text: 'Sign In'.tr(),
-              onPressed: () {
-                Navigator.pushNamed(context, '/Login');
-              },
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 20),
-          TextButton(
-            onPressed: () {
-                Navigator.pushNamed(context, '/Register');
-            },
-            child: Text(
-              'Create a new account',
-              style: Theme.of(context).textTheme.displayLarge?.copyWith(fontSize: 22)
-            ).tr())
-
+          Column(
+            children: [
+              Text(
+                'Learn Kazakh',
+                style: Theme.of(context).textTheme.displayLarge,
+                textAlign: TextAlign.center,
+              ).tr(),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  'Begin your engaging Kazakh language adventure, one spark at a time',
+                  style: Theme.of(context).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.center,
+                ).tr(),
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              CustomButton(
+                  text: 'Sign In'.tr(),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/Login');
+                  },
+              ),
+              const SizedBox(height: 20),
+              TextButton(
+                onPressed: () {
+                    Navigator.pushNamed(context, '/Register');
+                },
+                child: Text(
+                  'Create a new account',
+                  style: Theme.of(context).textTheme.displayLarge?.copyWith(fontSize: 22)
+                ).tr()),
+            ],
+          )
         ],
       ),
     );

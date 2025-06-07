@@ -1,0 +1,655 @@
+{
+  "data": [
+    {
+      "audioUrl": "mp3/extract1.mp3",
+      "titleKz": "Книга слов",
+      "titleRu": "Книга слов",
+      "titleEn": "The Book of Words",
+      "authorKz": "Абай Кунанбаев",
+      "authorRu": "Абай Кунанбаев",
+      "authorEn": "Abai Kunanbaev",
+      "level": "Intermediate",
+      "imageUrl": "https://m.media-amazon.com/images/I/51oKCv6AzTL._AC_UF894,1000_QL80_.jpg",
+      "lines": [
+        {
+          "kz": [
+            "Мен",
+            "өмірімде",
+            "жақсылық",
+            "пен",
+            "жамандықты",
+            "көріп,",
+            "ұзақ",
+            "жол",
+            "жүріп,",
+            "талай",
+            "қиындықты",
+            "бастан",
+            "кешіріп,",
+            "осы",
+            "күнге",
+            "жеттім.",
+            "Енді",
+            "не",
+            "істеуім",
+            "керек?",
+            "Қалай",
+            "өмір",
+            "сүремін?",
+            "Бұл",
+            "сұраққа",
+            "жауап",
+            "таба",
+            "алмай",
+            "отырмын."
+          ],
+          "ru": [
+            "Я",
+            "видел",
+            "в",
+            "своей",
+            "жизни",
+            "добро",
+            "и",
+            "зло",
+            ",",
+            "пройдя",
+            "длинный",
+            "путь",
+            ",",
+            "пережил",
+            "много",
+            "трудностей",
+            ",",
+            "достиг",
+            "этого",
+            "дня.",
+            "Теперь",
+            "что",
+            "мне",
+            "делать?",
+            "Как",
+            "мне",
+            "жить?",
+            "Я",
+            "не",
+            "могу",
+            "найти",
+            "ответ",
+            "на",
+            "этот",
+            "вопрос."
+          ],
+          "en": [
+            "I",
+            "have",
+            "seen",
+            "good",
+            "and",
+            "evil",
+            "in",
+            "my",
+            "life,",
+            "walked",
+            "a",
+            "long",
+            "road,",
+            "endured",
+            "many",
+            "hardships,",
+            "and",
+            "reached",
+            "this",
+            "day.",
+            "Now",
+            "what",
+            "should",
+            "I",
+            "do?",
+            "How",
+            "shall",
+            "I",
+            "live?",
+            "I",
+            "cannot",
+            "find",
+            "an",
+            "answer",
+            "to",
+            "this",
+            "question."
+          ],
+          "translationIndexRu": [
+            [0, 0],
+            [1, 4],
+            [2, 5],
+            [3, 6],
+            [4, 7],
+            [5, 1],
+            [6, 10],
+            [7, 11],
+            [8, 9],
+            [9, 14],
+            [10, 15],
+            [11, 13],
+            [12, 13],
+            [13, 18],
+            [14, 19],
+            [15, 17],
+            [16, 20],
+            [17, 21],
+            [18, 23],
+            [19, 23],
+            [20, 24],
+            [21, 26],
+            [22, 26],
+            [23, 33],
+            [24, 34],
+            [25, 31],
+            [26, 30],
+            [27, 28],
+            [28, 29]
+          ],
+          "translationIndexEn": [
+            [0, 0],
+            [1, 8],
+            [2, 3],
+            [3, 4],
+            [4, 5],
+            [5, 2],
+            [6, 11],
+            [7, 12],
+            [8, 9],
+            [9, 14],
+            [10, 15],
+            [11, 13],
+            [12, 13],
+            [13, 18],
+            [14, 19],
+            [15, 17],
+            [16, 20],
+            [17, 21],
+            [18, 22],
+            [19, 24],
+            [20, 25],
+            [21, 28],
+            [22, 28],
+            [23, 35],
+            [24, 36],
+            [25, 33],
+            [26, 31],
+            [27, 30],
+            [28, 29]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Қахар",
+      "titleRu": "Злость",
+      "titleEn": "Stone Sack",
+      "authorKz": "Ильяс Есенберлин",
+      "authorRu": "Ильяс Есенберлин",
+      "authorEn": "Ilyas Yesenberlin",
+      "level": "Intermediate",
+      "imageUrl": "https://simg.marwin.kz/media/catalog/product/cache/8d1771fdd19ec2393e47701ba45e606d/1/9/esenberlin_aar_kshpendler.jpg",
+      "lines": [
+        {
+          "kz": [
+            "Тарих",
+            "бізге",
+            "жаңа",
+            "көзқарас"
+          ],
+          "ru": [
+            "История",
+            "нам",
+            "новый",
+            "взгляд"
+          ],
+          "en": [
+            "History",
+            "to us",
+            "new",
+            "perspective"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Драмалық поэмалар",
+      "titleRu": "Драматические поэмы",
+      "titleEn": "Dramatic poems",
+      "authorKz": "Әбділда Тәжібаев",
+      "authorRu": "Абдила Тажибаев",
+      "authorEn": "Abdilda Tazhibaev",
+      "level": "Intermediate",
+      "imageUrl": "https://cdn.kitap.kz/storage/uploads/books/1144/Img_book.jpg",
+      "lines": [
+        {
+          "kz": [
+            "Менің",
+            "жерім",
+            "бағалы"
+          ],
+          "ru": [
+            "Моя",
+            "земля",
+            "ценна"
+          ],
+          "en": [
+            "My",
+            "land",
+            "is precious"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Жетім",
+      "titleRu": "Сирота",
+      "titleEn": "Orphan",
+      "authorKz": "Мұхтар Әуезов",
+      "authorRu": "Мухтар Ауэзов",
+      "authorEn": "Mukhtar Auezov",
+      "level": "Intermediate",
+      "imageUrl": "https://cdn.kitap.kz/storage//uploads/books/2761/Img_book.jpg",
+      "lines": [
+        {
+          "kz": [
+            "Қазақ",
+            "дәстүрін",
+            "сақтаймыз"
+          ],
+          "ru": [
+            "Мы",
+            "сохраняем",
+            "казахские традиции"
+          ],
+          "en": [
+            "We",
+            "preserve",
+            "Kazakh traditions"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Қызыл ат",
+      "titleRu": "Красная лошадь",
+      "titleEn": "Red Horse",
+      "authorKz": "Сәкен Сейфуллин",
+      "authorRu": "Сакен Сейфуллин",
+      "authorEn": "Saken Seifullin",
+      "level": "Intermediate",
+      "imageUrl": "https://cdn.kitap.kz/storage/uploads/books/2432/Img_book.jpg",
+      "lines": [
+        {
+          "kz": [
+            "Жасыл",
+            "дала",
+            "жас әні"
+          ],
+          "ru": [
+            "Зеленая",
+            "степь",
+            "молодая песня"
+          ],
+          "en": [
+            "Green",
+            "steppe",
+            "young song"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Ақ тамақ қарлығаштар",
+      "titleRu": "Белогорлые ласточки",
+      "titleEn": "White-throated swallows",
+      "authorKz": "Мұқағали Мақатаев",
+      "authorRu": "Мукагали Макатаев",
+      "authorEn": "Mukagali Makataev",
+      "level": "Intermediate",
+      "imageUrl": "https://adebiportal.kz/storage/tmp/resize/books/1200_0_a5d451f016c8820fbf547eec2d982eca.png",
+      "lines": [
+        {
+          "kz": [
+            "Қарлығаштар",
+            "қош келдің",
+            "көңілім"
+          ],
+          "ru": [
+            "Ласточки",
+            "приветствуем тебя",
+            "душа моя"
+          ],
+          "en": [
+            "Swallows",
+            "welcome you",
+            "my soul"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Қызғалдақ жайлы баллада",
+      "titleRu": "Баллада о тюльпане",
+      "titleEn": "Ballad about a tulip",
+      "authorKz": "Жұмекен Нәжімеденов",
+      "authorRu": "Жумекен Нажимеденов",
+      "authorEn": "Zhumeken Nazhimedenov",
+      "level": "Intermediate",
+      "imageUrl": "https://cdn.kitap.kz/storage//uploads/books/1066/Img_book.jpg",
+      "lines": [
+        {
+          "kz": [
+            "Менің",
+            "елім",
+            "таза"
+          ],
+          "ru": [
+            "Моя",
+            "страна",
+            "чиста"
+          ],
+          "en": [
+            "My",
+            "country",
+            "is pure"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Сенім патшалығы",
+      "titleRu": "Царство веры",
+      "titleEn": "The kingdom of faith",
+      "authorKz": "Мұхтар Шаханов",
+      "authorRu": "Мухтар Шаханов",
+      "authorEn": "Mukhtar Shakhanov",
+      "level": "Intermediate",
+      "imageUrl": "https://cdn.kitap.kz/storage/book/a755daadbd2b54041bf34409e8dce503.jpg",
+      "lines": [
+        {
+          "kz": [
+            "Өмір",
+            "жолында",
+            "оқиға"
+          ],
+          "ru": [
+            "В",
+            "жизни",
+            "события"
+          ],
+          "en": [
+            "In",
+            "life",
+            "there are events"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "titleKz": "Туған жер",
+      "titleRu": "Родина",
+      "titleEn": "Native Land",
+      "authorKz": "Ібдіжәмил Нұрпейісов",
+      "authorRu": "Ібдіжәмил Нұрпейісов",
+      "authorEn": "Ібдіжәмил Нұрпейісов",
+      "level": "Intermediate",
+      "imageUrl": "https://cdn.kitap.kz/storage/book/f973c00f0b6e73644bf3d8bd3ff7ece8.png",
+      "lines": [
+        {
+          "kz": [
+            "Туған",
+            "жерім",
+            "менің"
+          ],
+          "ru": [
+            "Моя",
+            "родина",
+            "любимая"
+          ],
+          "en": [
+            "My",
+            "native land",
+            "beloved"
+          ],
+          "translationIndexRu": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "translationIndexEn": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

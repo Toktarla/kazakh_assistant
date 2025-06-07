@@ -6,4 +6,10 @@ enum ContentType {
   literaryExtracts,
   regionalDialects,
   literatureRecommendations,
+  exerciseFillInTheBlank,
+  exerciseMultipleChoice,
+  exerciseMatchingGame,
+  exerciseListeningComprehension,
+  exerciseTrueFalse,
+  exerciseWordAssociation,
 }

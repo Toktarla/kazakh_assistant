@@ -13,6 +13,7 @@ import 'package:proj_management_project/utils/error/error_page.dart';
 import 'package:proj_management_project/features/home/views/home_page.dart';
 import 'package:proj_management_project/features/streak/views/streak_tracker_page.dart';
 import '../features/chat/views/chat_screen.dart';
+import '../features/intro/app_setup_page.dart';
 
 class AppRoutes {
   static Route onGenerateRoutes(RouteSettings settings) {
@@ -34,15 +35,16 @@ class AppRoutes {
       case '/Language':
         return _materialRoute(const LanguagePage());
       case '/Home':
-        final map = settings.arguments as Map<String,dynamic>;
-        return _materialRoute(HomePage(userId: map['userId'],));
+        return _materialRoute(const HomePage());
       case '/Chat':
         final map = settings.arguments as Map<String,dynamic>;
         return _materialRoute(ChatScreen(chatId: map['chatId'],));
       case '/ChatHistory':
         return _materialRoute(HistoryPage());
       case '/ManageAccount':
-        return _materialRoute(ManageAccountPage());
+        return _materialRoute(const ManageAccountPage());
+      case '/AppSetUp':
+        return _materialRoute(const AppSetUpPage());
       case '/StreakTracker':
         final map = settings.arguments as Map<String,dynamic>;
         return _materialRoute(StreakTracker(userId: map['userId']));

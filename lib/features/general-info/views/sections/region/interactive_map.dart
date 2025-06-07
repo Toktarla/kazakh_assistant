@@ -1,16 +1,17 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_drawing/path_drawing.dart';
 import 'package:proj_management_project/features/general-info/views/sections/region/region_compare_page.dart';
 import 'package:proj_management_project/features/general-info/views/sections/region/region_information_bs.dart';
 import 'package:proj_management_project/features/general-info/views/sections/region/regional_dialect_types_page.dart';
-import 'package:proj_management_project/features/general-info/views/sections/region/regional_dialects_section.dart';
-import 'package:proj_management_project/utils/get_color_hex.dart';
+import 'package:proj_management_project/utils/helpers/get_color_hex.dart';
 import 'package:xml/xml.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animate_do/animate_do.dart';
 import '../../../models/map_mode.dart';
 import '../../../models/region.dart';
+import '../../../widgets/default_app_bar.dart';
 import '../../../widgets/map_painter.dart';
 
 class MapPage extends StatefulWidget {
@@ -96,7 +97,8 @@ class _MapPageState extends State<MapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE9EDF5),
+      appBar: const DefaultAppBar(),
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
@@ -105,7 +107,7 @@ class _MapPageState extends State<MapPage> {
             children: [
               const SizedBox(height: 24),
               Text(
-                "Карта регионов Казахстана",
+                "Map of regions of Kazakhstan".tr(),
                 style: GoogleFonts.montserrat(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
@@ -115,18 +117,18 @@ class _MapPageState extends State<MapPage> {
               FadeIn(
                 duration: const Duration(milliseconds: 800),
                 child: Text(
-                  "Нажмите на регион, чтобы узнать особенности его диалекта",
+                  "Click on a region to learn about its dialect features".tr(),
                   style: GoogleFonts.montserrat(
                       fontSize: 16, color: Colors.black54),
                 ),
               ),
               const SizedBox(height: 12),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                spacing: 8,
                 children: [
-                  _buildModeButton("Обзор", MapMode.overview),
-                  _buildModeButton("Диалекты", MapMode.dialects),
-                  _buildModeButton("Сравнение", MapMode.compare),
+                  _buildModeButton("Review".tr(), MapMode.overview),
+                  _buildModeButton("Dialects".tr(), MapMode.dialects),
+                  _buildModeButton("Comparison mode".tr(), MapMode.compare),
                 ],
               ),
               const SizedBox(height: 50),
@@ -176,7 +178,7 @@ class _MapPageState extends State<MapPage> {
                         ),
                       ),
                       child: Text(
-                        "Открыть режим сравнения",
+                        "Open comparison mode".tr(),
                         style: GoogleFonts.montserrat(
                           fontSize: 16,
                           color: Colors.white,
@@ -194,21 +196,23 @@ class _MapPageState extends State<MapPage> {
 
   Widget _buildModeButton(String text, MapMode mode) {
     final isSelected = currentMode == mode;
-    return GestureDetector(
-      onTap: () {
-        setState(() => currentMode = mode);
-      },
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-        decoration: BoxDecoration(
-          color: isSelected ? Colors.black : Colors.grey[300],
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: Text(
-          text,
-          style: GoogleFonts.montserrat(
-            fontSize: 14,
-            color: isSelected ? Colors.white : Colors.black,
+    return Expanded(
+      child: GestureDetector(
+        onTap: () {
+          setState(() => currentMode = mode);
+        },
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+          decoration: BoxDecoration(
+            color: isSelected ? Colors.black : Colors.grey[300],
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.montserrat(
+              color: isSelected ? Colors.white : Colors.black,
+            ),
           ),
         ),
       ),

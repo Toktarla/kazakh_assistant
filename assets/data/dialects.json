@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "type": "Western Kazakhstan",
+      "typeEn": "Western Kazakhstan",
+      "typeRu": "Western Kazakhstan",
+      "typeKz": "Western Kazakhstan",
+      "dialects": [
+        {
+          "dialect": "шоңай",
+          "standart": "үлкен",
+          "meaningRu": "большой",
+          "meaningEn": "big",
+          "usageRu": "Используется в западных регионах вместо слова 'үлкен'.",
+          "usageEn": "Used in western regions instead of the word 'үлкен' (big).",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "type": "Southern Kazakhstan",
+      "typeEn": "Southern Kazakhstan",
+      "typeRu": "Southern Kazakhstan",
+      "typeKz": "Southern Kazakhstan",
+      "dialects": [
+        {
+          "dialect": "пәле",
+          "standart": "қиын",
+          "meaningRu": "трудный",
+          "meaningEn": "difficult",
+          "usageRu": "В Южном Казахстане 'пәле' может означать трудность или проблему.",
+          "usageEn": "In Southern Kazakhstan, 'пәле' may refer to a difficulty or problem.",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "type": "Eastern Kazakhstan",
+      "typeEn": "Eastern Kazakhstan",
+      "typeRu": "Eastern Kazakhstan",
+      "typeKz": "Eastern Kazakhstan",
+
+      "dialects": [
+        {
+          "dialect": "шіркін",
+          "standart": "уа, әттең",
+          "meaningRu": "ах, эх",
+          "meaningEn": "ah, oh",
+          "usageRu": "Употребляется для выражения сожаления или восторга.",
+          "usageEn": "Used to express regret or admiration.",
+          "level": "Beginner"
+        }
+      ]
+    },
+    {
+      "type": "Northern Kazakhstan",
+      "typeEn": "Northern Kazakhstan",
+      "typeRu": "Northern Kazakhstan",
+      "typeKz": "Northern Kazakhstan",
+
+      "dialects": [
+        {
+          "dialect": "қалқай",
+          "standart": "жүру",
+          "meaningRu": "идти",
+          "meaningEn": "to go",
+          "usageRu": "В северных регионах слово 'қалқай' означает 'идти'.",
+          "usageEn": "In northern regions, 'қалқай' means 'to go'.",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "type": "Central Kazakhstan",
+      "typeEn": "Central Kazakhstan",
+      "typeRu": "Central Kazakhstan",
+      "typeKz": "Central Kazakhstan",
+
+      "dialects": [
+        {
+          "dialect": "құдай-ай",
+          "standart": "тәңір-ай",
+          "meaningRu": "господи",
+          "meaningEn": "oh God",
+          "usageRu": "Используется для выражения удивления или беспокойства.",
+          "usageEn": "Used to express surprise or concern.",
+          "level": "Beginner"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "textBefore": {
+        "kk": "Мен",
+        "ru": "Я",
+        "en": "I"
+      },
+      "answer": {
+        "kk": "кітап",
+        "ru": "книгу",
+        "en": "book"
+      },
+      "textAfter": {
+        "kk": "оқып жатырмын.",
+        "ru": "читаю.",
+        "en": "am reading."
+      },
+      "level": "Intermediate"
+    },
+    {
+      "textBefore": {
+        "kk": "Ол",
+        "ru": "Он",
+        "en": "He"
+      },
+      "answer": {
+        "kk": "мұғалім",
+        "ru": "учитель",
+        "en": "teacher"
+      },
+      "textAfter": {
+        "kk": "болғысы келеді.",
+        "ru": "хочет стать.",
+        "en": "wants to be."
+      },
+      "level": "Intermediate"
+    },
+    {
+      "textBefore": {
+        "kk": "Біз",
+        "ru": "Мы",
+        "en": "We"
+      },
+      "answer": {
+        "kk": "ойнап жатырмыз",
+        "ru": "играем",
+        "en": "are playing"
+      },
+      "textAfter": {
+        "kk": "саябақта.",
+        "ru": "в парке.",
+        "en": "in the park."
+      },
+      "level": "Intermediate"
+    },
+    {
+      "textBefore": {
+        "kk": "Анасы",
+        "ru": "Мама",
+        "en": "Mother"
+      },
+      "answer": {
+        "kk": "тамақ дайындады",
+        "ru": "приготовила еду",
+        "en": "cooked food"
+      },
+      "textAfter": {
+        "kk": "бүгін.",
+        "ru": "сегодня.",
+        "en": "today."
+      },
+      "level": "Intermediate"
+    },
+    {
+      "textBefore": {
+        "kk": "Оқушы",
+        "ru": "Ученик",
+        "en": "Student"
+      },
+      "answer": {
+        "kk": "үй тапсырмасын",
+        "ru": "домашнее задание",
+        "en": "homework"
+      },
+      "textAfter": {
+        "kk": "орындап жатыр.",
+        "ru": "выполняет.",
+        "en": "is doing."
+      },
+      "level": "Intermediate"
+    }
+  ]
+
+}

@@ -16,6 +16,11 @@ class ThemeCubit extends Cubit<ThemeData> {
     return isDarkMode ? _darkTheme : _lightTheme;
   }
 
+  bool get isDarkMode {
+    final isDarkMode = _prefs.getBool('isDarkMode') ?? false;
+    return isDarkMode;
+  }
+
   static final ThemeData _lightTheme = ThemeData(
     pageTransitionsTheme: const PageTransitionsTheme(
       builders: {
@@ -50,11 +55,11 @@ class ThemeCubit extends Cubit<ThemeData> {
     iconTheme: const IconThemeData(
       color: AppColors.blueAccentColor,
     ),
-    textTheme: GoogleFonts.montserratTextTheme(const TextTheme(
+    textTheme: GoogleFonts.interTextTheme(const TextTheme(
       titleLarge: TextStyle(fontSize: 18, color: Colors.black),
       titleMedium: TextStyle(fontSize: 14, color: Colors.black),
       displayLarge: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: AppColors.blueAccentColor),
-      displayMedium: TextStyle(fontSize: 24, color: AppColors.whiteColor, fontWeight: FontWeight.bold),
+      displayMedium: TextStyle(fontSize: 24, color: AppColors.whiteColor, fontWeight: FontWeight.w500),
       displaySmall: TextStyle(fontSize: 16, color: Colors.black),
     )),
     appBarTheme: const AppBarTheme(
@@ -105,7 +110,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       ),
     ),
     primaryColorLight: AppColors.brightColor,
-
+    primaryColorDark: AppColors.beautifulWhiteColor,
   );
 
   static final ThemeData _darkTheme = ThemeData(
@@ -115,7 +120,7 @@ class ThemeCubit extends Cubit<ThemeData> {
         TargetPlatform.iOS: FadePageTransitionsBuilder(),
       },
     ),
-    textTheme: GoogleFonts.montserratTextTheme(const TextTheme(
+    textTheme: GoogleFonts.interTextTheme(const TextTheme(
       titleLarge: TextStyle(fontSize: 18, color: Colors.white),
       titleMedium: TextStyle(fontSize: 14, color: Colors.white),
       titleSmall: TextStyle(fontSize: 12, color: Colors.white),
@@ -155,7 +160,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       )
     ),
     cardColor: AppColors.blackBrightColor,
-    scaffoldBackgroundColor: Colors.white10,
+    scaffoldBackgroundColor: Colors.white24,
     dialogTheme: DialogTheme(
       backgroundColor: Colors.black26,
       contentTextStyle: const TextStyle(color: Colors.grey),
@@ -166,6 +171,7 @@ class ThemeCubit extends Cubit<ThemeData> {
       elevation: 10,
     ),
     primaryColorLight: AppColors.blackBrightColor,
+    primaryColorDark: AppColors.darkGreyColor,
   );
 
   Future<void> loadTheme() async {

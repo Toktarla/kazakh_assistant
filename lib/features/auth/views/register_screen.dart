@@ -1,6 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:proj_management_project/features/auth/providers/authentication_provider.dart';
 import 'package:proj_management_project/utils/mixins/focus_node_mixin.dart';
 import 'package:provider/provider.dart';
@@ -28,6 +30,9 @@ class _RegisterPageState extends State<RegisterPage> {
   late FocusNode passwordFocusNode;
   late FocusNode confirmPasswordFocusNode;
 
+  bool _isPasswordObscured = true;
+  bool _isConfirmPasswordObscured = true;
+
   @override
   void initState() {
     super.initState();
@@ -53,37 +58,32 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Form(
-            key: _formKey,
-            autovalidateMode: AutovalidateMode.disabled,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                Icon(
-                  Icons.phone_iphone_outlined,
-                  size: 100,
-                  color: Theme.of(context).primaryColor,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Text('HELLO FRESH!',style: Theme.of(context).textTheme.titleLarge,).tr(),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text('Welcome to our app, newbie!', style: Theme.of(context).textTheme.titleMedium
-                ).tr(),
-                const SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10),
+            child: Form(
+              key: _formKey,
+              autovalidateMode: AutovalidateMode.disabled,
+              child: Column(
+                spacing: 15,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ColorFiltered(
+                    colorFilter: ColorFilter.mode(Theme.of(context).iconTheme.color!, BlendMode.srcIn),
+                    child: Image.asset(
+                      "assets/images/app-logo.png",
+                      height: 100,
+                      width: 100,
+                    )
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text('Sign Up',style: Theme.of(context).textTheme.titleLarge,).tr(),
+                  Text('Welcome to our app, newbie!', style: Theme.of(context).textTheme.titleMedium, textAlign: TextAlign.center,
+                  ).tr(),
+                  Container(
                     // Email TextFormField
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -114,14 +114,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 7,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
-                    // Full Name TextFormField
+                  Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -153,13 +146,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 7,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
+                  Container(
                     // New Password TextFormField
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -172,13 +159,23 @@ class _RegisterPageState extends State<RegisterPage> {
                         focusNode: passwordFocusNode,
                         textInputAction: TextInputAction.next,
                         onFieldSubmitted: (_) {
-                          widget.fieldFocusChange(context, passwordFocusNode,
-                              confirmPasswordFocusNode);
+                          widget.fieldFocusChange(context, passwordFocusNode, confirmPasswordFocusNode);
                         },
-                        obscureText: true,
+                        obscureText: _isPasswordObscured,
                         decoration: InputDecoration(
                           hintText: 'New Password'.tr(),
                           border: InputBorder.none,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _isPasswordObscured ? Icons.visibility_off : Icons.visibility,
+                              color: Colors.grey,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _isPasswordObscured = !_isPasswordObscured;
+                              });
+                            },
+                          ),
                         ),
                         validator: (value) {
                           if (value != null && value.length < 8) {
@@ -190,13 +187,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 7,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
+                  Container(
                     // Confirm Password TextFormField
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
@@ -205,7 +196,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextFormField(
                         keyboardType: TextInputType.visiblePassword,
-                        obscureText: true,
+                        obscureText: _isConfirmPasswordObscured,
                         controller: confirmPasswordController,
                         focusNode: confirmPasswordFocusNode,
                         textInputAction: TextInputAction.done,
@@ -215,11 +206,21 @@ class _RegisterPageState extends State<RegisterPage> {
                         decoration: InputDecoration(
                           hintText: 'Confirm Password'.tr(),
                           border: InputBorder.none,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _isConfirmPasswordObscured ? Icons.visibility_off : Icons.visibility,
+                              color: Colors.grey,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _isConfirmPasswordObscured = !_isConfirmPasswordObscured;
+                              });
+                            },
+                          ),
                         ),
                         validator: (value) {
                           if (value != null &&
-                              (confirmPasswordController.text !=
-                                  passwordController.text)) {
+                              (confirmPasswordController.text != passwordController.text)) {
                             return "Passwords must match!".tr();
                           } else if (passwordController.text == "") {
                             return "Passwords must match!".tr();
@@ -230,59 +231,68 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 350,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  child: TextButton(
-                    onPressed: () {
-                      confirmPasswordFocusNode.unfocus();
-                      final isValidForm = _formKey.currentState!.validate();
-                      if (isValidForm) {
-                        context.read<AuthenticationProvider>().signUp(emailController.text, passwordController.text, confirmPasswordController.text, fullNameController.text, context);
-                      }
-                    },
-                    child: const Text('Sign Up',
-                        style: TextStyle(
-                            color: Colors.white, fontSize: 20
-                        )).tr(),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Are you a member?',
-                    ).tr(),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/Login');
-                      },
-                      child: const Text('Sign In',
-                          style: TextStyle(
-                              fontSize: 16, color: Colors.blue)).tr(),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.0),
+                      color: Theme.of(context).primaryColor,
                     ),
-                  ],
-                ),
-                Center(child: GestureDetector(
-                  child: SizedBox(
-                      height: 50,
-                      width: 50,
-                      child: Image.asset('assets/images/googlephoto.png')),
-                  onTap: () async {
-                    context.read<AuthenticationProvider>().signInWithGoogle(context);
-                  },
-                )),
-              ],
+                    child: TextButton(
+                      onPressed: () {
+                        confirmPasswordFocusNode.unfocus();
+                        final isValidForm = _formKey.currentState!.validate();
+                        if (isValidForm) {
+                          context.read<AuthenticationProvider>().signUp(emailController.text, passwordController.text, confirmPasswordController.text, fullNameController.text, context);
+                        }
+                      },
+                      child: const Text('Sign Up',
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 20
+                          )).tr(),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Are you a member?',
+                      ).tr(),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/Login');
+                        },
+                        child: const Text('Sign In',
+                            style: TextStyle(
+                                fontSize: 16, color: Colors.blue)).tr(),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        child: SizedBox(
+                            height: 50,
+                            width: 50,
+                            child: Image.asset('assets/images/googlephoto.png', height: 50, width: 50,)),
+                        onTap: () async {
+                          context.read<AuthenticationProvider>().signInWithGoogle(context);
+                        },
+                      ),
+                      const SizedBox(width: 20,),
+                      GestureDetector(
+                        child: SizedBox(
+                            height: 40,
+                            width: 40,
+                            child: SvgPicture.asset('assets/svg/user.svg', height: 50, width: 50, color: Theme.of(context).textTheme.titleLarge!.color)),
+                        onTap: () async {
+                          context.read<AuthenticationProvider>().signInAnonymously(context);
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),

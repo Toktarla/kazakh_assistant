@@ -1,0 +1,134 @@
+{
+  "sections": [
+    {
+      "titleEn": "Beautiful/Rare Kazakh Words",
+      "titleRu": "Красивые/Редкие казахские слова",
+      "titleKz": "Әдемі/Сирек кездесетін қазақ сөздері",
+      "descriptionEn": "Discover the beauty and richness of the Kazakh language with these exquisite words.",
+      "descriptionRu": "Откройте для себя красоту и богатство казахского языка с этими изысканными словами.",
+      "descriptionKz": "Қазақ тілінің әсемдігі мен байлығын осы керемет сөздер арқылы таныңыз.",
+      "contentTypeIndex": 0,
+      "contentTypeString": "learn"
+    },
+    {
+      "titleEn": "Phrases",
+      "titleRu": "Фразы",
+      "titleKz": "Сөйлемдер",
+      "descriptionEn": "Learn essential Kazakh phrases for everyday communication.",
+      "descriptionRu": "Изучите важные казахские фразы для повседневного общения.",
+      "descriptionKz": "Күнделікті қарым-қатынасқа қажетті маңызды қазақша сөйлемдерді үйреніңіз.",
+      "contentTypeIndex": 1,
+      "contentTypeString": "learn"
+    },
+    {
+      "titleEn": "Idioms",
+      "titleRu": "Идиомы",
+      "titleKz": "Тұрақты тіркестер",
+      "descriptionEn": "Discover the colorful world of Kazakh idioms and expressions.",
+      "descriptionRu": "Откройте для себя яркий мир казахских идиом и выражений.",
+      "descriptionKz": "Қазақтың идиомалары мен тұрақты тіркестерінің бай әлемін ашыңыз.",
+      "contentTypeIndex": 2,
+      "contentTypeString": "learn"
+    },
+    {
+      "titleEn": "Proverbs",
+      "titleRu": "Пословицы",
+      "titleKz": "Мақал-мәтелдер",
+      "descriptionEn": "Gain wisdom from the rich heritage of Kazakh proverbs.",
+      "descriptionRu": "Почерпните мудрость из богатого наследия казахских пословиц.",
+      "descriptionKz": "Қазақ мақал-мәтелдерінің бай мұрасынан даналық алыңыз.",
+      "contentTypeIndex": 3,
+      "contentTypeString": "information"
+    },
+    {
+      "titleEn": "Literary Extracts",
+      "titleRu": "Литературные отрывки",
+      "titleKz": "Әдеби үзінділер",
+      "descriptionEn": "Enjoy beautiful excerpts from famous Kazakh literary works.",
+      "descriptionRu": "Наслаждайтесь красивыми отрывками из известных казахских литературных произведений.",
+      "descriptionKz": "Белгілі қазақ әдеби шығармаларынан алынған үзінділерді тамашалаңыз.",
+      "contentTypeIndex": 4,
+      "contentTypeString": "information"
+    },
+    {
+      "titleEn": "Regional Dialects",
+      "titleRu": "Региональные диалекты",
+      "titleKz": "Өңірлік диалектілер",
+      "descriptionEn": "Open regional dialects of Kazakhstan for yourself.",
+      "descriptionRu": "Откройте для себя региональные диалекты Казахстана.",
+      "descriptionKz": "Қазақстанның өңірлік диалектілерін өзіңізге ашыңыз.",
+      "contentTypeIndex": 5,
+      "contentTypeString": "information"
+    },
+    {
+      "titleEn": "Literature Recommendations",
+      "titleRu": "Литературные рекомендации",
+      "titleKz": "Әдеби ұсыныстар",
+      "descriptionEn": "Explore a collection of beautiful literatures in Kazakh history.",
+      "descriptionRu": "Исследуйте подборку прекрасных произведений казахской литературы.",
+      "descriptionKz": "Қазақ әдебиетінің тамаша шығармалар жинағымен танысыңыз.",
+      "contentTypeIndex": 6,
+      "contentTypeString": "information"
+    },
+    {
+      "titleKz": "Толтыру жаттығуы",
+      "titleRu": "Упражнение с пропусками",
+      "titleEn": "Fill in the Blank Exercise",
+      "descriptionKz": "Сөздердің орнына дұрыс нұсқаны қойыңыз.",
+      "descriptionRu": "Вставьте правильный вариант вместо пропусков.",
+      "descriptionEn": "Fill in the correct words in the blanks.",
+      "contentTypeString": "exercise",
+      "contentTypeIndex": 7
+    },
+    {
+      "titleKz": "Көп таңдау",
+      "titleRu": "Множественный выбор",
+      "titleEn": "Multiple Choice Quiz",
+      "descriptionKz": "Дұрыс жауапты таңдаңыз.",
+      "descriptionRu": "Выберите правильный ответ.",
+      "descriptionEn": "Select the correct answer.",
+      "contentTypeString": "exercise",
+      "contentTypeIndex": 8
+    },
+    {
+      "titleKz": "Сәйкестендіру ойыны",
+      "titleRu": "Игра на сопоставление",
+      "titleEn": "Matching Game",
+      "descriptionKz": "Сөздерді дұрыс жұптастырыңыз.",
+      "descriptionRu": "Сопоставьте слова правильно.",
+      "descriptionEn": "Match the words correctly.",
+      "contentTypeString": "exercise",
+      "contentTypeIndex": 9
+    },
+    {
+      "titleKz": "Тыңдау жаттығуы",
+      "titleRu": "Упражнение на аудирование",
+      "titleEn": "Listening Comprehension",
+      "descriptionKz": "Тыңдап, дұрыс жауапты таңдаңыз.",
+      "descriptionRu": "Прослушайте и выберите правильный ответ.",
+      "descriptionEn": "Listen and select the correct answer.",
+      "contentTypeString": "exercise",
+      "contentTypeIndex": 10
+    },
+    {
+      "titleKz": "Дұрыс немесе бұрыс",
+      "titleRu": "Верно или неверно",
+      "titleEn": "True or False",
+      "descriptionKz": "Жауаптың дұрыстығын анықтаңыз.",
+      "descriptionRu": "Определите, верно ли утверждение.",
+      "descriptionEn": "Decide if the statement is true or false.",
+      "contentTypeString": "exercise",
+      "contentTypeIndex": 11
+    },
+    {
+      "titleKz": "Сөздер ассоциациясы",
+      "titleRu": "Ассоциация слов",
+      "titleEn": "Word Association",
+      "descriptionKz": "Сөздерді суреттермен байланыстырыңыз.",
+      "descriptionRu": "Свяжите слова с изображениями.",
+      "descriptionEn": "Associate words with images.",
+      "contentTypeString": "exercise",
+      "contentTypeIndex": 12
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proj_management_project/features/general-info/widgets/default_app_bar.dart';
 import '../../../../../config/variables.dart';
 import 'dialect_words_list_page.dart';
 
@@ -14,10 +15,7 @@ class RegionDialectTypesPage extends StatelessWidget {
 
 
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-      ),
+      appBar: const DefaultAppBar(),
       body: GridView.count(
         padding: const EdgeInsets.all(16),
         crossAxisCount: 2,

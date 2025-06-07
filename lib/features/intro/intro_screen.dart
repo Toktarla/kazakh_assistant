@@ -21,7 +21,7 @@ class _IntroScreenState extends State<IntroScreen> {
   Future<void> _onDone() async {
     await prefs.setBool('intro_seen', true);
     if (!mounted) return;
-    Navigator.pushReplacementNamed(context, '/Auth');
+    Navigator.pushReplacementNamed(context, '/AppSetUp');
   }
 
   @override
@@ -79,6 +79,6 @@ class _IntroScreenState extends State<IntroScreen> {
   }
 }
 
-Future<bool> shouldShowIntro() async {
+bool shouldShowIntro() {
   return prefs.getBool('intro_seen') ?? false;
 }

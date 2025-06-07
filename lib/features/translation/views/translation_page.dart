@@ -77,99 +77,110 @@ class _TranslationPageState extends State<TranslationPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: Colors.grey.shade400),
-                    ),
-                    child: DropdownButton<String>(
-                      value: _inputLanguage,
-                      items: <String>['auto', 'en', 'ru', 'kk'].map((String value) {
-                        String displayText;
-                        switch (value) {
-                          case 'auto':
-                            displayText = 'Auto-detect'.tr();
-                            break;
-                          case 'en':
-                            displayText = 'English'.tr();
-                            break;
-                          case 'ru':
-                            displayText = 'Russian'.tr();
-                            break;
-                          case 'kk':
-                            displayText = 'Kazakh'.tr();
-                            break;
-                          default:
-                            displayText = value;
-                        }
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
-                            child: Text(displayText, style: Theme.of(context).textTheme.titleMedium,),
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (value) {
-                        setState(() {
-                          _inputLanguage = value!;
-                          _translate();
-                        });
-                      },
-                      underline: const SizedBox(),
-                      icon: const Icon(Icons.arrow_drop_down_rounded),
-                      style: const TextStyle(fontSize: 16),
-                      dropdownColor: Theme.of(context).primaryColorLight,
-                      borderRadius: BorderRadius.circular(12),
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                  Flexible(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: Colors.grey.shade400),
+                      ),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          value: _inputLanguage,
+                          items: <String>['auto', 'en', 'ru', 'kk'].map((String value) {
+                            String displayText;
+                            switch (value) {
+                              case 'auto':
+                                displayText = 'Auto-detect'.tr();
+                                break;
+                              case 'en':
+                                displayText = 'English'.tr();
+                                break;
+                              case 'ru':
+                                displayText = 'Russian'.tr();
+                                break;
+                              case 'kk':
+                                displayText = 'Kazakh'.tr();
+                                break;
+                              default:
+                                displayText = value;
+                            }
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(
+                                displayText,
+                                overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (value) {
+                            setState(() {
+                              _inputLanguage = value!;
+                              _translate();
+                            });
+                          },
+                          icon: const Icon(Icons.arrow_drop_down_rounded),
+                          dropdownColor: Theme.of(context).primaryColorLight,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
                     ),
                   ),
-                  IconButton(
-                    icon: Icon(Icons.swap_horiz_rounded, color: Theme.of(context).iconTheme.color, size: 40,),
-                    onPressed: _swapLanguages,
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: Colors.grey.shade400),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: IconButton(
+                      icon: Icon(Icons.swap_horiz_rounded, color: Theme.of(context).iconTheme.color, size: 40),
+                      onPressed: _swapLanguages,
                     ),
-                    child: DropdownButton<String>(
-                      value: _outputLanguage,
-                      items: <String>['kk', 'ru', 'en'].map((String value) {
-                        String displayText;
-                        switch (value) {
-                          case 'en':
-                            displayText = 'English'.tr();
-                            break;
-                          case 'ru':
-                            displayText = 'Russian'.tr();
-                            break;
-                          case 'kk':
-                            displayText = 'Kazakh'.tr();
-                            break;
-                          default:
-                            displayText = value;
-                        }
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
-                            child: Text(displayText, style: Theme.of(context).textTheme.titleMedium,),
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (value) {
-                        setState(() {
-                          _outputLanguage = value!;
-                          _translate();
-                        });
-                      },
-                      underline: const SizedBox(),
-                      icon: const Icon(Icons.arrow_drop_down_rounded),
-                      style: const TextStyle(fontSize: 16),
-                      dropdownColor: Theme.of(context).primaryColorLight,
-                      borderRadius: BorderRadius.circular(12),
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                  ),
+                  Flexible(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        border: Border.all(color: Colors.grey.shade400),
+                      ),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<String>(
+                          isExpanded: true,
+                          value: _outputLanguage,
+                          items: <String>['kk', 'ru', 'en'].map((String value) {
+                            String displayText;
+                            switch (value) {
+                              case 'en':
+                                displayText = 'English'.tr();
+                                break;
+                              case 'ru':
+                                displayText = 'Russian'.tr();
+                                break;
+                              case 'kk':
+                                displayText = 'Kazakh'.tr();
+                                break;
+                              default:
+                                displayText = value;
+                            }
+                            return DropdownMenuItem<String>(
+                              value: value,
+                              child: Text(
+                                displayText,
+                                overflow: TextOverflow.ellipsis,
+                                style: Theme.of(context).textTheme.titleMedium,
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (value) {
+                            setState(() {
+                              _outputLanguage = value!;
+                              _translate();
+                            });
+                          },
+                          icon: const Icon(Icons.arrow_drop_down_rounded),
+                          dropdownColor: Theme.of(context).primaryColorLight,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
                     ),
                   ),
                 ],

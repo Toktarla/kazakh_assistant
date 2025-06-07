@@ -52,6 +52,25 @@ class AuthenticationProvider extends ChangeNotifier {
     }
   }
 
+  Future<void> signInAnonymously(BuildContext context) async {
+    try {
+      _user = await _authRepository.signInAnonymously();
+
+      if (_user != null) {
+        Navigator.pushNamedAndRemoveUntil(context, "/Home", arguments: {
+          "userId": _user!.uid,
+        }, (route) => false);
+
+        notifyListeners();
+      }
+    } on FirebaseAuthException catch (e) {
+      ErrorHandler.handleAuthError(e);
+    } catch (e) {
+      SnackbarHelper.showErrorSnackbar(message: "An error occurred: $e");
+    }
+  }
+
+
   Future<void> signInWithGoogle(BuildContext context) async {
     try {
       await googleSignIn.signOut();
@@ -81,6 +100,7 @@ class AuthenticationProvider extends ChangeNotifier {
           'streakCount': 1,
           'name': _user!.displayName,
           'photoUrl': _user!.photoURL ?? defaultUserPhotoUrl,
+          'isAnonymous': false,
         });
       }
       else {
@@ -91,6 +111,7 @@ class AuthenticationProvider extends ChangeNotifier {
             'name': _user!.displayName,
             'photoUrl': _user!.photoURL ?? defaultUserPhotoUrl,
             'email': _user!.email,
+            'isAnonymous': false,
           });
         }
       }

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import '../../config/app_colors.dart';
@@ -10,21 +11,28 @@ class DeleteConfirmationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("Confirm Delete"),
-      content: const Text("Are you sure you want to delete all progress records?"),
+      backgroundColor: Theme.of(context).cardColor,
+      title: Text('confirm_delete').tr(),
+      content: Text('confirm_delete_message').tr(),
       actions: <Widget>[
         TextButton(
           onPressed: () {
             Navigator.of(context).pop();
           },
-          child: const Text("Cancel", style: TextStyle(color: AppColors.blueAccentColor),),
+          child: Text(
+            'Cancel',
+            style: const TextStyle(color: AppColors.blueAccentColor),
+          ).tr(),
         ),
         TextButton(
           onPressed: () {
             onDelete();
             Navigator.of(context).pop();
           },
-          child: const Text('Sign Out', style: TextStyle(color: Colors.red)),
+          child: Text(
+            'yes',
+            style: const TextStyle(color: Colors.red),
+          ).tr(),
         ),
       ],
     );

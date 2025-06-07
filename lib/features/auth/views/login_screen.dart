@@ -2,6 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:proj_management_project/utils/mixins/focus_node_mixin.dart';
 import 'package:provider/provider.dart';
 
@@ -28,6 +30,8 @@ class _LoginPageState extends State<LoginPage> {
   // Validator
   final _formKey = GlobalKey<FormState>();
 
+  bool _isPasswordObscured = true;
+
   @override
   void initState() {
     super.initState();
@@ -48,34 +52,29 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Form(
-            autovalidateMode: AutovalidateMode.disabled,
-            key: _formKey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                Icon(
-                  Icons.phone_android,
-                  size: 100,
-                  color: Theme.of(context).primaryColor,
-                ),
-                const SizedBox(
-                  height: 75,
-                ),
-                Text('HELLO AGAIN!', style: Theme.of(context).textTheme.titleLarge,).tr(),
-                const SizedBox(
-                  height: 15,
-                ),
-                Text('Welcome back , you have been missed', style: Theme.of(context).textTheme.titleMedium).tr(),
-                const SizedBox(
-                  height: 30,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 10),
+            child: Form(
+              autovalidateMode: AutovalidateMode.disabled,
+              key: _formKey,
+              child: Column(
+                spacing: 15,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ColorFiltered(
+                      colorFilter: ColorFilter.mode(Theme.of(context).iconTheme.color!, BlendMode.srcIn),
+                      child: Image.asset(
+                        "assets/images/app-logo.png",
+                        height: 100,
+                        width: 100,
+                      )
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Text('Sign In', style: Theme.of(context).textTheme.titleLarge,).tr(),
+                  Text('Welcome to our app, newbie!', style: Theme.of(context).textTheme.titleMedium, textAlign: TextAlign.center).tr(),
+                  Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -104,13 +103,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 7,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                  child: Container(
+                  Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -118,12 +111,23 @@ class _LoginPageState extends State<LoginPage> {
                       padding: const EdgeInsets.only(left: 20.0),
                       child: TextFormField(
                         keyboardType: TextInputType.visiblePassword,
-                        obscureText: true,
+                        obscureText: _isPasswordObscured,
                         controller: passwordController,
                         focusNode: passwordFocusNode,
                         decoration: InputDecoration(
                           hintText: 'Password'.tr(),
                           border: InputBorder.none,
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _isPasswordObscured ? Icons.visibility_off : Icons.visibility,
+                              color: Colors.grey,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _isPasswordObscured = !_isPasswordObscured;
+                              });
+                            },
+                          ),
                         ),
                         validator: (value) {
                           if (value != null && value.length < 8) {
@@ -135,58 +139,67 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: 350,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0),
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  child: TextButton(
-                    onPressed: () {
-                      final isValidForm = _formKey.currentState!.validate();
-                      if (isValidForm) {
-                        context.read<AuthenticationProvider>().signIn(emailController.text, passwordController.text, context);
-                      }
-                    },
-                    child: const Text('Sign In',
-                        style: TextStyle(
-                            color: Colors.white, fontSize: 20)).tr(),
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      'Not a member?',
-                      style: TextStyle(fontSize: 16),
-                    ).tr(),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pushNamed(context,'/Register');
-                      },
-                      child: const Text('Register now',
-                          style: TextStyle(
-                              fontSize: 16, color: Colors.blue)).tr(),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12.0),
+                      color: Theme.of(context).primaryColor,
                     ),
-                  ],
-                ),
-                Center(child: GestureDetector(
-                  child: SizedBox(
-                      height: 50,
-                      width: 50,
-                      child: Image.asset('assets/images/googlephoto.png')),
-                  onTap: () async {
-                    context.read<AuthenticationProvider>().signInWithGoogle(context);
-                  },
-                )),
-              ],
+                    child: TextButton(
+                      onPressed: () {
+                        final isValidForm = _formKey.currentState!.validate();
+                        if (isValidForm) {
+                          context.read<AuthenticationProvider>().signIn(emailController.text, passwordController.text, context);
+                        }
+                      },
+                      child: const Text('Sign In',
+                          style: TextStyle(
+                              color: Colors.white, fontSize: 20)).tr(),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        'Not a member?',
+                        style: TextStyle(fontSize: 16),
+                      ).tr(),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context,'/Register');
+                        },
+                        child: const Text('Register now',
+                            style: TextStyle(
+                                fontSize: 16, color: Colors.blue)).tr(),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        child: SizedBox(
+                            height: 50,
+                            width: 50,
+                            child: Image.asset('assets/images/googlephoto.png', height: 50, width: 50, )),
+                        onTap: () async {
+                          context.read<AuthenticationProvider>().signInWithGoogle(context);
+                        },
+                      ),
+                      const SizedBox(width: 20,),
+                      GestureDetector(
+                        child: SizedBox(
+                            height: 50,
+                            width: 50,
+                            child: SvgPicture.asset('assets/svg/user.svg', height: 50, width: 50,color: Theme.of(context).textTheme.titleLarge!.color,)),
+                        onTap: () async {
+                          context.read<AuthenticationProvider>().signInAnonymously(context);
+                        },
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
