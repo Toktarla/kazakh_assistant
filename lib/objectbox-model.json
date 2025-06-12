@@ -550,7 +550,7 @@
     },
     {
       "id": "9:6303527452055229534",
-      "lastPropertyId": "16:4039206330448990602",
+      "lastPropertyId": "17:7816961605162699778",
       "name": "RareKazakhWord",
       "properties": [
         {
@@ -636,6 +636,11 @@
           "id": "16:4039206330448990602",
           "name": "audioUrl",
           "type": 9
+        },
+        {
+          "id": "17:7816961605162699778",
+          "name": "synonyms",
+          "type": 30
         }
       ],
       "relations": []

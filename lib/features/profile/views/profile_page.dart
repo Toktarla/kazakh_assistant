@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -8,18 +7,62 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:proj_management_project/features/profile/widgets/custom_chevron_icon.dart';
 import 'package:proj_management_project/utils/helpers/snackbar_helper.dart';
+import 'package:proj_management_project/utils/widgets/near_regular_hexagon_painter.dart';
+import '../../../config/di/injection_container.dart';
 import '../../../config/variables.dart';
 import '../../../services/local/local_notifications_service.dart';
+import '../../../services/local/ranking_service.dart';
 import '../../../utils/helpers/delete_confirmation_dialog.dart';
 import '../viewmodels/theme_cubit.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
+
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+
+  int _userLevel = 1;
+  late final List<String> exerciseTypes;
+  late LevelData levelData;
+  double _levelProgress = 0.0;
+  late LevelData _nextLevelData;
+  final firestore = sl<RankingService>();
+
+  @override
+  void initState() {
+    super.initState();
+    _loadLevel();
+    _loadProgress();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    // Now it's safe to access inherited widgets like EasyLocalization and Theme
+    levelData = RankingService.getLevelData(context, _userLevel);
+    _nextLevelData = RankingService.getLevelData(context, _userLevel + 1);
+  }
+
+  Future<void> _loadLevel() async {
+    _userLevel = await RankingService.getCurrentUserLevel();
+    setState(() {
+      levelData = RankingService.getLevelData(context, _userLevel);
+      _nextLevelData = RankingService.getLevelData(context, _userLevel + 1);
+    });
+  }
+
+  Future<void> _loadProgress() async {
+    _levelProgress = await RankingService.getUserLevelProgress();
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
     User? user = FirebaseAuth.instance.currentUser;
-    String? userId = user?.uid;
 
     return Scaffold(
       appBar: AppBar(
@@ -63,9 +106,118 @@ class ProfilePage extends StatelessWidget {
                       const SizedBox(height: 10),
                       ListTile(
                         leading: CircleAvatar(backgroundImage: NetworkImage(user?.photoURL ?? defaultImagePath), radius: 25,).animate().fadeIn(duration: 500.ms),
-                        title: Text(user!.isAnonymous ? "Guest".tr() : user.displayName ?? "No Display Name".tr()),
-                        subtitle: Text(user.isAnonymous ? "No Email".tr() : user.email ?? "No Display Name".tr()),
+                        title: Text(user?.isAnonymous ?? false ? "Guest".tr() : user?.displayName ?? "No Display Name".tr()),
+                        subtitle: Text(user?.isAnonymous ?? false ? "No Email".tr() : user?.email ?? "No Display Name".tr()),
                         trailing: const CustomChevronIcon(),
+                          onTap: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) {
+                                double localProgress = _levelProgress;
+                                int localLevel = _userLevel;
+
+                                return StatefulBuilder(
+                                  builder: (context, setDialogState) {
+                                    final levelData = RankingService.getLevelData(context, localLevel);
+
+                                    return AlertDialog(
+                                      backgroundColor: Theme.of(context).cardColor,
+                                      content: SingleChildScrollView(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Stack(
+                                              alignment: Alignment.center,
+                                              children: [
+                                                LinearProgressIndicator(
+                                                  value: localProgress,
+                                                  minHeight: 15,
+                                                  backgroundColor: levelData.color.withOpacity(0.3),
+                                                  valueColor: AlwaysStoppedAnimation<Color>(levelData.color),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                  children: [
+                                                    Text("LVL: $localLevel", style: const TextStyle(color: Colors.black)),
+                                                    Text("LVL: ${localLevel + 1}", style: const TextStyle(color: Colors.black)),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
+                                            const SizedBox(height: 10),
+                                            CustomPaint(
+                                              painter: NearRegularHexagonPainter(levelData.color),
+                                              child: SizedBox(
+                                                width: 150,
+                                                height: 150,
+                                                child: Center(
+                                                  child: Column(
+                                                    mainAxisAlignment: MainAxisAlignment.center,
+                                                    children: [
+                                                      Text("RANK", style: Theme.of(context).textTheme.titleMedium).tr(),
+                                                      Text(
+                                                        localLevel.toString(),
+                                                        style: Theme.of(context).textTheme.titleMedium!.copyWith(fontSize: 36),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Text(levelData.title, style: Theme.of(context).textTheme.displayLarge),
+                                            const SizedBox(height: 20),
+                                            Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                              children: [
+                                                Flexible(
+                                                  child: ElevatedButton(
+                                                    onPressed: () async {
+                                                      await RankingService.addProgress(10); // +10 EXP
+                                                      final level = await RankingService.getCurrentUserLevel();
+                                                      final progress = await RankingService.getUserLevelProgress();
+
+                                                      setState(() {
+                                                        _userLevel = level;
+                                                        _levelProgress = progress;
+                                                      });
+                                                      setDialogState(() {
+                                                        localLevel = level;
+                                                        localProgress = progress;
+                                                      });
+                                                    },
+                                                    child: Text("Add EXP", style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
+                                                  ),
+                                                ),
+                                                Flexible(
+                                                  child: ElevatedButton(
+                                                    onPressed: () async {
+                                                      await RankingService.addProgress(-10); // -10 EXP
+                                                      final level = await RankingService.getCurrentUserLevel();
+                                                      final progress = await RankingService.getUserLevelProgress();
+
+                                                      setState(() {
+                                                        _userLevel = level;
+                                                        _levelProgress = progress;
+                                                      });
+                                                      setDialogState(() {
+                                                        localLevel = level;
+                                                        localProgress = progress;
+                                                      });
+                                                    },
+                                                    child: Text("Decrease EXP", style: Theme.of(context).textTheme.titleLarge, textAlign: TextAlign.center),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                            );
+                          }
                       ),
                       ListTile(
                         leading: const Icon(Icons.lock_outline),

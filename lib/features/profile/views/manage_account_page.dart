@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -119,7 +120,7 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
       appBar: AppBar(
         title: const Text(
           "Modify user crediantials",
-        ),
+        ).tr(),
       ),
       body: SingleChildScrollView(
         reverse: true,
@@ -163,7 +164,7 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                     ),
                     child: TextButton(
                       onPressed: uploadProfilePicture,
-                      child: Text("Upload File", style: kanitStyle),
+                      child: Text("Upload File".tr(), style: kanitStyle),
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -179,22 +180,25 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                           builder: (BuildContext context) {
                             String networkPhotoUrl = '';
                             return AlertDialog(
-                              title: const Text('Enter Network Photo URL'),
+                              backgroundColor: Theme.of(context).cardColor,
+                              title: const Text('Enter Network Photo URL').tr(),
                               content: TextField(
                                 onChanged: (value) {
                                   networkPhotoUrl = value;
                                 },
-                                decoration: const InputDecoration(hintText: 'URL'),
+                                decoration: InputDecoration(
+                                    hintText: 'URL'
+                                ),
                               ),
                               actions: <Widget>[
                                 TextButton(
-                                  child: const Text('Cancel'),
+                                  child: const Text('Cancel').tr(),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
                                 ),
                                 TextButton(
-                                  child: const Text('Upload'),
+                                  child: const Text('Upload').tr(),
                                   onPressed: () {
                                     uploadNetworkProfilePicture(networkPhotoUrl);
                                     Navigator.of(context).pop();
@@ -205,7 +209,7 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                           },
                         );
                       },
-                      child: Text("Upload Network URL", style: kanitStyle),
+                      child: Text("Upload Network URL".tr(), style: kanitStyle),
                     ),
                   ),
                 ],
@@ -218,14 +222,17 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
 
               // Email
               Text(
-                'Change user email',
-                style: kanitStyle.copyWith(color: Colors.black54, fontSize: 18),
+                'Change user email'.tr(),
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(
+                height: 5,
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  border: Border.all(color: Colors.white),
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  border: Border.all(color: Theme.of(context).textTheme.titleLarge!.color!),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Padding(
@@ -245,24 +252,24 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                               print(error);
                             });
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
+                              SnackBar(
                                 backgroundColor: Colors.green,
-                                content: Text('Email updated successfully'),
+                                content: Text('Email updated successfully').tr(),
                               ),
                             );
                           } catch (e) {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
+                              SnackBar(
                                 backgroundColor: Colors.red,
-                                content: Text('Failed to update email'),
+                                content: Text('Failed to update email').tr(),
                               ),
                             );
                           }
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
+                            SnackBar(
                               backgroundColor: Colors.red,
-                              content: Text('It is the same email'),
+                              content: Text('It is the same email').tr(),
                             ),
                           );
                         }
@@ -270,13 +277,13 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                       keyboardType: TextInputType.emailAddress,
                       controller: emailController,
                       decoration: InputDecoration(
-                        hintText: 'Current : ${user?.email ?? "No email"}',
+                        hintText: 'Current : ${user?.email ?? "Anonymous".tr()}',
                         hintStyle: kanitStyle,
                         border: InputBorder.none,
                       ),
                       validator: (email) {
                         if (email != null && !EmailValidator.validate(email)) {
-                          return "Enter valid email!";
+                          return "Enter valid email!".tr();
                         } else {
                           return null;
                         }
@@ -289,13 +296,16 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
               ),
               // Display Name
               Text(
-                'Change user display name',
-                style: kanitStyle.copyWith(color: Colors.black54, fontSize: 18),
+                'Change user display name'.tr(),
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(
+                height: 5,
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  border: Border.all(color: Colors.white),
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  border: Border.all(color: Theme.of(context).textTheme.titleLarge!.color!),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Padding(
@@ -308,27 +318,27 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                           ScaffoldMessenger.of(context).clearSnackBars();
 
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
+                             SnackBar(
                               backgroundColor: Colors.green,
                               content:
-                              Text('Display name updated successfully'),
+                              Text('Display name updated successfully').tr(),
                             ),
                           );
                         } catch (e) {
                           ScaffoldMessenger.of(context).clearSnackBars();
 
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
+                             SnackBar(
                               backgroundColor: Colors.red,
-                              content: Text('Failed to update display name'),
+                              content: Text('Failed to update display name').tr(),
                             ),
                           );
                         }
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
+                           SnackBar(
                             backgroundColor: Colors.red,
-                            content: Text('It is the same display name'),
+                            content: Text('It is the same display name').tr(),
                           ),
                         );
                       }
@@ -337,16 +347,16 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                     controller: fullNameController,
                     decoration: InputDecoration(
                       hintText:
-                      'Current : ${user?.displayName ?? "No display name"}',
+                      'Current : ${user?.displayName ?? "Anonymous".tr()}',
                       hintStyle: kanitStyle,
                       border: InputBorder.none,
                     ),
                     validator: (fullName) {
                       final namePattern = RegExp(r'^[A-Z][a-z]+\s[A-Z][a-z]+$');
                       if (fullName == null || fullName.isEmpty) {
-                        return 'Please enter your full name';
+                        return 'Please enter your full name'.tr();
                       } else if (!namePattern.hasMatch(fullName.trim())) {
-                        return 'Please enter a valid full name like "Toktar Sultan"';
+                        return 'Please enter a valid full name like "Toktar Sultan"'.tr();
                       }
                       return null;
                     },
@@ -358,13 +368,16 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
               ),
               // Password
               Text(
-                'Change user password',
-                style: kanitStyle.copyWith(color: Colors.black54, fontSize: 18),
+                'Change user password'.tr(),
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(
+                height: 5,
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
-                  border: Border.all(color: Colors.white),
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  border: Border.all(color: Theme.of(context).textTheme.titleLarge!.color!),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Padding(
@@ -378,9 +391,9 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                             ScaffoldMessenger.of(context).clearSnackBars();
 
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
+                              SnackBar(
                                 backgroundColor: Colors.green,
-                                content: Text('Password updated successfully'),
+                                content: Text('Password updated successfully').tr(),
                               ),
                             );
                           } catch (e) {
@@ -408,7 +421,7 @@ class _ManageAccountPageState extends State<ManageAccountPage> {
                       obscureText: true,
                       controller: passwordController,
                       decoration: InputDecoration(
-                        hintText: 'New Password',
+                        hintText: 'New Password'.tr(),
                         hintStyle: kanitStyle,
                         border: InputBorder.none,
                       ),

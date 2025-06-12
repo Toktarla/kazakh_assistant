@@ -8,7 +8,6 @@ import 'package:proj_management_project/services/local/app_data_box_manager.dart
 import 'package:proj_management_project/utils/extensions/localized_context_extension.dart';
 
 import '../../../../../config/di/injection_container.dart';
-import '../../../../../repositiories/phrase_repository.dart';
 
 class PhrasesWidget extends StatefulWidget {
   const PhrasesWidget({Key? key}) : super(key: key);
@@ -18,7 +17,6 @@ class PhrasesWidget extends StatefulWidget {
 }
 
 class _PhrasesWidgetState extends State<PhrasesWidget> {
-  late final PhraseRepository repository;
   List<PhraseTheme> _data = [];
   int currentIndex = 0;
   final manager = sl<AppDataBoxManager>();
@@ -26,7 +24,6 @@ class _PhrasesWidgetState extends State<PhrasesWidget> {
   @override
   void initState() {
     super.initState();
-    repository = PhraseRepository(manager.store);
   }
 
   @override
@@ -34,7 +31,7 @@ class _PhrasesWidgetState extends State<PhrasesWidget> {
     super.didChangeDependencies();
     // Ensure this only runs once
     if (_data.isEmpty) {
-      _data = manager.getAllPhrase();
+      _data = manager.getAllPhraseThemes();
     }
     print(_data);
   }

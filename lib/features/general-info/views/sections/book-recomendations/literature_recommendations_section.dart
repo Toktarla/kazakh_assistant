@@ -22,10 +22,11 @@ class _LiteratureRecommendationsWidgetState extends State<LiteratureRecommendati
   final List<String> genres = [
     'All'.tr(),
     'Kazakh Learning'.tr(),
-    'Romance'.tr(),
+    'Literature'.tr(),
+    'Poetry'.tr(),
     'Drama'.tr(),
     'Historical'.tr(),
-    'Folklore'.tr(),
+    'Epic'.tr(),
   ];
 
   @override

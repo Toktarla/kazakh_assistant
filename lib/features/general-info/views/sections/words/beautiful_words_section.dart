@@ -32,14 +32,14 @@ class _BeautifulWordSectionsPageState extends State<BeautifulWordSectionsPage> {
 
   void _loadRareWords() {
     setState(() {
-      rareWordTypes = boxManager.getAllRareWords();
+      rareWordTypes = boxManager.getAllRareWordTypes();
     });
   }
 
   void _refreshProgress() {
     // This method will be called when a word's learned status changes
     setState(() {
-      rareWordTypes = boxManager.getAllRareWords();
+      rareWordTypes = boxManager.getAllRareWordTypes();
     });
   }
 

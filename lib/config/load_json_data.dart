@@ -39,21 +39,6 @@ Future<void> loadDataFromJson(Store store) async {
   final literaryExtractsData = json.decode(await rootBundle.loadString('assets/data/extracts.json'));
   final proverbsData = json.decode(await rootBundle.loadString('assets/data/proverbs.json'));
   final dialectsData = json.decode(await rootBundle.loadString('assets/data/dialects.json'));
-  final fillInTheBlankData = json.decode(await rootBundle.loadString('assets/data/fill_in_blank.json'));
-
-  final items = (fillInTheBlankData['data'] as List<dynamic>).map((json) => FillInTheBlank(
-    textBeforeKk: json['textBefore']['kk'] ?? '',
-    textBeforeRu: json['textBefore']['ru'] ?? '',
-    textBeforeEn: json['textBefore']['en'] ?? '',
-    answerKk: json['answer']['kk'] ?? '',
-    answerRu: json['answer']['ru'] ?? '',
-    answerEn: json['answer']['en'] ?? '',
-    textAfterKk: json['textAfter']['kk'] ?? '',
-    textAfterRu: json['textAfter']['ru'] ?? '',
-    textAfterEn: json['textAfter']['en'] ?? '',
-    level: json['level'] ?? 'Intermediate',
-  )).toList();
-  fillInTheBlankBox.putMany(items);
 
   // Sections
   for (final s in sectionData['sections']) {
@@ -220,6 +205,7 @@ Future<void> loadDataFromJson(Store store) async {
         ..meaningKz = w['meaningKz']
         ..meaningRu = w['meaningRu']
         ..meaningEn = w['meaningEn']
+        ..synonyms = List<String>.from(w['synonyms'] ?? [])
         ..etymologyKz = w['etymologyKz']
         ..etymologyRu = w['etymologyRu']
         ..etymologyEn = w['etymologyEn']

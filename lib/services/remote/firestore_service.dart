@@ -235,4 +235,65 @@ class FirestoreService {
       throw Exception('Failed to delete chat: $e');
     }
   }
+
+  // Save level and progress
+  Future<void> updateUserLevelData({required int level, required int progress}) async {
+    final uid = _firebaseAuth.currentUser?.uid;
+    if (uid == null) return;
+
+    await _firestore.collection('users').doc(uid).set({
+      'userLevel': level,
+      'userProgress': progress,
+    }, SetOptions(merge: true));
+  }
+
+// Get current level
+  Future<int> getCurrentUserLevel() async {
+    final uid = _firebaseAuth.currentUser?.uid;
+    if (uid == null) return 1;
+
+    final doc = await _firestore.collection('users').doc(uid).get();
+    return (doc.data()?['userLevel'] as int?) ?? 1;
+  }
+
+// Get current progress
+  Future<int> getCurrentUserProgress() async {
+    final uid = _firebaseAuth.currentUser?.uid;
+    if (uid == null) return 0;
+
+    final doc = await _firestore.collection('users').doc(uid).get();
+    return (doc.data()?['userProgress'] as int?) ?? 0;
+  }
+
+// Add progress and level up if needed
+  Future<void> addProgress(int points) async {
+    final uid = _firebaseAuth.currentUser?.uid;
+    if (uid == null) return;
+
+    final docRef = _firestore.collection('users').doc(uid);
+    final snapshot = await docRef.get();
+    int currentLevel = (snapshot.data()?['userLevel'] as int?) ?? 1;
+    int currentProgress = (snapshot.data()?['userProgress'] as int?) ?? 0;
+
+    const requiredPoints = 50;
+    currentProgress += points;
+
+    while (currentProgress >= requiredPoints && currentLevel < 100) {
+      currentProgress -= requiredPoints;
+      currentLevel++;
+    }
+
+    await docRef.set({
+      'userLevel': currentLevel,
+      'userProgress': currentProgress,
+    }, SetOptions(merge: true));
+  }
+
+// Calculate progress as 0.0 - 1.0
+  Future<double> getUserLevelProgress() async {
+    int progress = await getCurrentUserProgress();
+    const requiredPoints = 50;
+    return progress / requiredPoints;
+  }
+
 }

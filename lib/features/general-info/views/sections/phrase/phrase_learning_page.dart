@@ -58,114 +58,110 @@ class _PhraseLearningPageState extends State<PhraseLearningPage> {
             iconColor: Theme.of(context).textTheme.titleLarge!.color,
             textColor: Theme.of(context).textTheme.titleLarge!.color,
           ),
-          Expanded(
-            child: GridView.builder(
-              padding: const EdgeInsets.all(12),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 12,
-                mainAxisSpacing: 12,
-                childAspectRatio: 1.1, // tweak this for height
-              ),
-              itemCount: widget.phrases.length,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                final phrase = widget.phrases[index];
-                return GestureDetector(
-                  onTap: () => _showDetailsDialog(phrase),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      gradient: LinearGradient(
-                        colors: [
-                          Theme.of(context).primaryColorDark,
-                          Theme.of(context).cardColor,
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 6,
-                          offset: Offset(2, 2),
-                        ),
-                      ],
-                    ),
-                    padding: const EdgeInsets.all(12),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Text(
-                            phrase.phrase ?? '',
-                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          context.localizedValue(
-                            kz: phrase.meaningKz,
-                            ru: phrase.meaningRu,
-                            en: phrase.meaningEn,
-                          ) ?? '',
-                          style: Theme.of(context).textTheme.bodySmall,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        const Spacer(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            IconButton(
-                              icon: Icon(
-                                phrase.isFavorite ? Icons.star : Icons.star_border,
-                                color: Colors.amber,
-                                size: 20,
-                              ),
-                              onPressed: () {
-                                dataBoxManager.toggleFavorite<Phrase>(
-                                  phrase,
-                                  dataBoxManager.phraseBox,
-                                      (p) => p.isFavorite,
-                                      (p, value) => p.isFavorite = value,
-                                );
-                                setState(() {});
-                              },
-                            ),
-                            IconButton(
-                              icon: const Icon(Icons.volume_up, color: Colors.lightBlueAccent),
-                              onPressed: () async {
-                                await audioService.playAsset(phrase.audioUrl ?? "");
-                              },
-                            ),
-                            IconButton(
-                              icon: Icon(
-                                phrase.isLearned ? Icons.check_circle : Icons.check_circle_outline,
-                                color: Colors.green,
-                                size: 20,
-                              ),
-                              onPressed: () {
-                                dataBoxManager.toggleLearned<Phrase>(
-                                  phrase,
-                                  dataBoxManager.phraseBox,
-                                );
-                                setState(() {});
-                              },
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              },
+          GridView.builder(
+            padding: const EdgeInsets.all(12),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              crossAxisSpacing: 12,
+              mainAxisSpacing: 12,
+              childAspectRatio: 1.1, // tweak this for height
             ),
+            itemCount: widget.phrases.length,
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              final phrase = widget.phrases[index];
+              return GestureDetector(
+                onTap: () => _showDetailsDialog(phrase),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    gradient: LinearGradient(
+                      colors: [
+                        Theme.of(context).primaryColorDark,
+                        Theme.of(context).cardColor,
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 6,
+                        offset: Offset(2, 2),
+                      ),
+                    ],
+                  ),
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        phrase.phrase ?? '',
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        context.localizedValue(
+                          kz: phrase.meaningKz,
+                          ru: phrase.meaningRu,
+                          en: phrase.meaningEn,
+                        ) ?? '',
+                        style: Theme.of(context).textTheme.bodySmall,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const Spacer(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          IconButton(
+                            icon: Icon(
+                              phrase.isFavorite ? Icons.star : Icons.star_border,
+                              color: Colors.amber,
+                              size: 20,
+                            ),
+                            onPressed: () {
+                              dataBoxManager.toggleFavorite<Phrase>(
+                                phrase,
+                                dataBoxManager.phraseBox,
+                                    (p) => p.isFavorite,
+                                    (p, value) => p.isFavorite = value,
+                              );
+                              setState(() {});
+                            },
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.volume_up, color: Colors.lightBlueAccent),
+                            onPressed: () async {
+                              await audioService.playAsset(phrase.audioUrl ?? "");
+                            },
+                          ),
+                          IconButton(
+                            icon: Icon(
+                              phrase.isLearned ? Icons.check_circle : Icons.check_circle_outline,
+                              color: Colors.green,
+                              size: 20,
+                            ),
+                            onPressed: () {
+                              dataBoxManager.toggleLearned<Phrase>(
+                                phrase,
+                                dataBoxManager.phraseBox,
+                              );
+                              setState(() {});
+                            },
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
           )
         ],
       ),

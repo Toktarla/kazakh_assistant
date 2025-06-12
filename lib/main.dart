@@ -10,6 +10,7 @@ import 'package:proj_management_project/features/auth/providers/authentication_p
 import 'package:proj_management_project/features/chat/providers/chat_provider.dart';
 import 'package:proj_management_project/features/general-info/models/user_level.dart';
 import 'package:proj_management_project/services/local/app_data_box_manager.dart';
+import 'package:proj_management_project/services/local/internet_checker.dart';
 import 'package:proj_management_project/services/local/objectbox.dart';
 import 'package:provider/provider.dart';
 import 'features/intro/intro_screen.dart' show IntroScreen, shouldShowIntro;
@@ -31,6 +32,7 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   objectbox = await ObjectBox.create();
   await setupServiceLocator();
+  InternetChecker().initialize();
 
   final firebaseMessagingService = sl<FirebaseMessagingService>();
   firebaseMessagingService.initialize();
@@ -45,7 +47,7 @@ void main() async {
       supportedLocales: const [Locale('en'), Locale('ru'), Locale('kk')],
       path: 'assets/translations',
       fallbackLocale: const Locale('en'),
-      child: MyApp(hasSeenIntro: hasSeenIntro))
+      child: MyApp(hasSeenIntro: false))
   );
 }
 

@@ -9,6 +9,7 @@ import '../../../../../config/di/injection_container.dart';
 import '../../../../../config/variables.dart';
 import '../../../../../services/local/app_data_box_manager.dart';
 import '../../../../../services/local/audio_player_service.dart';
+import '../../../../../services/local/ranking_service.dart';
 import '../../../models/idiom.dart';
 
 class IdiomLearningPage extends StatefulWidget {
@@ -93,7 +94,7 @@ class _IdiomLearningPageState extends State<IdiomLearningPage> {
         children: [
           const SizedBox(height: 20),
           Expanded(
-            flex: 5,
+            flex: 4,
             child: PageView.builder(
               controller: _pageController,
               onPageChanged: (index) => setState(() => _currentIndex = index),
@@ -101,7 +102,7 @@ class _IdiomLearningPageState extends State<IdiomLearningPage> {
               itemBuilder: (context, index) {
                 final currentIdiom = widget.idioms[index];
                 final synonyms = currentIdiom.synonyms ?? [];
-
+            
                 return AnimatedBuilder(
                   animation: _pageController,
                   builder: (context, child) {
@@ -110,7 +111,7 @@ class _IdiomLearningPageState extends State<IdiomLearningPage> {
                       value = (_pageController.page! - index).abs();
                       value = (1 - (value * 0.3)).clamp(0.8, 1.0);
                     }
-
+            
                     return Center(
                       child: Transform.scale(
                         scale: Curves.easeInOutBack.transform(value),

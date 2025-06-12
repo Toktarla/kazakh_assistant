@@ -6,6 +6,7 @@ import 'package:proj_management_project/features/general-info/models/fill_in_the
 import 'package:proj_management_project/features/general-info/models/streak.dart';
 import 'package:proj_management_project/features/general-info/models/user_level.dart';
 import 'package:proj_management_project/objectbox.g.dart';
+import 'package:proj_management_project/services/local/ranking_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../features/general-info/models/section.dart';
@@ -141,18 +142,22 @@ class AppDataBoxManager {
     }
   }
 
-  void toggleLearned<T extends Object>(T item, Box<T> box) {
+  void toggleLearned<T extends Object>(T item, Box<T> box) async {
     if (item is RareKazakhWord) {
       item.isLearned = !item.isLearned;
+      if (item.isLearned) await RankingService.addProgress(10);
       box.put(item);
     } else if (item is Idiom) {
       item.isLearned = !item.isLearned;
+      if (item.isLearned) await RankingService.addProgress(10);
       box.put(item);
     } else if (item is Phrase) {
       item.isLearned = !item.isLearned;
+      if (item.isLearned) await RankingService.addProgress(10);
       box.put(item);
     } else if (item is Proverb) {
       item.isLearned = !item.isLearned;
+      if (item.isLearned) await RankingService.addProgress(10);
       box.put(item);
     } else {
       throw Exception("Unsupported type for isLearned toggle: ${T.toString()}");
@@ -233,7 +238,7 @@ class AppDataBoxManager {
 
   List<IdiomType> getAllIdiomTypes() => idiomTypeBox.getAll();
 
-  List<PhraseTheme> getAllPhrase() {
+  List<PhraseTheme> getAllPhraseThemes() {
     final level = getUserLevel().name;
 
     return phraseThemeBox.getAll().where((phraseTheme) {
@@ -243,7 +248,23 @@ class AppDataBoxManager {
     }).toList();
   }
 
-  List<RareKazakhWordType> getAllRareWords() {
+  List<Phrase> getAllPhrases() {
+    final level = getUserLevel().name;
+    return phraseThemeBox.getAll().expand((phraseTheme) {
+      return phraseTheme.phraseTypes.expand((phraseType) {
+        return phraseType.phrases.where((phrase) => phrase.level == level);
+      });
+    }).toList();
+  }
+
+  List<RareKazakhWord> getAllRareWords() {
+    final level = getUserLevel().name;
+    return rareTypeBox.getAll().expand((wordType) {
+      return wordType.words.where((word) => word.level == level).toList();
+    }).toList();
+  }
+
+  List<RareKazakhWordType> getAllRareWordTypes() {
     final level = getUserLevel().name;
 
     return rareTypeBox.getAll().where((rareKazakhWordType) {

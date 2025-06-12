@@ -3,8 +3,6 @@ import 'package:lucide_icons/lucide_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../../../../../config/variables.dart';
-
 class RegionInformationBS extends StatelessWidget {
   final String regionId;
   final Color color;
@@ -208,3 +206,51 @@ class RegionInformationBS extends StatelessWidget {
     );
   }
 }
+
+final Map<String, Map<String, dynamic>> regionDetailData = {
+  'south': {
+    'name': 'Юг Казахстана',
+    'territory': 300000,
+    'territoryText': 'второй по величине',
+    'population': '6 млн',
+    'cities': ['Шымкент', 'Туркестан', 'Кызылорда'],
+    'popularPlaces': ['Мавзолей Ходжи Ахмеда Ясави', 'Арал'],
+    'infoUrl': 'https://ru.wikipedia.org/wiki/Южный_Казахстан',
+  },
+  'north': {
+    'name': 'Север Казахстана',
+    'territory': 250000,
+    'territoryText': 'третий по величине',
+    'population': '4 млн',
+    'cities': ['Петропавловск', 'Кокшетау'],
+    'popularPlaces': ['Бурабай', 'Национальный парк Кокшетау'],
+    'infoUrl': 'https://ru.wikipedia.org/wiki/Северный_Казахстан',
+  },
+  'central': {
+    'name': 'Центр',
+    'territory': 297000,
+    'territoryText': 'как 4 Южной Кореи',
+    'population': 1800000,
+    'cities': ['Караганда', 'Темиртау', 'Балхаш'],
+    'popularPlaces': ['Горный музей', 'Озеро Балхаш'],
+    'infoUrl': 'https://ru.wikipedia.org/wiki/Центральный_Казахстан',
+  },
+  'west': {
+    'name': 'Запад',
+    'territory': 350000,
+    'territoryText': 'как 3 Испании',
+    'population': 1200000,
+    'cities': ['Атырау', 'Актау', 'Уральск'],
+    'popularPlaces': ['Каспийское море', 'Пустыня Мангышлак'],
+    'infoUrl': 'https://ru.wikipedia.org/wiki/Западный_Казахстан',
+  },
+  'east': {
+    'name': 'Восток',
+    'territory': 283000,
+    'territoryText': 'как 2 Италии',
+    'population': 1600000,
+    'cities': ['Семей', 'Өскемен', 'Риддер'],
+    'popularPlaces': ['Алтайские горы', 'Иртыш'],
+    'infoUrl': 'https://ru.wikipedia.org/wiki/Восточный_Казахстан',
+  },
+};

@@ -2,11 +2,11 @@
   "data": [
     {
       "themeEn": "Daily Life",
-      "themeKz": "Daily Life",
-      "themeRu": "Daily Life",
+      "themeKz": "Күнделікті өмір",
+      "themeRu": "Повседневная жизнь",
       "descriptionEn": "These phrases should be used in daily life and you will use them most of the time.",
-      "descriptionRu": "These phrases should be used in daily life and you will use them most of the time.",
-      "descriptionKz": "These phrases should be used in daily life and you will use them most of the time.",
+      "descriptionRu": "Эти фразы следует использовать в повседневной жизни, и вы будете использовать их большую часть времени.",
+      "descriptionKz": "Бұл тіркестер күнделікті өмірде қолданылуы керек және сіз оларды көп жағдайда қолданасыз.",
       "types": [
         {
           "typeEn": "Greetings",
@@ -410,7 +410,7 @@
             {
               "phrase": "Қош болыңыз",
               "meaningKz": "Ұзақ уақытқа қоштасу",
-              "meaningRu": "Прощайте (надолго)",
+              "meaningRu": "Прощайте",
               "meaningEn": "Farewell (for a long time)",
               "usageKz": "Ұзақ уақытқа не мәңгі қоштасқанда.",
               "usageRu": "Когда прощаетесь надолго или навсегда.",

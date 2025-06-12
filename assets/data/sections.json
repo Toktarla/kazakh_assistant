@@ -71,9 +71,9 @@
       "contentTypeString": "information"
     },
     {
-      "titleKz": "Толтыру жаттығуы",
-      "titleRu": "Упражнение с пропусками",
-      "titleEn": "Fill in the Blank Exercise",
+      "titleKz": "Қазақша сөздік сөздік қорыңызды жаттықтырыңыз",
+      "titleRu": "Тренируйте свой казахский словарный запас",
+      "titleEn": "Train Your Kazakh Word Vocabulary",
       "descriptionKz": "Сөздердің орнына дұрыс нұсқаны қойыңыз.",
       "descriptionRu": "Вставьте правильный вариант вместо пропусков.",
       "descriptionEn": "Fill in the correct words in the blanks.",
@@ -81,9 +81,9 @@
       "contentTypeIndex": 7
     },
     {
-      "titleKz": "Көп таңдау",
-      "titleRu": "Множественный выбор",
-      "titleEn": "Multiple Choice Quiz",
+      "titleKz": "Қазақша сөз тіркестері қаншалықты жақсы?",
+      "titleRu": "Насколько хорошо вы знаете казахские фразы?",
+      "titleEn": "How Good Are You with Kazakh Phrases?",
       "descriptionKz": "Дұрыс жауапты таңдаңыз.",
       "descriptionRu": "Выберите правильный ответ.",
       "descriptionEn": "Select the correct answer.",
@@ -91,9 +91,9 @@
       "contentTypeIndex": 8
     },
     {
-      "titleKz": "Сәйкестендіру ойыны",
-      "titleRu": "Игра на сопоставление",
-      "titleEn": "Matching Game",
+      "titleKz": "Сіз осы идиомаларды дұрыс сәйкестендіре аласыз ба?",
+      "titleRu": "Сможете ли вы правильно сопоставить эти идиомы?",
+      "titleEn": "Can You Match These Idioms Correctly?",
       "descriptionKz": "Сөздерді дұрыс жұптастырыңыз.",
       "descriptionRu": "Сопоставьте слова правильно.",
       "descriptionEn": "Match the words correctly.",
@@ -101,34 +101,14 @@
       "contentTypeIndex": 9
     },
     {
-      "titleKz": "Тыңдау жаттығуы",
-      "titleRu": "Упражнение на аудирование",
-      "titleEn": "Listening Comprehension",
+      "titleKz": "Қазақ тіліндегі дұрыс сөздерді байланыстыр",
+      "titleRu": "Свяжите правильные слова на казахском языке",
+      "titleEn": "Associate the Right Words in Kazakh",
       "descriptionKz": "Тыңдап, дұрыс жауапты таңдаңыз.",
       "descriptionRu": "Прослушайте и выберите правильный ответ.",
       "descriptionEn": "Listen and select the correct answer.",
       "contentTypeString": "exercise",
       "contentTypeIndex": 10
-    },
-    {
-      "titleKz": "Дұрыс немесе бұрыс",
-      "titleRu": "Верно или неверно",
-      "titleEn": "True or False",
-      "descriptionKz": "Жауаптың дұрыстығын анықтаңыз.",
-      "descriptionRu": "Определите, верно ли утверждение.",
-      "descriptionEn": "Decide if the statement is true or false.",
-      "contentTypeString": "exercise",
-      "contentTypeIndex": 11
-    },
-    {
-      "titleKz": "Сөздер ассоциациясы",
-      "titleRu": "Ассоциация слов",
-      "titleEn": "Word Association",
-      "descriptionKz": "Сөздерді суреттермен байланыстырыңыз.",
-      "descriptionRu": "Свяжите слова с изображениями.",
-      "descriptionEn": "Associate words with images.",
-      "contentTypeString": "exercise",
-      "contentTypeIndex": 12
     }
   ]
 }

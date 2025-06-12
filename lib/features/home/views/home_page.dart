@@ -4,8 +4,6 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart'; // Import salomon_b
 import 'package:proj_management_project/features/chat/views/chat_history_screen.dart';
 import 'package:proj_management_project/features/profile/views/profile_page.dart';
 import '../../../services/local/local_notifications_service.dart';
-import '../../../services/remote/firestore_service.dart';
-import 'package:proj_management_project/config/di/injection_container.dart';
 import '../../general-info/views/general_information_page.dart';
 import '../../translation/views/translation_page.dart';
 

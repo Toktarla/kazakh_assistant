@@ -104,7 +104,11 @@ class _ProverbsWidgetState extends State<ProverbsWidget>
               title: 'Daily Proverb'.tr(),
               item: dataBoxManager.getDailyProverb(),
               getContent: (p) => p.proverb ?? '',
-              getMeaning: (p) => p.meaningEn,
+              getMeaning: (p) => context.localizedValue(
+                kz: p.meaningKz,
+                ru: p.meaningRu,
+                en: p.meaningEn,
+              ) ?? '',
               icon: Icons.lightbulb,
               getDetails: (p) => {
                 "Meaning".tr(): context.localizedValue(

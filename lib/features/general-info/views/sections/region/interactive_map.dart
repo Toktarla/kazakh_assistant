@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_drawing/path_drawing.dart';
+import 'package:proj_management_project/features/general-info/views/sections/region/dialect_words_list_page.dart';
 import 'package:proj_management_project/features/general-info/views/sections/region/region_compare_page.dart';
 import 'package:proj_management_project/features/general-info/views/sections/region/region_information_bs.dart';
-import 'package:proj_management_project/features/general-info/views/sections/region/regional_dialect_types_page.dart';
 import 'package:proj_management_project/utils/helpers/get_color_hex.dart';
 import 'package:xml/xml.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,6 +47,7 @@ class _MapPageState extends State<MapPage> {
       if (partId.isEmpty) continue;
       final partPath = element.getAttribute('d').toString();
       final colorHex = element.getAttribute('fill')?.toUpperCase() ?? '#CCCCCC';
+      print(partId);
       regions.add(Region(id: partId, path: partPath, colorHex: colorHex));
     }
 
@@ -77,8 +78,8 @@ class _MapPageState extends State<MapPage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (_) => RegionDialectTypesPage(
-                  regionId: regions[i].id
+              builder: (_) => DialectWordsListPage(
+                regionId: regions[i].id,
               ),
             ),
           );
@@ -128,7 +129,6 @@ class _MapPageState extends State<MapPage> {
                 children: [
                   _buildModeButton("Review".tr(), MapMode.overview),
                   _buildModeButton("Dialects".tr(), MapMode.dialects),
-                  _buildModeButton("Comparison mode".tr(), MapMode.compare),
                 ],
               ),
               const SizedBox(height: 50),
@@ -155,38 +155,37 @@ class _MapPageState extends State<MapPage> {
                   ),
                 ),
               ),
-              if (currentMode == MapMode.compare)
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => const RegionComparePage(),
-                          ),
-                        );
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.blueGrey.shade800,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 32, vertical: 16),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const RegionComparePage(),
                         ),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey.shade800,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 32, vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
                       ),
-                      child: Text(
-                        "Open comparison mode".tr(),
-                        style: GoogleFonts.montserrat(
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
+                    ),
+                    child: Text(
+                      "Open comparison mode".tr(),
+                      style: GoogleFonts.montserrat(
+                        fontSize: 16,
+                        color: Colors.white,
                       ),
                     ),
                   ),
                 ),
+              ),
             ],
           ),
         ),

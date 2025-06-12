@@ -8,6 +8,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../config/app_colors.dart';
+import '../../../services/local/internet_checker.dart';
 import '../../../utils/helpers/delete_confirmation_dialog.dart';
 
 class HistoryPage extends StatelessWidget {
@@ -200,6 +201,36 @@ class HistoryPage extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () async {
+                bool hasInternet = await InternetChecker().checkInternet();
+
+                if (hasInternet) {
+                  await chatViewModel.startNewChat();
+                  if (chatViewModel.currentChatId != null) {
+                    Navigator.pushNamed(context, '/Chat', arguments: {
+                      "chatId": chatViewModel.currentChatId,
+                    });
+                  } else {
+                    if (!context.mounted) return;
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('Failed to start a new chat. Please try again.'.tr()),
+                        backgroundColor: Colors.orange,
+                      ),
+                    );
+                  }
+                } else {
+                  // 3. If not connected, show a Snackbar
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('No internet connection. Please check your network and try again.'.tr()),
+                      backgroundColor: Colors.red,
+                      behavior: SnackBarBehavior.floating, // Often looks better
+                      margin: const EdgeInsets.all(10), // Adds margin
+                      duration: const Duration(seconds: 3), // How long it stays
+                    ),
+                  );
+                }
+
                 await chatViewModel.startNewChat();
                 Navigator.pushNamed(context, '/Chat', arguments: {
                   "chatId": chatViewModel.currentChatId,
@@ -216,9 +247,9 @@ class HistoryPage extends StatelessWidget {
                     Theme.of(context).primaryColor.withValues(alpha: 0.6),
                 elevation: 0,
               ),
-              child: Text(
+              child: const Text(
                 'New Chat',
-                style: GoogleFonts.montserrat(
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.w600,

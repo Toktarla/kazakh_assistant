@@ -41,7 +41,7 @@ class _IdiomsWidgetState extends State<IdiomsWidget> {
       body: Column(
         children: [
         DailyItemCard<Idiom>(
-            title: 'Daily Idiom',
+            title: 'Daily Idiom'.tr(),
             item: dataBoxManager.getDailyIdiom(),
             getContent: (i) => i.idiom ?? '',
             getMeaning: (i) => i.meaningEn,

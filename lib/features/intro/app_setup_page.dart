@@ -1,5 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:lucide_icons/lucide_icons.dart';
 import 'package:proj_management_project/main.dart';
 import '../../config/di/injection_container.dart';
 import '../../config/load_json_data.dart';
@@ -78,13 +80,13 @@ class _AppSetUpPageState extends State<AppSetUpPage> {
               Text(
                 'Setting things up for you...',
                 style: theme.textTheme.titleMedium,
-              ),
+              ).tr(),
               const SizedBox(height: 10),
               Text(
                 'Please wait while we configure your preferences.',
                 style: theme.textTheme.bodyMedium,
                 textAlign: TextAlign.center,
-              ),
+              ).tr(),
               const SizedBox(height: 30),
               // Show progress bar with percentage
               Padding(
@@ -123,7 +125,7 @@ class _AppSetUpPageState extends State<AppSetUpPage> {
                     'Choose your Kazakh language level',
                     style: theme.textTheme.titleMedium,
                     textAlign: TextAlign.center,
-                  ),
+                  ).tr(),
                   const SizedBox(height: 20),
                   Wrap(
                     spacing: 12,
@@ -131,23 +133,52 @@ class _AppSetUpPageState extends State<AppSetUpPage> {
                     alignment: WrapAlignment.center,
                     children: UserLevel.values.map((level) {
                       final isSelected = _selectedLevel == level;
+
+                      // Define icon and color per level
+                      late final IconData icon;
+                      late final Color color;
+
+                      switch (level) {
+                        case UserLevel.Beginner:
+                          icon = LucideIcons.bookOpen;
+                          color = Colors.green;
+                          break;
+                        case UserLevel.Intermediate:
+                          icon = LucideIcons.trendingUp;
+                          color = Colors.orangeAccent;
+                          break;
+                        case UserLevel.Native:
+                          icon = LucideIcons.award;
+                          color = Colors.redAccent;
+                          break;
+                      }
+
                       return ChoiceChip(
-                        label: Text(level.levelName),
+                        label: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              icon,
+                              size: 18,
+                              color: isSelected ? Colors.white : color,
+                            ),
+                            const SizedBox(width: 8),
+                            Text(
+                              level.levelName,
+                              style: TextStyle(
+                                color: isSelected ? Colors.white : color,
+                                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                              ),
+                            ).tr(),
+                          ],
+                        ),
                         selected: isSelected,
                         onSelected: (_) {
                           setState(() => _selectedLevel = level);
                         },
-                        selectedColor: theme.primaryColor,
-                        backgroundColor:
-                        theme.primaryColor.withOpacity(0.2),
-                        labelStyle: TextStyle(
-                          color: theme.textTheme.titleLarge!.color,
-                          fontWeight: isSelected
-                              ? FontWeight.bold
-                              : FontWeight.normal,
-                        ),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 16, vertical: 10),
+                        selectedColor: color,
+                        backgroundColor: color.withOpacity(0.2),
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16),
                         ),
@@ -165,10 +196,10 @@ class _AppSetUpPageState extends State<AppSetUpPage> {
                         borderRadius: BorderRadius.circular(20),
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       'Continue',
-                      style: TextStyle(fontSize: 16, color: Colors.white),
-                    ),
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ).tr(),
                   ),
                 ],
               ),

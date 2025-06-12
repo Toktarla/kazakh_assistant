@@ -123,7 +123,6 @@ class _ChatScreenState extends State<ChatScreen> {
           },
         );
 
-        // Timeout if no speech in 3 seconds
         Future.delayed(const Duration(seconds: 5), () {
           if (!heardAnything && _isListening) {
             _speech.stop();
@@ -610,64 +609,6 @@ class _ChatScreenState extends State<ChatScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Row(
-                      children: [
-                        DropdownButtonHideUnderline(
-                          child: DropdownButton<String>(
-                            hint: const Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(Icons.build, size: 20),
-                                SizedBox(width: 4),
-                                Text('Tools'),
-                              ],
-                            ),
-                            items: const [
-                              DropdownMenuItem(
-                                value: 'learning_words',
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.menu_book, size: 20),
-                                    SizedBox(width: 8),
-                                    Text('Learning Words'),
-                                  ],
-                                ),
-                              ),
-                              DropdownMenuItem(
-                                value: 'new_words',
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.fiber_new, size: 20),
-                                    SizedBox(width: 8),
-                                    Text('New Words'),
-                                  ],
-                                ),
-                              ),
-                              DropdownMenuItem(
-                                value: 'new_idioms',
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.lightbulb_outline, size: 20),
-                                    SizedBox(width: 8),
-                                    Text('New Idioms'),
-                                  ],
-                                ),
-                              ),
-                            ],
-                            onChanged: (value) {
-                              if (value == 'learning_words') {
-                                chatViewModel.fetchLearningWords();
-                              } else if (value == 'new_words') {
-                                chatViewModel.fetchNewWords();
-                              } else if (value == 'new_idioms') {
-                                chatViewModel.fetchNewIdioms();
-                              }
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
                     IconButton(
                       icon: Icon(_isListening ? Icons.mic_off : Icons.mic),
                       color: _isListening

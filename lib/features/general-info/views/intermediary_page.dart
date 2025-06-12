@@ -1,8 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:proj_management_project/config/load_json_data.dart';
-import 'package:proj_management_project/features/general-info/views/sections/fill_in_blank_page.dart';
-import 'package:proj_management_project/features/general-info/views/sections/listening_comprehension_page.dart';
-import 'package:proj_management_project/features/general-info/views/sections/matching_game_page.dart';
 import 'package:proj_management_project/features/general-info/views/sections/multiple_choice_page.dart';
 import 'package:proj_management_project/features/general-info/views/sections/word_association_page.dart';
 import 'package:proj_management_project/features/general-info/views/sections/words/beautiful_words_section.dart';
@@ -12,16 +10,23 @@ import 'package:proj_management_project/features/general-info/views/sections/boo
 import 'package:proj_management_project/features/general-info/views/sections/phrase/phrases_section.dart';
 import 'package:proj_management_project/features/general-info/views/sections/proverb/proverbs_section.dart';
 import 'package:proj_management_project/features/general-info/views/sections/region/interactive_map.dart';
-import 'package:proj_management_project/features/general-info/views/true_or_false_page.dart';
+import 'package:proj_management_project/services/local/app_data_box_manager.dart';
+import 'package:proj_management_project/utils/helpers/quiz_helper.dart';
 
+import '../../../config/di/injection_container.dart';
 import '../models/content_type.dart';
 
 class IntermediaryPage extends StatelessWidget {
   final ContentType contentType;
   final int contentTypeIndex;
+  final String? title;
 
-  const IntermediaryPage(
-      {super.key, required this.contentType, required this.contentTypeIndex});
+  const IntermediaryPage({
+    super.key,
+    required this.contentType,
+    required this.contentTypeIndex,
+    this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +36,7 @@ class IntermediaryPage extends StatelessWidget {
   }
 
   Widget _buildContent(BuildContext context) {
+    final boxManager = sl<AppDataBoxManager>();
     switch (contentType) {
       case ContentType.beautifulWords:
         return BeautifulWordSectionsPage(
@@ -50,20 +56,37 @@ class IntermediaryPage extends StatelessWidget {
         return LiteratureRecommendationsWidget(
           recommendationBox: recommendationBox,
         );
-      case ContentType.exerciseFillInTheBlank:
-        return const FillInTheBlankPage(
-
+      case ContentType.exerciseIdioms: {
+        final idioms = boxManager.getAllIdioms();
+        final items = QuizHelper.generateIdiomQuestions(context, idioms, context.locale.languageCode);
+        return MultipleChoicePage(
+            title: title ?? '',
+            items: items
         );
-      case ContentType.exerciseMultipleChoice:
-        return const MultipleChoicePage();
-      case ContentType.exerciseMatchingGame:
-        return const MatchingGamePage();
-      case ContentType.exerciseListeningComprehension:
-        return const ListeningComprehensionPage();
-      case ContentType.exerciseTrueFalse:
-        return const TrueFalsePage();
+      }
+
+      case ContentType.exercisePhrases: {
+        final phrases = boxManager.getAllPhrases();
+        final items = QuizHelper.generatePhraseQuestions(context, phrases, context.locale.languageCode);
+        return MultipleChoicePage(
+            title: title ?? '',
+            items: items
+        );
+      }
+
+      case ContentType.exerciseWordVocabulary: {
+        final words = boxManager.getAllRareWords();
+        final items = QuizHelper.generateWordQuestions(context, words, context.locale.languageCode);
+        return MultipleChoicePage(
+            title: title ?? '',
+            items: items
+        );
+      }
       case ContentType.exerciseWordAssociation:
-        return const WordAssociationPage();
+        final words = boxManager.getAllRareWords();
+        final pairs = QuizHelper.generateWordSynonymPairs(words);
+        return WordAssociationPage(wordSynonymPairs: pairs);
+
     }
   }
 }

@@ -33,6 +33,7 @@ class RareKazakhWord {
   String? etymologyEn;
   String? etymologyKz;
   List<String>? examples;
+  List<String>? synonyms;
   String? poemExample;
   String? writingExample;
   String? level;

@@ -54,11 +54,11 @@ class _FavoritesPageState extends State<FavoritesPage> with TickerProviderStateM
 
     favoriteProverbs = appData.getAllProverbs().where((p) => p.isFavorite).toList();
     favoriteIdioms = appData.getAllIdioms().where((i) => i.isFavorite).toList();
-    favoriteRareWords = appData.getAllRareWords()
+    favoriteRareWords = appData.getAllRareWordTypes()
         .expand((type) => type.words)
         .where((w) => w.isFavorite)
         .toList();
-    favoritePhrases = appData.getAllPhrase()
+    favoritePhrases = appData.getAllPhraseThemes()
         .expand((theme) => theme.phraseTypes)
         .expand((type) => type.phrases)
         .where((p) => p.isFavorite)

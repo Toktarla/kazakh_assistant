@@ -9,7 +9,7 @@ import 'package:proj_management_project/features/chat/providers/chat_provider.da
 import 'package:proj_management_project/features/chat/repositories/chat_repository.dart';
 import 'package:proj_management_project/main.dart';
 import 'package:proj_management_project/services/local/app_data_box_manager.dart';
-import 'package:proj_management_project/services/remote/generative_model_service.dart';
+import 'package:proj_management_project/services/local/ranking_service.dart';
 import 'package:proj_management_project/services/remote/authentication_service.dart';
 import 'package:proj_management_project/services/remote/firestore_service.dart';
 import 'package:proj_management_project/services/remote/firebase_messaging_service.dart';
@@ -38,10 +38,10 @@ Future<void> setupServiceLocator() async {
   sl.registerLazySingleton<KazakhLearningApi>(() => KazakhLearningApi());
 
   // Register services
+  sl.registerLazySingleton<RankingService>(() => RankingService());
   sl.registerLazySingleton<FirestoreService>(() => FirestoreService(sl(),sl()));
   sl.registerLazySingleton<FirebaseMessagingService>(() => FirebaseMessagingService(sl(),sl<FirestoreService>()));
   sl.registerLazySingleton<AuthenticationService>(() => AuthenticationService(sl()));
-  sl.registerLazySingleton<GenerativeChatService>(() => GenerativeChatService());
 
   // Register repositories
   sl.registerLazySingleton<ChatRepository>(() => ChatRepository(sl(),sl()));

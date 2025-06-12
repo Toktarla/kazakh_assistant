@@ -578,7 +578,7 @@ final _entities = <obx_int.ModelEntity>[
   obx_int.ModelEntity(
       id: const obx_int.IdUid(9, 6303527452055229534),
       name: 'RareKazakhWord',
-      lastPropertyId: const obx_int.IdUid(16, 4039206330448990602),
+      lastPropertyId: const obx_int.IdUid(17, 7816961605162699778),
       flags: 0,
       properties: <obx_int.ModelProperty>[
         obx_int.ModelProperty(
@@ -662,6 +662,11 @@ final _entities = <obx_int.ModelEntity>[
             id: const obx_int.IdUid(16, 4039206330448990602),
             name: 'audioUrl',
             type: 9,
+            flags: 0),
+        obx_int.ModelProperty(
+            id: const obx_int.IdUid(17, 7816961605162699778),
+            name: 'synonyms',
+            type: 30,
             flags: 0)
       ],
       relations: <obx_int.ModelRelation>[],
@@ -2014,7 +2019,12 @@ obx_int.ModelDefinition getObjectBoxModel() {
           final audioUrlOffset = object.audioUrl == null
               ? null
               : fbb.writeString(object.audioUrl!);
-          fbb.startTable(17);
+          final synonymsOffset = object.synonyms == null
+              ? null
+              : fbb.writeList(object.synonyms!
+                  .map(fbb.writeString)
+                  .toList(growable: false));
+          fbb.startTable(18);
           fbb.addInt64(0, object.id);
           fbb.addInt64(1, object.idiomType.targetId);
           fbb.addOffset(2, wordOffset);
@@ -2031,6 +2041,7 @@ obx_int.ModelDefinition getObjectBoxModel() {
           fbb.addOffset(13, meaningKzOffset);
           fbb.addOffset(14, etymologyKzOffset);
           fbb.addOffset(15, audioUrlOffset);
+          fbb.addOffset(16, synonymsOffset);
           fbb.finish(fbb.endTable());
           return object.id;
         },
@@ -2069,7 +2080,11 @@ obx_int.ModelDefinition getObjectBoxModel() {
             ..etymologyKz = const fb.StringReader(asciiOptimization: true)
                 .vTableGetNullable(buffer, rootOffset, 32)
             ..audioUrl = const fb.StringReader(asciiOptimization: true)
-                .vTableGetNullable(buffer, rootOffset, 34);
+                .vTableGetNullable(buffer, rootOffset, 34)
+            ..synonyms = const fb.ListReader<String>(
+                    fb.StringReader(asciiOptimization: true),
+                    lazy: false)
+                .vTableGetNullable(buffer, rootOffset, 36);
           object.idiomType.targetId =
               const fb.Int64Reader().vTableGet(buffer, rootOffset, 6, 0);
           object.idiomType.attach(store);
@@ -3214,6 +3229,10 @@ class RareKazakhWord_ {
   /// See [RareKazakhWord.audioUrl].
   static final audioUrl =
       obx.QueryStringProperty<RareKazakhWord>(_entities[6].properties[15]);
+
+  /// See [RareKazakhWord.synonyms].
+  static final synonyms = obx.QueryStringVectorProperty<RareKazakhWord>(
+      _entities[6].properties[16]);
 }
 
 /// [RareKazakhWordType] entity fields to define ObjectBox queries.

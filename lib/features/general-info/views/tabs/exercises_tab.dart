@@ -49,8 +49,16 @@ class ExercisesTab extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => IntermediaryPage(contentType: contentType, contentTypeIndex: section.contentTypeIndex!,),
-                ),
+                        builder: (_) => IntermediaryPage(
+                          contentType: contentType,
+                          contentTypeIndex: section.contentTypeIndex!,
+                          title: context.localizedValue(
+                            ru: section.titleRu,
+                            en: section.titleEn,
+                            kz: section.titleKz,
+                          ),
+                        ),
+                      ),
               );
             },
             child: Row(

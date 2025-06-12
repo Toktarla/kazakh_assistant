@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../../../../../config/variables.dart';
+import '../../../../../config/data.dart';
 
 class RegionComparePage extends StatefulWidget {
   const RegionComparePage({super.key});
@@ -17,6 +17,23 @@ class _RegionComparePageState extends State<RegionComparePage> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final localeCode = Localizations.localeOf(context).languageCode;
+    final supportedLocales = ['kk', 'ru', 'en'];
+    final langCode = supportedLocales.contains(localeCode) ? localeCode : 'kk';
+
+    final localizedRegionA = localizedRegions[regionA]?[langCode] ?? regionA;
+    final localizedRegionB = localizedRegions[regionB]?[langCode] ?? regionB;
+    final localizedCompareTitle = localizedCompareStrings['compareDialects']?[langCode] ?? 'Compare Dialects';
+    final localizedVS = localizedCompareStrings['vs']?[langCode] ?? 'VS';
+    final localizedFact = localizedCompareStrings['interestingFact']?[langCode] ?? '';
+
+    // Filter dialectWords only those having dialect for at least one region? Or all? Here all:
+    final filteredWords = dialectWords.where((word) {
+      final standardWord = word.localizations[langCode] ?? word.localizations['kk'] ?? '';
+      final dialectA = word.regionDialects[regionA] ?? standardWord;
+      final dialectB = word.regionDialects[regionB] ?? standardWord;
+      return dialectA != dialectB;
+    }).toList();
 
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
@@ -30,7 +47,7 @@ class _RegionComparePageState extends State<RegionComparePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
-                    alignment: Alignment.center,
+                      alignment: Alignment.center,
                       child: IconButton(
                           onPressed: () => Navigator.pop(context),
                           icon: const Icon(
@@ -38,15 +55,15 @@ class _RegionComparePageState extends State<RegionComparePage> {
                             size: 36,
                           ))),
                   Text(
-                    "Сравнение диалектов",
+                    localizedCompareTitle,
                     style: theme.textTheme.headlineLarge,
                   ),
                   const SizedBox(height: 20),
-                  _buildRegionSelectors(theme),
+                  _buildRegionSelectors(theme, langCode, localizedVS),
                   const SizedBox(height: 20),
-                  Expanded(child: _buildWordComparisonList(theme)),
+                  Expanded(child: _buildWordComparisonList(filteredWords, theme, regionA, regionB, langCode)),
                   const SizedBox(height: 20),
-                  _buildFooter(theme),
+                  _buildFooter(theme, localizedFact),
                 ],
               ),
             ),
@@ -62,12 +79,12 @@ class _RegionComparePageState extends State<RegionComparePage> {
         Positioned(
           top: -100,
           left: -50,
-          child: _coloredBlurCircle(Colors.purpleAccent.withValues(alpha: 0.3), 300),
+          child: _coloredBlurCircle(Colors.purpleAccent.withOpacity(0.3), 300),
         ),
         Positioned(
           bottom: -100,
           right: -50,
-          child: _coloredBlurCircle(Colors.cyanAccent.withValues(alpha: 0.3), 300),
+          child: _coloredBlurCircle(Colors.cyanAccent.withOpacity(0.3), 300),
         ),
       ],
     );
@@ -86,25 +103,67 @@ class _RegionComparePageState extends State<RegionComparePage> {
     );
   }
 
-  Widget _buildRegionSelectors(ThemeData theme) {
+  Widget _buildRegionSelectors(ThemeData theme, String langCode, String localizedVS) {
+    // For the left dropdown, exclude regionB
+    final leftDropdownRegions = regions.where((r) => r != regionB).toList();
+
+    // For the right dropdown, exclude regionA
+    final rightDropdownRegions = regions.where((r) => r != regionA).toList();
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _glassDropdown(value: regionA, onChanged: (v) => setState(() => regionA = v!)),
+        _glassDropdown(
+          value: regionA,
+          onChanged: (v) {
+            if (v != null) {
+              setState(() {
+                regionA = v;
+                // Optional: if regionA == regionB, change regionB automatically:
+                if (regionA == regionB) {
+                  // Change regionB to something else (choose first different from regionA)
+                  regionB = regions.firstWhere((r) => r != regionA);
+                }
+              });
+            }
+          },
+          langCode: langCode,
+          options: leftDropdownRegions,
+        ),
         const SizedBox(width: 12),
-        Text("VS", style: theme.textTheme.titleMedium),
+        Text(localizedVS, style: theme.textTheme.titleMedium),
         const SizedBox(width: 12),
-        _glassDropdown(value: regionB, onChanged: (v) => setState(() => regionB = v!)),
+        _glassDropdown(
+          value: regionB,
+          onChanged: (v) {
+            if (v != null) {
+              setState(() {
+                regionB = v;
+                // Optional: if regionB == regionA, change regionA automatically:
+                if (regionB == regionA) {
+                  regionA = regions.firstWhere((r) => r != regionB);
+                }
+              });
+            }
+          },
+          langCode: langCode,
+          options: rightDropdownRegions,
+        ),
       ],
     );
   }
 
-  Widget _glassDropdown({required String value, required ValueChanged<String?> onChanged}) {
+  Widget _glassDropdown({
+    required String value,
+    required ValueChanged<String?> onChanged,
+    required String langCode,
+    required List<String> options,  // <-- New param for filtered options
+  }) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        color: Theme.of(context).primaryColor.withValues(alpha: 0.1),
+        color: Theme.of(context).primaryColor.withOpacity(0.1),
         border: Border.all(color: Theme.of(context).primaryColor),
       ),
       child: DropdownButtonHideUnderline(
@@ -114,21 +173,41 @@ class _RegionComparePageState extends State<RegionComparePage> {
           style: Theme.of(context).textTheme.titleLarge,
           value: value,
           onChanged: onChanged,
-          items: regions.map((r) => DropdownMenuItem(value: r, child: Text(r))).toList(),
+          items: options
+              .map((r) => DropdownMenuItem(
+            value: r,
+            child: Text(localizedRegions[r]?[langCode] ?? r),
+          ))
+              .toList(),
         ),
       ),
     );
   }
 
-  Widget _buildWordComparisonList(ThemeData theme) {
-    final wordCount = regionWords[regionA]?.length ?? 0;
+
+  Widget _buildWordComparisonList(List dialectWords, ThemeData theme, String regionA, String regionB, String langCode) {
+    if (dialectWords.isEmpty) {
+      return Center(child: Text('No words found'));
+    }
     return ListView.separated(
-      itemCount: wordCount,
+      itemCount: dialectWords.length,
       separatorBuilder: (_, __) => const SizedBox(height: 12),
       itemBuilder: (context, index) {
-        final a = regionWords[regionA]![index];
-        final b = regionWords[regionB]!.firstWhere((e) => e['word'] == a['word'], orElse: () => {});
-        return _glassWordCard(a['dialect'] ?? '-', a['word'] ?? '-', b['dialect'] ?? '-', theme);
+        final word = dialectWords[index];
+
+        // Get standard localized word (fallback to kk)
+        final standardWord = word.localizations[langCode] ?? word.localizations['kk'] ?? '';
+
+        // Dialect forms for selected regions, fallback to standard if missing
+        final dialectA = word.regionDialects[regionA] ?? standardWord;
+        final dialectB = word.regionDialects[regionB] ?? standardWord;
+
+        // If dialect forms are the same, don't show this word
+        if (dialectA == dialectB) {
+          return const SizedBox.shrink();
+        }
+
+        return _glassWordCard(dialectA, standardWord, dialectB, theme);
       },
     );
   }
@@ -136,44 +215,38 @@ class _RegionComparePageState extends State<RegionComparePage> {
   Widget _glassWordCard(String left, String center, String right, ThemeData theme) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
-            border: Border.all(color: Theme.of(context).primaryColor),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Row(
-            children: [
-              Expanded(child: Text(left, textAlign: TextAlign.center, style: theme.textTheme.bodyLarge)),
-              Container(width: 1, height: 24, color: Theme.of(context).primaryColor),
-              Expanded(child: Text(center, textAlign: TextAlign.center, style: theme.textTheme.bodyLarge)),
-              Container(width: 1, height: 24, color: Theme.of(context).primaryColor),
-              Expanded(child: Text(right, textAlign: TextAlign.center, style: theme.textTheme.bodyLarge)),
-            ],
-          ),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        decoration: BoxDecoration(
+          color: Theme.of(context).cardColor,
+          border: Border.all(color: Theme.of(context).primaryColor),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          children: [
+            Expanded(child: Text(left, textAlign: TextAlign.center, style: theme.textTheme.bodyLarge)),
+            Container(width: 1, height: 24, color: Theme.of(context).primaryColor),
+            Expanded(child: Text(center, textAlign: TextAlign.center, style: theme.textTheme.bodyLarge)),
+            Container(width: 1, height: 24, color: Theme.of(context).primaryColor),
+            Expanded(child: Text(right, textAlign: TextAlign.center, style: theme.textTheme.bodyLarge)),
+          ],
         ),
       ),
     );
   }
 
-  Widget _buildFooter(ThemeData theme) {
+  Widget _buildFooter(ThemeData theme, String localizedFact) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(16),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: theme.primaryColor.withValues(alpha: 0.3),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Text(
-            "Интересный факт: В западных диалектах часто встречается заимствование из татарского и башкирского языков.",
-            style: theme.textTheme.bodyMedium?.copyWith(fontStyle: FontStyle.italic),
-          ),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: theme.primaryColor.withValues(alpha: 0.3),
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Text(
+          localizedFact,
+          style: theme.textTheme.bodyMedium?.copyWith(fontStyle: FontStyle.italic),
         ),
       ),
     );
